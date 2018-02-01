@@ -103,13 +103,14 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">The JupyterLab Interface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#menu-bar">Menu Bar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#left-sidebar">Left Sidebar</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#main-area">Main area</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#tabs-and-single-document-mode">Tabs and Single Document Mode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#main-work-area">Main Work Area</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tabs-and-single-document-mode">Tabs and Single-Document Mode</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#context-menus">Context Menus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#keyboard-shortcuts">Keyboard Shortcuts</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="files.html">Working with Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file_editor.html">File Editor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_editor.html">Text Editor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code_console.html">Code Consoles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminals</a></li>
@@ -202,28 +203,28 @@
 exploratory computing. While JupyterLab has many features found in
 traditional integrated development environments (IDEs), it remains
 focused on interactive, exploratory computing.</p>
-<p>The JupyterLab interface consists of a <a class="reference internal" href="#main-area"><span class="std std-ref">main work area</span></a> containing tabs of
-documents and activities, a collapsible <a class="reference internal" href="#left-sidebar"><span class="std std-ref">left sidebar</span></a>, and a <a class="reference internal" href="#menu-bar"><span class="std std-ref">menu bar</span></a>.
-The left sidebar contains a <a class="reference internal" href="files.html#working-with-files"><span class="std std-ref">file browser</span></a>, the <a class="reference internal" href="running.html#running"><span class="std std-ref">list of running kernels
-and terminals</span></a>, the <a class="reference internal" href="commands.html#commands"><span class="std std-ref">command palette</span></a>, the <a class="reference internal" href="notebook.html#notebook"><span class="std std-ref">notebook cell tools inspector</span></a>,
-and the <a class="reference internal" href="#tabs"><span class="std std-ref">tabs list</span></a>.</p>
-<img alt="../_images/interface_jupyterlab.png" src="../_images/interface_jupyterlab.png" />
+<p>The JupyterLab interface consists of a <a class="reference internal" href="#main-area"><span class="std std-ref">main work area</span></a>
+containing tabs of documents and activities, a collapsible <a class="reference internal" href="#left-sidebar"><span class="std std-ref">left sidebar</span></a>, and a <a class="reference internal" href="#menu-bar"><span class="std std-ref">menu bar</span></a>. The left sidebar contains a
+<a class="reference internal" href="files.html#working-with-files"><span class="std std-ref">file browser</span></a>, the <a class="reference internal" href="running.html#running"><span class="std std-ref">list of running kernels and
+terminals</span></a>, the <a class="reference internal" href="commands.html#commands"><span class="std std-ref">command palette</span></a>, the <a class="reference internal" href="notebook.html#notebook"><span class="std std-ref">notebook
+cell tools inspector</span></a>, and the <a class="reference internal" href="#tabs"><span class="std std-ref">tabs list</span></a>.</p>
+<img alt="../_images/interface_jupyterlab.png" class="jp-screenshot" src="../_images/interface_jupyterlab.png" />
 <div class="section" id="menu-bar">
 <span id="id1"></span><h2>Menu Bar<a class="headerlink" href="#menu-bar" title="Permalink to this headline">¶</a></h2>
 <p>The menu bar at the top of JupyterLab has top-level menus that expose
 actions available in JupyterLab with their keyboard shortcuts. The
 default menus are:</p>
 <ul class="simple">
-<li>File: actions related to files and directories</li>
-<li>Edit: actions related to editing documents and other activities</li>
-<li>View: actions that alter the appearance of JupyterLab</li>
-<li>Run: actions for running code in different activities such as
-Notebooks and Code Consoles</li>
-<li>Kernel: actions for managing kernels, which are separate processes
+<li><strong>File</strong>: actions related to files and directories</li>
+<li><strong>Edit</strong>: actions related to editing documents and other activities</li>
+<li><strong>View</strong>: actions that alter the appearance of JupyterLab</li>
+<li><strong>Run</strong>: actions for running code in different activities such as
+notebooks and code consoles</li>
+<li><strong>Kernel</strong>: actions for managing kernels, which are separate processes
 for running code</li>
-<li>Tabs: a list of the open documents and activities in the dock panel</li>
-<li>Settings: common settings and an advanced settings editor</li>
-<li>Help: a list of JupyterLab and kernel help links</li>
+<li><strong>Tabs</strong>: a list of the open documents and activities in the dock panel</li>
+<li><strong>Settings</strong>: common settings and an advanced settings editor</li>
+<li><strong>Help</strong>: a list of JupyterLab and kernel help links</li>
 </ul>
 <p><a class="reference internal" href="extensions.html#user-extensions"><span class="std std-ref">JupyterLab extensions</span></a> can also create new top-level menus in the menu
 bar.</p>
@@ -233,30 +234,37 @@ bar.</p>
 <p>The left sidebar contains a number of commonly-used tabs, such as a file
 browser, a list of running kernels and terminals, the command palette,
 and a list of tabs in the main area:</p>
-<img alt="../_images/interface_left.png" class="align-center" src="../_images/interface_left.png" />
+<img alt="../_images/interface_left.png" class="jp-screenshot align-center" src="../_images/interface_left.png" />
 <p>The left sidebar can be collapsed or expanded by clicking on the active
 sidebar tab:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PlJGecfetek" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>JupyterLab extensions can add additional panels to the left sidebar.</p>
+<div class="jp-youtube-video">
+   <iframe src="https://www.youtube-nocookie.com/embed/PlJGecfetek?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>JupyterLab extensions can add additional panels to the left sidebar.</p>
 </div>
-<div class="section" id="main-area">
-<span id="id3"></span><h2>Main area<a class="headerlink" href="#main-area" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="main-work-area">
+<span id="main-area"></span><h2>Main Work Area<a class="headerlink" href="#main-work-area" title="Permalink to this headline">¶</a></h2>
 <p>The main work area in JupyterLab allows you to arrange documents
 (notebooks, text files, etc.) and other activities (terminals, code
 consoles, etc.) into panels of tabs that can be resized or subdivided:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ka8qS7CO1XQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>The main area has a single current activity. The tab for this activity
+<div class="jp-youtube-video">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Ka8qS7CO1XQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>The work area has a single current activity. The tab for this activity
 is marked with a colored top border (blue by default).</p>
 </div>
 <div class="section" id="tabs-and-single-document-mode">
-<span id="tabs"></span><h2>Tabs and Single Document Mode<a class="headerlink" href="#tabs-and-single-document-mode" title="Permalink to this headline">¶</a></h2>
+<span id="tabs"></span><h2>Tabs and Single-Document Mode<a class="headerlink" href="#tabs-and-single-document-mode" title="Permalink to this headline">¶</a></h2>
 <p>The Tabs panel in the left sidebar lists the open documents or
 activities in the main area:</p>
-<img alt="../_images/interface_tabs.png" class="align-center" src="../_images/interface_tabs.png" />
-<p>The same information is also available in the Tabs Menu:</p>
-<img alt="../_images/interface_tabs_menu.png" class="align-center" src="../_images/interface_tabs_menu.png" />
-<p>It is often useful to focus on a single document or activity without
-closing other tabs in the main area. Single Document Mode toggles the
-view of the main area to show only a single tab at a time:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/DO7NOenMQC0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>When you leave Single Document Mode, the original layout of the main
+<img alt="../_images/interface_tabs.png" class="jp-screenshot align-center" src="../_images/interface_tabs.png" />
+<p>The same information is also available in the Tabs menu:</p>
+<img alt="../_images/interface_tabs_menu.png" class="jp-screenshot align-center" src="../_images/interface_tabs_menu.png" />
+<p>It is often useful to focus on a single document or activity without closing
+other tabs in the main area. Single-document mode enable this, while making
+it simple to return to your multi-activity layout in the main work area.
+Toggle single-document mode using the View menu:</p>
+<div class="jp-youtube-video">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/DO7NOenMQC0?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>When you leave single-document mode, the original layout of the main
 area is restored.</p>
 </div>
 <div class="section" id="context-menus">
@@ -264,9 +272,24 @@ area is restored.</p>
 <p>Many parts of JupyterLab, such as notebooks, text files, code consoles,
 and tabs have context menus that can be accessed by right-clicking on
 the element:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y30fs6kg6fc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe><p>The browser’s native context menu can be accessed by holding down
+<div class="jp-youtube-video">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y30fs6kg6fc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>The browser’s native context menu can be accessed by holding down
 <code class="docutils literal"><span class="pre">Shift</span></code> and right-clicking:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/XPPWW-7WJ40" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+<div class="jp-youtube-video">
+  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/XPPWW-7WJ40?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div></div>
+<div class="section" id="keyboard-shortcuts">
+<span id="shortcuts"></span><h2>Keyboard Shortcuts<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>As in the classic Notebook, you can navigate the user interface through keyboard
+shortcuts. You can find and customize the current list of keyboard shortcuts by
+selecting the Advanced Settings Editor item in the Settings menu, then selecting
+Keyboard Shortcuts in the Settings tab.</p>
+<p>[screenshot]</p>
+<p>You can also customize the text editor to use vim, emacs, or Sublime Text
+keyboard shortcuts by using the Text Editor Key Map submenu in the Settings
+menu.</p>
+</div>
 </div>
 
 
@@ -291,7 +314,9 @@ the element:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Project Jupyter.
+        &copy; Copyright 2018, Project Jupyter.<br/>
+        The Jupyter Trademark is registered with the U.S. Patent &amp Trademark Office.
+        
 
     </p>
   </div>
