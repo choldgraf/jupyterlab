@@ -1,309 +1,468 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Extension Developer Guide &mdash; JupyterLab 1.0 Beta documentation</title>
-  
 
-  
-  
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Extension Developer Guide &#8212; JupyterLab 3.0.0a5 documentation</title>
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="JupyterLab 1.0 Beta documentation" href="../index.html"/>
-        <link rel="next" title="Documents" href="documents.html"/>
-        <link rel="prev" title="General Codebase Orientation" href="repo.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-   
-  <div class="wy-grid-for-nav">
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-          
-            <a href="../index.html" class="icon icon-home"> JupyterLab
-          
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
-          
-          </a>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
 
-          
-            
-            
-              <div class="version">
-                1.0 Beta
-              </div>
-            
-          
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Common Extension Points" href="extension_points.html" />
+    <link rel="prev" title="Developer Guide" href="repo.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/starting.html">Starting JupyterLab</a></li>
-</ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../user/interface.html">The JupyterLab Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/files.html">Working with Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/file_editor.html">Text Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/notebook.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/code_console.html">Code Consoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/terminal.html">Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Managing Kernels and Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/commands.html">Command Palette</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/documents_kernels.html">Documents and kernels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/file_formats.html">File and Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/extensions.html">Extensions</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="repo.html">General Codebase Orientation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Extension Developer Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#application-object">Application Object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#jupyterlab-shell">JupyterLab Shell</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#phosphor">Phosphor</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extension-authoring">Extension Authoring</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mime-renderer-extensions">Mime Renderer Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#themes">Themes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#standard-general-purpose-extensions">Standard (General-Purpose) Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#extension-settings">Extension Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#storing-extension-data">Storing Extension Data</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#state-database">State Database</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#context-menus">Context Menus</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="documents.html">Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="patterns.html">Design Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css.html">CSS Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualdom.html">Virtual DOM and React</a></li>
-<li class="toctree-l1"><a class="reference internal" href="adding_content.html">Adding Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xkcd_extension_tutorial.html">Let’s Make an xkcd JupyterLab Extension</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
     </nav>
+    
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">JupyterLab</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
+    <div class="container-xl">
+      <div class="row">
           
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
 
 
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Extension Developer Guide</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/developer/extension_dev.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
+  <div class="bd-toc-item active">
   
-  <hr/>
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="active">
+                  <a href="">Extension Developer Guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_points.html">Common Extension Points</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="contributing.html">Contributing to JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="components.html">Using JupyterLab components</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_components.html">Reusing JupyterLab UI</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents.html">Documents</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebook</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="patterns.html">Design Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="css.html">CSS Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="virtualdom.html">React</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_helpers.html">User Interface Helpers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminology.html">Terminology</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_tutorial.html">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_migration.html">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#tutorials" class="nav-link">Tutorials</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#cookiecutters" class="nav-link">Cookiecutters</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#api-documentation" class="nav-link">API Documentation</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#plugins" class="nav-link">Plugins</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#application-object" class="nav-link">Application Object</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyter-front-end-shell" class="nav-link">Jupyter Front-End Shell</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#lumino" class="nav-link">Lumino</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#extension-authoring" class="nav-link">Extension Authoring</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#testing-your-extension" class="nav-link">Testing your extension</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#mime-renderer-extensions" class="nav-link">Mime Renderer Extensions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#themes" class="nav-link">Themes</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#standard-general-purpose-extensions" class="nav-link">Standard (General-Purpose) Extensions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#core-tokens" class="nav-link">Core Tokens</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#standard-extension-example" class="nav-link">Standard Extension Example</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#storing-extension-data" class="nav-link">Storing Extension Data</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#extension-settings" class="nav-link">Extension Settings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#state-database" class="nav-link">State Database</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#context-menus" class="nav-link">Context Menus</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-react" class="nav-link">Using React</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#companion-packages" class="nav-link">Companion Packages</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#shipping-packages" class="nav-link">Shipping Packages</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#listings" class="nav-link">Listings</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="extension-developer-guide">
 <span id="developer-extensions"></span><h1>Extension Developer Guide<a class="headerlink" href="#extension-developer-guide" title="Permalink to this headline">¶</a></h1>
-<p>JupyterLab can be extended in three ways via:</p>
+<p>JupyterLab can be extended in four ways via:</p>
 <ul class="simple">
-<li><strong>application plugins (top level):</strong> Application plugins extend the
-functionality of JupyterLab itself.</li>
-<li><strong>mime renderer extension (top level):</strong> Mime Renderer extensions are
+<li><p><strong>application plugins (top level):</strong> Application plugins extend the
+functionality of JupyterLab itself.</p></li>
+<li><p><strong>mime renderer extensions (top level):</strong> Mime Renderer extensions are
 a convenience for creating an extension that can render mime data and
-potentially render files of a given type.</li>
-<li>document widget extensions (lower level): Document widget extensions
+potentially render files of a given type.</p></li>
+<li><p><strong>theme extensions (top level):</strong> Theme extensions allow you to customize the appearance of
+JupyterLab by adding your own fonts, CSS rules, and graphics to the application.</p></li>
+<li><p><strong>document widget extensions (lower level):</strong> Document widget extensions
 extend the functionality of document widgets added to the
-application, and we cover them in <a class="reference internal" href="documents.html#documents"><span class="std std-ref">Documents</span></a>.</li>
+application, and we cover them in <a class="reference internal" href="documents.html#documents"><span class="std std-ref">Documents</span></a>.</p></li>
 </ul>
-<p>See <a class="reference internal" href="xkcd_extension_tutorial.html#xkcd-extension-tutorial"><span class="std std-ref">Let’s Make an xkcd JupyterLab Extension</span></a> to learn how to make a simple JupyterLab extension.</p>
 <p>A JupyterLab application is comprised of:</p>
 <ul class="simple">
-<li>A core Application object</li>
-<li>Plugins</li>
+<li><p>A core Application object</p></li>
+<li><p>Plugins</p></li>
 </ul>
+<p>Extensions are distributed as JavaScript packages, so you can write extensions in JavaScript or any language that compiles to JavaScript. We recommend writing extensions in <a class="reference external" href="https://www.typescriptlang.org/">TypeScript</a>, which is used for the JupyterLab core extensions and many popular community extensions.</p>
+<div class="section" id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<p>We provide a set of guides to get started writing third-party extensions for JupyterLab:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="extension_tutorial.html#extension-tutorial"><span class="std std-ref">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</span></a>: An in-depth tutorial to learn how to make a simple JupyterLab extension.</p></li>
+<li><p>The <a class="reference external" href="https://github.com/jupyterlab/extension-examples">JupyterLab Extension Examples Repository</a>: A short tutorial series
+to learn how to develop extensions for JupyterLab, by example.</p></li>
+<li><p><a class="reference internal" href="extension_points.html#developer-extension-points"><span class="std std-ref">Common Extension Points</span></a>: A list of the most common JupyterLab extension points.</p></li>
+</ul>
+</div>
+<div class="section" id="cookiecutters">
+<h2>Cookiecutters<a class="headerlink" href="#cookiecutters" title="Permalink to this headline">¶</a></h2>
+<p>We provide several cookiecutters to create JupyterLab plugin extensions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/jupyterlab/extension-cookiecutter-ts">extension-cookiecutter-ts</a>: Create a JupyterLab extension in TypeScript</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/extension-cookiecutter-js">extension-cookiecutter-js</a>: Create a JupyterLab extension in JavaScript</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/mimerender-cookiecutter-ts">mimerender-cookiecutter-ts</a>: Create a MIME Renderer JupyterLab extension in TypeScript</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/theme-cookiecutter">theme-cookiecutter</a>: Create a new theme for JupyterLab</p></li>
+</ul>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h2>
+<p>If you are looking for lower level details on the JupyterLab and Lumino API:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterlab.github.io/jupyterlab/">JupyterLab API Documentation</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.github.io/lumino/">Lumino API Documentation</a></p></li>
+</ul>
+</div>
 <div class="section" id="plugins">
 <h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
 <p>A plugin adds a core functionality to the application:</p>
-<ul>
-<li><p class="first">A plugin can require other plugins for operation.</p>
-</li>
-<li><p class="first">A plugin is activated when it is needed by other plugins, or when
-explicitly activated.</p>
-</li>
-<li><p class="first">Plugins require and provide <code class="docutils literal"><span class="pre">Token</span></code> objects, which are used to
-provide a typed value to the plugin’s <code class="docutils literal"><span class="pre">activate()</span></code> method.</p>
-</li>
-<li><p class="first">The module providing plugin(s) must meet the
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/interfaces/_application_src_index_.jupyterlab.ipluginmodule.html">JupyterLab.IPluginModule</a>
+<ul class="simple">
+<li><p>A plugin can require other plugins for operation.</p></li>
+<li><p>A plugin is activated when it is needed by other plugins, or when
+explicitly activated.</p></li>
+<li><p>Plugins require and provide <code class="docutils literal notranslate"><span class="pre">Token</span></code> objects, which are used to
+provide a typed value to the plugin’s <code class="docutils literal notranslate"><span class="pre">activate()</span></code> method.</p></li>
+<li><p>The module providing plugin(s) must meet the
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/interfaces/_application_src_index_.jupyterlab.ipluginmodule.html">JupyterLab.IPluginModule</a>
 interface, by exporting a plugin object or array of plugin objects as
-the default export.</p>
-<p>We provide two cookie cutters to create JuptyerLab plugin extensions in
-<cite>CommonJS &lt;https://github.com/jupyterlab/extension-cookiecutter-js&gt;</cite> and
-<cite>TypeScript &lt;https://github.com/jupyterlab/extension-cookiecutter-ts&gt;</cite>.</p>
-</li>
+the default export.</p></li>
 </ul>
 <p>The default plugins in the JupyterLab application include:</p>
 <ul class="simple">
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/terminal-extension/src/index.ts">Terminal</a>
-- Adds the ability to create command prompt terminals.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/shortcuts-extension/src/index.ts">Shortcuts</a>
-- Sets the default set of shortcuts for the application.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/imageviewer-extension/src/index.ts">Images</a>
-- Adds a widget factory for displaying image files.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/help-extension/src/index.ts">Help</a>
-- Adds a side bar widget for displaying external documentation.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/filebrowser-extension/src/index.ts">File
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/terminal-extension/src/index.ts">Terminal</a>
+- Adds the ability to create command prompt terminals.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/shortcuts-extension/src/index.ts">Shortcuts</a>
+- Sets the default set of shortcuts for the application.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/imageviewer-extension/src/index.ts">Images</a>
+- Adds a widget factory for displaying image files.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/help-extension/src/index.tsx">Help</a>
+- Adds a side bar widget for displaying external documentation.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/filebrowser-extension/src/index.ts">File
 Browser</a>
 - Creates the file browser and the document manager and the file
-browser to the side bar.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/fileeditor-extension/src/index.ts">Editor</a>
-- Add a widget factory for displaying editable source files.</li>
-<li><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/console-extension/src/index.ts">Console</a>
+browser to the side bar.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/fileeditor-extension/src/index.ts">Editor</a>
+- Add a widget factory for displaying editable source files.</p></li>
+<li><p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/packages/console-extension/src/index.ts">Console</a>
 - Adds the ability to launch Jupyter Console instances for
-interactive kernel console sessions.</li>
+interactive kernel console sessions.</p></li>
 </ul>
-<p>A dependency graph for the core JupyterLab plugins (along with links to
-their source) is shown here: <img alt="dependencies" src="../_images/dependency-graph.svg" /></p>
+<p>Here is a dependency graph for the core JupyterLab components: <img alt="dependencies" src="../_images/dependency-graph.svg" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Installing an extension allows for arbitrary code execution on the
+server, kernel, and in the client’s browser. You should therefore
+take steps to protect against malicious changes to your extension’s
+code. This includes ensuring strong authentication for your npm
+account.</p>
+</div>
 </div>
 <div class="section" id="application-object">
 <h2>Application Object<a class="headerlink" href="#application-object" title="Permalink to this headline">¶</a></h2>
-<p>The JupyterLab Application object is given to each plugin in its
-<code class="docutils literal"><span class="pre">activate()</span></code> function. The Application object has a:</p>
+<p>A Jupyter front-end application object is given to each plugin in its
+<code class="docutils literal notranslate"><span class="pre">activate()</span></code> function. The application object has:</p>
 <ul class="simple">
-<li>commands - used to add and execute commands in the application.</li>
-<li>keymap - used to add keyboard shortcuts to the application.</li>
-<li>shell - a JupyterLab shell instance.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commands</span></code> - an extensible registry used to add and execute commands in the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">commandLinker</span></code> - used to connect DOM nodes with the command registry so that clicking on them executes a command.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docRegistry</span></code> - an extensible registry containing the document types that the application is able to read and render.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">restored</span></code> - a promise that is resolved when the application has finished loading.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceManager</span></code> - low-level manager for talking to the Jupyter REST API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">shell</span></code> - a generic Jupyter front-end shell instance, which holds the user interface for the application.</p></li>
 </ul>
 </div>
-<div class="section" id="jupyterlab-shell">
-<h2>JupyterLab Shell<a class="headerlink" href="#jupyterlab-shell" title="Permalink to this headline">¶</a></h2>
-<p>The JupyterLab
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_application_src_shell_.applicationshell.html">shell</a>
-is used to add and interact with content in the application. The
-application consists of:</p>
+<div class="section" id="jupyter-front-end-shell">
+<h2>Jupyter Front-End Shell<a class="headerlink" href="#jupyter-front-end-shell" title="Permalink to this headline">¶</a></h2>
+<p>The Jupyter front-end
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/interfaces/_application_src_index_.jupyterfrontend.ishell.html">shell</a>
+is used to add and interact with content in the application. The <code class="docutils literal notranslate"><span class="pre">IShell</span></code>
+interface provides an <code class="docutils literal notranslate"><span class="pre">add()</span></code> method for adding widgets to the application.
+In JupyterLab, the application shell consists of:</p>
 <ul class="simple">
-<li>A top area for things like top level menus and toolbars</li>
-<li>Left and right side bar areas for collapsible content</li>
-<li>A main area for user activity.</li>
-<li>A bottom area for things like status bars</li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">top</span></code> area for things like top level menus and toolbars.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">left</span></code> and <code class="docutils literal notranslate"><span class="pre">right</span></code> side bar areas for collapsible content.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">main</span></code> work area for user activity.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">bottom</span></code> area for things like status bars.</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">header</span></code> area for custom elements.</p></li>
 </ul>
 </div>
-<div class="section" id="phosphor">
-<h2>Phosphor<a class="headerlink" href="#phosphor" title="Permalink to this headline">¶</a></h2>
-<p>The Phosphor library is used as the underlying architecture of
+<div class="section" id="lumino">
+<h2>Lumino<a class="headerlink" href="#lumino" title="Permalink to this headline">¶</a></h2>
+<p>The Lumino library is used as the underlying architecture of
 JupyterLab and provides many of the low level primitives and widget
-structure used in the application. Phosphor provides a rich set of
+structure used in the application. Lumino provides a rich set of
 widgets for developing desktop-like applications in the browser, as well
 as patterns and objects for writing clean, well-abstracted code. The
-widgets in the application are primarily <strong>Phosphor widgets</strong>, and
-Phosphor concepts, like message passing and signals, are used
-throughout. <strong>Phosphor messages</strong> are a <em>many-to-one</em> interaction that
-allows information like resize events to flow through the widget
-hierarchy in the application. <strong>Phosphor signals</strong> are a <em>one-to-many</em>
-interaction that allow listeners to react to changes in an observed
+widgets in the application are primarily <strong>Lumino widgets</strong>, and
+Lumino concepts, like message passing and signals, are used
+throughout. <strong>Lumino messages</strong> are a <em>many-to-one</em> interaction that
+enables information like resize events to flow through the widget
+hierarchy in the application. <strong>Lumino signals</strong> are a <em>one-to-many</em>
+interaction that enable listeners to react to changes in an observed
 object.</p>
 </div>
 <div class="section" id="extension-authoring">
@@ -311,248 +470,587 @@ object.</p>
 <p>An Extension is a valid <a class="reference external" href="https://docs.npmjs.com/getting-started/what-is-npm">npm
 package</a> that
 meets the following criteria:</p>
-<ul class="simple">
-<li>Exports one or more JupyterLab plugins as the default export in its
-main file.</li>
-<li>Has a <code class="docutils literal"><span class="pre">jupyterlab</span></code> key in its <code class="docutils literal"><span class="pre">package.json</span></code> which has
-<code class="docutils literal"><span class="pre">&quot;extension&quot;</span></code> metadata. The value can be <code class="docutils literal"><span class="pre">true</span></code> to use the main
+<ul>
+<li><p>Exports one or more JupyterLab plugins as the default export in its
+main file.</p></li>
+<li><p>Has a <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> key in its <code class="docutils literal notranslate"><span class="pre">package.json</span></code> which has
+<code class="docutils literal notranslate"><span class="pre">&quot;extension&quot;</span></code> metadata. The value can be <code class="docutils literal notranslate"><span class="pre">true</span></code> to use the main
 module of the package, or a string path to a specific module (e.g.
-<code class="docutils literal"><span class="pre">&quot;lib/foo&quot;</span></code>).</li>
+<code class="docutils literal notranslate"><span class="pre">&quot;lib/foo&quot;</span></code>). Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;jupyterlab&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="n">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p>It is also recommended to include the keyword <code class="docutils literal notranslate"><span class="pre">jupyterlab-extension</span></code>
+in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code>, to aid with discovery (e.g. by the extension
+manager). Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;jupyter&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;jupyterlab&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;jupyterlab-extension&quot;</span>
+<span class="p">],</span>
+</pre></div>
+</div>
+</li>
 </ul>
 <p>While authoring the extension, you can use the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>   <span class="c1"># install npm package dependencies</span>
-<span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>  <span class="c1"># optional build step if using TypeScript, babel, etc.</span>
-<span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span>  <span class="c1"># install the current directory as an extension</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm install   <span class="c1"># install npm package dependencies</span>
+npm run build  <span class="c1"># optional build step if using TypeScript, babel, etc.</span>
+jupyter labextension install  <span class="c1"># install the current directory as an extension</span>
 </pre></div>
 </div>
 <p>This causes the builder to re-install the source folder before building
 the application files. You can re-build at any time using
-<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">build</span></code> and it will reinstall these packages. You can also
-link other local npm packages that you are working on simultaneously
-using <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">link</span></code>; they will be re-installed but not
-considered as extensions. Local extensions and linked packages are
-included in <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">list</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">build</span></code> and it will reinstall these packages.</p>
+<p>You can also link other local <code class="docutils literal notranslate"><span class="pre">npm</span></code> packages that you are working on
+simultaneously using <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">link</span></code>; they will be re-installed
+but not considered as extensions. Local extensions and linked packages are
+included in <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">list</span></code>.</p>
 <p>When using local extensions and linked packages, you can run the command</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span> <span class="o">--</span><span class="n">watch</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span> <span class="o">--</span><span class="n">watch</span>
 </pre></div>
 </div>
 <p>This will cause the application to incrementally rebuild when one of the
 linked packages changes. Note that only compiled JavaScript files (and
-the CSS files) are watched by the WebPack process.</p>
+the CSS files) are watched by the WebPack process. This means that if
+your extension is in TypeScript you’ll have to run a <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code>
+before the changes will be reflected in JupyterLab. To avoid this step
+you can also watch the TypeScript sources in your extension which is
+usually assigned to the <code class="docutils literal notranslate"><span class="pre">tsc</span> <span class="pre">-w</span></code> shortcut. If WebPack doesn’t seem to
+detect the changes, this can be related to <a class="reference external" href="https://github.com/webpack/docs/wiki/troubleshooting#not-enough-watchers">the number of available watches</a>.</p>
 <p>Note that the application is built against <strong>released</strong> versions of the
 core JupyterLab extensions. If your extension depends on JupyterLab
 packages, it should be compatible with the dependencies in the
-<code class="docutils literal"><span class="pre">jupyterlab/static/package.json</span></code> file. If you must install a extension
-into a development branch of JupyterLab, you have to graft it into the
-source tree of JupyterLab itself. This may be done using the command</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">run</span> <span class="n">add</span><span class="p">:</span><span class="n">sibling</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span>
+<code class="docutils literal notranslate"><span class="pre">jupyterlab/static/package.json</span></code> file.  Note that building will always use the latest JavaScript packages that meet the dependency requirements of JupyterLab itself and any installed extensions.  If you wish to test against a
+specific patch release of one of the core JupyterLab packages you can
+temporarily pin that requirement to a specific version in your own
+dependencies.</p>
+<p>If you must install an extension into a development branch of JupyterLab, you have to graft it into the source tree of JupyterLab itself. This may be done using the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">run</span> <span class="n">add</span><span class="p">:</span><span class="n">sibling</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">-</span><span class="ow">or</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>in the JupyterLab root directory, where <code class="docutils literal"><span class="pre">&lt;path-or-url&gt;</span></code> refers either
-to an extension npm package on the local filesystem, or a URL to a git
-repository for an extension npm package. This operation may be
+<p>in the JupyterLab root directory, where <code class="docutils literal notranslate"><span class="pre">&lt;path-or-url&gt;</span></code> refers either
+to an extension <code class="docutils literal notranslate"><span class="pre">npm</span></code> package on the local file system, or a URL to a git
+repository for an extension <code class="docutils literal notranslate"><span class="pre">npm</span></code> package. This operation may be
 subsequently reversed by running</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">run</span> <span class="n">remove</span><span class="p">:</span><span class="n">package</span> <span class="o">&lt;</span><span class="n">extension</span><span class="o">-</span><span class="nb">dir</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">run</span> <span class="n">remove</span><span class="p">:</span><span class="n">package</span> <span class="o">&lt;</span><span class="n">extension</span><span class="o">-</span><span class="nb">dir</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>This will remove the package metadata from the source tree, but wil
-<strong>not</strong> remove any files added by the <code class="docutils literal"><span class="pre">addsibling</span></code> script, which
-should be removed manually.</p>
-<p>The package should export EMCAScript 5 compatible JavaScript. It can
-import CSS using the syntax <code class="docutils literal"><span class="pre">require('foo.css')</span></code>. The CSS files can
+<p>This will remove the package metadata from the source tree and delete
+all of the package files.</p>
+<p>The package should export EMCAScript 6 compatible JavaScript. It can
+import CSS using the syntax <code class="docutils literal notranslate"><span class="pre">require('foo.css')</span></code>. The CSS files can
 also import CSS from other packages using the syntax
-<code class="docutils literal"><span class="pre">&#64;import</span> <span class="pre">url('~foo/index.css')</span></code>, where <code class="docutils literal"><span class="pre">foo</span></code> is the name of the
+<code class="docutils literal notranslate"><span class="pre">&#64;import</span> <span class="pre">url('~foo/index.css')</span></code>, where <code class="docutils literal notranslate"><span class="pre">foo</span></code> is the name of the
 package.</p>
 <p>The following file types are also supported (both in JavaScript and
-CSS): json, html, jpg, png, gif, svg, js.map, woff2, ttf, eot.</p>
+CSS): <code class="docutils literal notranslate"><span class="pre">json</span></code>, <code class="docutils literal notranslate"><span class="pre">html</span></code>, <code class="docutils literal notranslate"><span class="pre">jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">png</span></code>, <code class="docutils literal notranslate"><span class="pre">gif</span></code>, <code class="docutils literal notranslate"><span class="pre">svg</span></code>,
+<code class="docutils literal notranslate"><span class="pre">js.map</span></code>, <code class="docutils literal notranslate"><span class="pre">woff2</span></code>, <code class="docutils literal notranslate"><span class="pre">ttf</span></code>, <code class="docutils literal notranslate"><span class="pre">eot</span></code>.</p>
 <p>If your package uses any other file type it must be converted to one of
-the above types. If your JavaScript is written in any other dialect than
-EMCAScript 5 it must be converted using an appropriate tool.</p>
-<p>If you publish your extension on npm.org, users will be able to install
-it as simply <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span> <span class="pre">&lt;foo&gt;</span></code>, where <code class="docutils literal"><span class="pre">&lt;foo&gt;</span></code> is
-the name of the published npm package. You can alternatively provide a
-script that runs <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> against a local folder
+the above types or <a class="reference external" href="https://webpack.js.org/concepts/loaders/#inline">include a loader in the import statement</a>.
+If you include a loader, the loader must be importable at build time, so if
+it is not already installed by JupyterLab, you must add it as a dependency
+of your extension.</p>
+<p>If your JavaScript is written in any other dialect than
+EMCAScript 6 (2015) it should be converted using an appropriate tool.
+You can use Webpack to pre-build your extension to use any of it’s features
+not enabled in our build configuration. To build a compatible package set
+<code class="docutils literal notranslate"><span class="pre">output.libraryTarget</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;commonjs2&quot;</span></code> in your Webpack configuration.
+(see <a class="reference external" href="https://github.com/saulshanabrook/jupyterlab-webpack">this</a> example repo).</p>
+<p>Another option to try out your extension with a local version of JupyterLab is to add it to the
+list of locally installed packages and to have JupyterLab register your extension when it starts up.</p>
+<p>You can do this by adding your extension to the <code class="docutils literal notranslate"><span class="pre">jupyterlab.externalExtensions</span></code> key
+in the <code class="docutils literal notranslate"><span class="pre">dev_mode/package.json</span></code> file. It should be a mapping
+of extension name to version, just like in <code class="docutils literal notranslate"><span class="pre">dependencies</span></code>. Then run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">integrity</span></code>
+and these extensions should be added automatically to the <code class="docutils literal notranslate"><span class="pre">dependencies</span></code> and pulled in.</p>
+<p>When you then run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span> <span class="pre">&amp;&amp;</span> <span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--dev</span></code> or <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--dev</span> <span class="pre">--watch</span></code> this extension
+will be loaded by default. For example, this is how you can add the Jupyter Widgets
+extensions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;externalExtensions&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;@jupyter-widgets/jupyterlab-manager&quot;</span><span class="p">:</span> <span class="s2">&quot;2.0.0&quot;</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>If you publish your extension on <code class="docutils literal notranslate"><span class="pre">npm.org</span></code>, users will be able to install
+it as simply <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span> <span class="pre">&lt;foo&gt;</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;foo&gt;</span></code> is
+the name of the published <code class="docutils literal notranslate"><span class="pre">npm</span></code> package. You can alternatively provide a
+script that runs <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> against a local folder
 path on the user’s machine or a provided tarball. Any valid
-<code class="docutils literal"><span class="pre">npm</span> <span class="pre">install</span></code> specifier can be used in
-<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> (e.g. <code class="docutils literal"><span class="pre">foo&#64;latest</span></code>, <code class="docutils literal"><span class="pre">bar&#64;3.0.0.0</span></code>,
-<code class="docutils literal"><span class="pre">path/to/folder</span></code>, and <code class="docutils literal"><span class="pre">path/to/tar.gz</span></code>).</p>
+<code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span></code> specifier can be used in
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> (e.g. <code class="docutils literal notranslate"><span class="pre">foo&#64;latest</span></code>, <code class="docutils literal notranslate"><span class="pre">bar&#64;3.0.0.0</span></code>,
+<code class="docutils literal notranslate"><span class="pre">path/to/folder</span></code>, and <code class="docutils literal notranslate"><span class="pre">path/to/tar.gz</span></code>).</p>
+<div class="section" id="testing-your-extension">
+<h3>Testing your extension<a class="headerlink" href="#testing-your-extension" title="Permalink to this headline">¶</a></h3>
+<p>There are a number of helper functions in <code class="docutils literal notranslate"><span class="pre">testutils</span></code> in this repo (which
+is a public <code class="docutils literal notranslate"><span class="pre">npm</span></code> package called <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/testutils</span></code>) that can be used when
+writing tests for an extension.  See <code class="docutils literal notranslate"><span class="pre">tests/test-application</span></code> for an example
+of the infrastructure needed to run tests.  There is a <code class="docutils literal notranslate"><span class="pre">karma</span></code> config file
+that points to the parent directory’s <code class="docutils literal notranslate"><span class="pre">karma</span></code> config, and a test runner,
+<code class="docutils literal notranslate"><span class="pre">run-test.py</span></code> that starts a Jupyter server.</p>
+<p>If you are using <a class="reference external" href="https://jestjs.io/">jest</a> to test your extension, you will
+need to transpile the jupyterlab packages to <code class="docutils literal notranslate"><span class="pre">commonjs</span></code> as they are using ES6 modules
+that <code class="docutils literal notranslate"><span class="pre">node</span></code> does not support.</p>
+<p>To transpile jupyterlab packages, you need to install the following package:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">add</span> <span class="o">--</span><span class="n">dev</span> <span class="n">jest</span><span class="o">@^</span><span class="mi">24</span> <span class="nd">@types</span><span class="o">/</span><span class="n">jest</span><span class="o">@^</span><span class="mi">24</span> <span class="n">ts</span><span class="o">-</span><span class="n">jest</span><span class="o">@^</span><span class="mi">24</span> <span class="nd">@babel</span><span class="o">/</span><span class="n">core</span><span class="o">@^</span><span class="mi">7</span> <span class="nd">@babel</span><span class="o">/</span><span class="n">preset</span><span class="o">-</span><span class="n">env</span><span class="o">@^</span><span class="mi">7</span>
+</pre></div>
+</div>
+<p>Then in <cite>jest.config.js</cite>, you will specify to use babel for js files and ignore
+all node modules except the jupyterlab ones:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span><span class="o">.</span><span class="n">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">preset</span><span class="p">:</span> <span class="s1">&#39;ts-jest/presets/js-with-babel&#39;</span><span class="p">,</span>
+  <span class="n">moduleFileExtensions</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;ts&#39;</span><span class="p">,</span> <span class="s1">&#39;tsx&#39;</span><span class="p">,</span> <span class="s1">&#39;js&#39;</span><span class="p">,</span> <span class="s1">&#39;jsx&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span> <span class="s1">&#39;node&#39;</span><span class="p">],</span>
+  <span class="n">transformIgnorePatterns</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;/node_modules/(?!(@jupyterlab/.*)/)&#39;</span><span class="p">],</span>
+  <span class="nb">globals</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s1">&#39;ts-jest&#39;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="n">tsConfig</span><span class="p">:</span> <span class="s1">&#39;tsconfig.json&#39;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="o">...</span> <span class="o">//</span> <span class="n">Other</span> <span class="n">options</span> <span class="n">useful</span> <span class="k">for</span> <span class="n">your</span> <span class="n">extension</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Finally, you will need to configure babel with a <code class="docutils literal notranslate"><span class="pre">babel.config.js</span></code> file containing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span><span class="o">.</span><span class="n">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">presets</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">[</span>
+      <span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span>
+      <span class="p">{</span>
+        <span class="n">targets</span><span class="p">:</span> <span class="p">{</span>
+          <span class="n">node</span><span class="p">:</span> <span class="s1">&#39;current&#39;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">]</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="mime-renderer-extensions">
-<h2>Mime Renderer Extensions<a class="headerlink" href="#mime-renderer-extensions" title="Permalink to this headline">¶</a></h2>
+<span id="rendermime"></span><h2>Mime Renderer Extensions<a class="headerlink" href="#mime-renderer-extensions" title="Permalink to this headline">¶</a></h2>
 <p>Mime Renderer extensions are a convenience for creating an extension
 that can render mime data and potentially render files of a given type.
-We provide cookiecutters for Mime render extensions in
-<a class="reference external" href="https://github.com/jupyterlab/mimerender-cookiecutter">JavaScript</a> and
-<a class="reference external" href="https://github.com/jupyterlab/mimerender-cookiecutter-ts">TypeScript</a>.</p>
+We provide a cookiecutter for mime renderer extensions in TypeScript
+<a class="reference external" href="https://github.com/jupyterlab/mimerender-cookiecutter-ts">here</a>.</p>
 <p>Mime renderer extensions are more declarative than standard extensions.
 The extension is treated the same from the command line perspective
-(<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> ), but it does not directly create
+(<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> ), but it does not directly create
 JupyterLab plugins. Instead it exports an interface given in the
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/interfaces/_rendermime_interfaces_src_index_.irendermime.iextension.html">rendermime-interfaces</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/interfaces/_rendermime_interfaces_src_index_.irendermime.iextension.html">rendermime-interfaces</a>
 package.</p>
 <p>The JupyterLab repo has an example mime renderer extension for
 <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/packages/pdf-extension">pdf</a>
 files. It provides a mime renderer for pdf data and registers itself as
 a document renderer for pdf file types.</p>
-<p>The <code class="docutils literal"><span class="pre">rendermime-interfaces</span></code> package is intended to be the only
+<p>The JupyterLab organization also has a mime renderer extension tutorial
+which adds mp4 video rendering to the application
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab-mp4">here</a>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">rendermime-interfaces</span></code> package is intended to be the only
 JupyterLab package needed to create a mime renderer extension (using the
 interfaces in TypeScript or as a form of documentation if using plain
 JavaScript).</p>
 <p>The only other difference from a standard extension is that has a
-<code class="docutils literal"><span class="pre">jupyterlab</span></code> key in its <code class="docutils literal"><span class="pre">package.json</span></code> with <code class="docutils literal"><span class="pre">&quot;mimeExtension&quot;</span></code>
-metadata. The value can be <code class="docutils literal"><span class="pre">true</span></code> to use the main module of the
-package, or a string path to a specific module (e.g. <code class="docutils literal"><span class="pre">&quot;lib/foo&quot;</span></code>).</p>
-<p>The mime renderer can update its data by calling <code class="docutils literal"><span class="pre">.setData()</span></code> on the
+<code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> key in its <code class="docutils literal notranslate"><span class="pre">package.json</span></code> with <code class="docutils literal notranslate"><span class="pre">&quot;mimeExtension&quot;</span></code>
+metadata. The value can be <code class="docutils literal notranslate"><span class="pre">true</span></code> to use the main module of the
+package, or a string path to a specific module (e.g. <code class="docutils literal notranslate"><span class="pre">&quot;lib/foo&quot;</span></code>).</p>
+<p>The mime renderer can update its data by calling <code class="docutils literal notranslate"><span class="pre">.setData()</span></code> on the
 model it is given to render. This can be used for example to add a
-<code class="docutils literal"><span class="pre">png</span></code> representation of a dynamic figure, which will be picked up by a
+<code class="docutils literal notranslate"><span class="pre">png</span></code> representation of a dynamic figure, which will be picked up by a
 notebook model and added to the notebook document. When using
-<code class="docutils literal"><span class="pre">IDocumentWidgetFactoryOptions</span></code>, you can update the document model by
-calling <code class="docutils literal"><span class="pre">.setData()</span></code> with updated data for the rendered MIME type. The
+<code class="docutils literal notranslate"><span class="pre">IDocumentWidgetFactoryOptions</span></code>, you can update the document model by
+calling <code class="docutils literal notranslate"><span class="pre">.setData()</span></code> with updated data for the rendered MIME type. The
 document can then be saved by the user in the usual manner.</p>
 </div>
 <div class="section" id="themes">
 <h2>Themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h2>
-<p>A theme is a JupyterLab extension that uses a <code class="docutils literal"><span class="pre">ThemeManager</span></code> and can
+<p>A theme is a JupyterLab extension that uses a <code class="docutils literal notranslate"><span class="pre">ThemeManager</span></code> and can
 be loaded and unloaded dynamically. The package must include all static
-assets that are referenced by <code class="docutils literal"><span class="pre">url()</span></code> in its CSS files. Local URLs can
-be used to reference files relative to the location of the referring CSS
-file in the theme directory. For example <code class="docutils literal"><span class="pre">url('images/foo.png')</span></code> or
-<code class="docutils literal"><span class="pre">url('../foo/bar.css')</span></code>can be used to refer local files in the
-theme. Absolute URLs (starting with a <code class="docutils literal"><span class="pre">/</span></code>) or external URLs (e.g.
-<code class="docutils literal"><span class="pre">https:</span></code>) can be used to refer to external assets. The path to the
-theme assets is specified <code class="docutils literal"><span class="pre">package.json</span></code> under the <code class="docutils literal"><span class="pre">&quot;jupyterlab&quot;</span></code>
-key as <code class="docutils literal"><span class="pre">&quot;themeDir&quot;</span></code>. See the <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/packages/theme-light-extension">JupyterLab Light
+assets that are referenced by <code class="docutils literal notranslate"><span class="pre">url()</span></code> in its CSS files. Local URLs can
+be used to reference files relative to the location of the referring sibling CSS files. For example <code class="docutils literal notranslate"><span class="pre">url('images/foo.png')</span></code> or
+<code class="docutils literal notranslate"><span class="pre">url('../foo/bar.css')</span></code>can be used to refer local files in the
+theme. Absolute URLs (starting with a <code class="docutils literal notranslate"><span class="pre">/</span></code>) or external URLs (e.g.
+<code class="docutils literal notranslate"><span class="pre">https:</span></code>) can be used to refer to external assets. The path to the
+theme asset entry point is specified <code class="docutils literal notranslate"><span class="pre">package.json</span></code> under the <code class="docutils literal notranslate"><span class="pre">&quot;jupyterlab&quot;</span></code>
+key as <code class="docutils literal notranslate"><span class="pre">&quot;themePath&quot;</span></code>. See the <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/packages/theme-light-extension">JupyterLab Light
 Theme</a>
 for an example. Ensure that the theme files are included in the
-<code class="docutils literal"><span class="pre">&quot;files&quot;</span></code> metadata in package.json. A theme can optionally specify an
-<code class="docutils literal"><span class="pre">embed.css</span></code> file that can be consumed outside of a JupyterLab
-application.</p>
-<p>To quickly create a theme based on the JupyterLab Light Theme, follow
-the instructions in the <a class="reference external" href="CONTRIBUTING.html#setting-up-a-development-environment">contributing
-guide</a> and
-then run <code class="docutils literal"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">create:theme</span></code> from the repository root directory.
-Once you select a name, title and a description, a new theme folder will
-be created in the current directory. You can move that new folder to a
-location of your choice, and start making desired changes.</p>
-<p>The theme extension is installed the same as a regular extension (see
-[extension authoring](#Extension Authoring)).</p>
+<code class="docutils literal notranslate"><span class="pre">&quot;files&quot;</span></code> metadata in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>.  Note that if you want to use SCSS, SASS, or LESS files,
+you must compile them to CSS and point JupyterLab to the CSS files.</p>
+<p>The theme extension is installed in the same way as a regular extension (see
+<a class="reference external" href="#extension-authoring">extension authoring</a>).</p>
+<p>It is also possible to create a new theme using the
+<a class="reference external" href="https://github.com/jupyterlab/theme-cookiecutter">TypeScript theme cookiecutter</a>.</p>
 </div>
 <div class="section" id="standard-general-purpose-extensions">
 <h2>Standard (General-Purpose) Extensions<a class="headerlink" href="#standard-general-purpose-extensions" title="Permalink to this headline">¶</a></h2>
-<p>See the example, <a class="reference external" href="./notebook.html#how-to-extend-the-notebook-plugin">How to Extend the Notebook
-Plugin</a>. Notice
-that the mime renderer and themes extensions above use a limited,
+<p>JupyterLab’s modular architecture is based around the idea
+that all extensions are on equal footing, and that they interact
+with each other through typed interfaces that are provided by <code class="docutils literal notranslate"><span class="pre">Token</span></code> objects.
+An extension can provide a <code class="docutils literal notranslate"><span class="pre">Token</span></code> to the application,
+which other extensions can then request for their own use.</p>
+<div class="section" id="core-tokens">
+<span id="tokens"></span><h3>Core Tokens<a class="headerlink" href="#core-tokens" title="Permalink to this headline">¶</a></h3>
+<p>The core packages of JupyterLab provide a set of tokens,
+which are listed here, along with short descriptions of when you
+might want to use them in your extensions.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:IConnectionLost</span></code>: A token for invoking the dialog shown
+when JupyterLab has lost its connection to the server. Use this if, for some reason,
+you want to bring up the “connection lost” dialog under new circumstances.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:IInfo</span></code>: A token providing metadata about the current
+application, including currently disabled extensions and whether dev mode is enabled.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:IPaths</span></code>: A token providing information about various
+URLs and server paths for the current application. Use this token if you want to
+assemble URLs to use the JupyterLab REST API.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:ILabStatus</span></code>: An interface for interacting with the application busy/dirty
+status. Use this if you want to set the application “busy” favicon, or to set
+the application “dirty” status, which asks the user for confirmation before leaving.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:ILabShell</span></code>: An interface to the JupyterLab shell.
+The top-level application object also has a reference to the shell, but it has a restricted
+interface in order to be agnostic to different spins on the application.
+Use this to get more detailed information about currently active widgets and layout state.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:ILayoutRestorer</span></code>: An interface to the application layout
+restoration functionality. Use this to have your activities restored across
+page loads.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:IMimeDocumentTracker</span></code>: A widget tracker for documents
+rendered using a mime renderer extension. Use this if you want to list and interact
+with documents rendered by such extensions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/application:IRouter</span></code>: The URL router used by the application.
+Use this to add custom URL-routing for your extension (e.g., to invoke
+a command if the user navigates to a sub-path).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/apputils:ICommandPalette</span></code>: An interface to the application command palette
+in the left panel. Use this to add commands to the palette.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/apputils:ISplashScreen</span></code>: An interface to the splash screen for the application.
+Use this if you want to show the splash screen for your own purposes.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/apputils:IThemeManager</span></code>: An interface to the theme manager for the application.
+Most extensions will not need to use this, as they can register a
+<a class="reference external" href="#themes">theme extension</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/apputils:IWindowResolver</span></code>: An interface to a window resolver for the
+application. JupyterLab workspaces are given a name, which are determined using
+the window resolver. Require this if you want to use the name of the current workspace.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/codeeditor:IEditorServices</span></code>: An interface to the text editor provider
+for the application. Use this to create new text editors and host them in your
+UI elements.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/completer:ICompletionManager</span></code>: An interface to the completion manager
+for the application. Use this to allow your extension to invoke a completer.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/console:IConsoleTracker</span></code>: A widget tracker for code consoles.
+Use this if you want to be able to iterate over and interact with code consoles
+created by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/console:IContentFactory</span></code>: A factory object that creates new code
+consoles. Use this if you want to create and host code consoles in your own UI elements.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/docmanager:IDocumentManager</span></code>: An interface to the manager for all
+documents used by the application. Use this if you want to open and close documents,
+create and delete files, and otherwise interact with the file system.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/documentsearch:ISearchProviderRegistry</span></code>: An interface for a registry of search
+providers for the application. Extensions can register their UI elements with this registry
+to provide find/replace support.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/filebrowser:IFileBrowserFactory</span></code>: A factory object that creates file browsers.
+Use this if you want to create your own file browser (e.g., for a custom storage backend),
+or to interact with other file browsers that have been created by extensions.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/fileeditor:IEditorTracker</span></code>: A widget tracker for file editors.
+Use this if you want to be able to iterate over and interact with file editors
+created by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/htmlviewer:IHTMLViewerTracker</span></code>: A widget tracker for rendered HTML documents.
+Use this if you want to be able to iterate over and interact with HTML documents
+viewed by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/imageviewer:IImageTracker</span></code>: A widget tracker for images.
+Use this if you want to be able to iterate over and interact with images
+viewed by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/inspector:IInspector</span></code>: An interface for adding variable inspectors to widgets.
+Use this to add the ability to hook into the variable inspector to your extension.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/launcher:ILauncher</span></code>: An interface to the application activity launcher.
+Use this to add your extension activities to the launcher panel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/mainmenu:IMainMenu</span></code>: An interface to the main menu bar for the application.
+Use this if you want to add your own menu items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/markdownviewer:IMarkdownViewerTracker</span></code>: A widget tracker for markdown
+document viewers. Use this if you want to iterate over and interact with rendered markdown documents.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/notebook:INotebookTools</span></code>: An interface to the <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">Tools</span></code> panel in the
+application left area. Use this to add your own functionality to the panel.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/notebook:IContentFactory</span></code>: A factory object that creates new notebooks.
+Use this if you want to create and host notebooks in your own UI elements.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/notebook:INotebookTracker</span></code>: A widget tracker for notebooks.
+Use this if you want to be able to iterate over and interact with notebooks
+created by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/rendermime:IRenderMimeRegistry</span></code>: An interface to the rendermime registry
+for the application. Use this to create renderers for various mime-types in your extension.
+Most extensions will not need to use this, as they can register a
+<a class="reference external" href="#mime-renderer-extensions">mime renderer extension</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/rendermime:ILatexTypesetter</span></code>: An interface to the LaTeX typesetter for the
+application. Use this if you want to typeset math in your extension.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/settingeditor:ISettingEditorTracker</span></code>: A widget tracker for setting editors.
+Use this if you want to be able to iterate over and interact with setting editors
+created by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/settingregistry:ISettingRegistry</span></code>: An interface to the JupyterLab settings system.
+Use this if you want to store settings for your application.
+See <a class="reference external" href="#extension-settings">extension settings</a> for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/statedb:IStateDB</span></code>: An interface to the JupyterLab state database.
+Use this if you want to store data that will persist across page loads.
+See <a class="reference external" href="#state-database">state database</a> for more information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/statusbar:IStatusBar</span></code>: An interface to the status bar on the application.
+Use this if you want to add new status bar items.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/terminal:ITerminalTracker</span></code>: A widget tracker for terminals.
+Use this if you want to be able to iterate over and interact with terminals
+created by the application.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/tooltip:ITooltipManager</span></code>: An interface to the tooltip manager for the application.
+Use this to allow your extension to invoke a tooltip.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/vdom:IVDOMTracker</span></code>: A widget tracker for virtual DOM (VDOM) documents.
+Use this to iterate over and interact with VDOM instances created by the application.</p></li>
+</ul>
+</div>
+<div class="section" id="standard-extension-example">
+<h3>Standard Extension Example<a class="headerlink" href="#standard-extension-example" title="Permalink to this headline">¶</a></h3>
+<p>For a concrete example of a standard extension, see <a class="reference internal" href="notebook.html#extend-notebook-plugin"><span class="std std-ref">How to extend the Notebook plugin</span></a>.
+Notice that the mime renderer extensions use a limited,
 simplified interface to JupyterLab’s extension system. Modifying the
 notebook plugin requires the full, general-purpose interface to the
 extension system.</p>
 </div>
+<div class="section" id="storing-extension-data">
+<h3>Storing Extension Data<a class="headerlink" href="#storing-extension-data" title="Permalink to this headline">¶</a></h3>
+<p>In addition to the file system that is accessed by using the
+<code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/services</span></code> package, JupyterLab exposes a plugin settings
+system that can be used to provide default setting values and user overrides.</p>
 <div class="section" id="extension-settings">
-<h2>Extension Settings<a class="headerlink" href="#extension-settings" title="Permalink to this headline">¶</a></h2>
+<h4>Extension Settings<a class="headerlink" href="#extension-settings" title="Permalink to this headline">¶</a></h4>
 <p>An extension can specify user settings using a JSON Schema. The schema
-definition should be in a file that resides in the <code class="docutils literal"><span class="pre">schemaDir</span></code>
-directory that is specified in the <code class="docutils literal"><span class="pre">package.json</span></code> file of the
+definition should be in a file that resides in the <code class="docutils literal notranslate"><span class="pre">schemaDir</span></code>
+directory that is specified in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file of the
 extension. The actual file name should use is the part that follows the
 package name of extension. So for example, the JupyterLab
-<code class="docutils literal"><span class="pre">apputils-extension</span></code> package hosts several plugins:</p>
+<code class="docutils literal notranslate"><span class="pre">apputils-extension</span></code> package hosts several plugins:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">'&#64;jupyterlab/apputils-extension:menu'</span></code></li>
-<li><code class="docutils literal"><span class="pre">'&#64;jupyterlab/apputils-extension:palette'</span></code></li>
-<li><code class="docutils literal"><span class="pre">'&#64;jupyterlab/apputils-extension:settings'</span></code></li>
-<li><code class="docutils literal"><span class="pre">'&#64;jupyterlab/apputils-extension:themes'</span></code></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'&#64;jupyterlab/apputils-extension:menu'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'&#64;jupyterlab/apputils-extension:palette'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'&#64;jupyterlab/apputils-extension:settings'</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">'&#64;jupyterlab/apputils-extension:themes'</span></code></p></li>
 </ul>
-<p>And in the <code class="docutils literal"><span class="pre">package.json</span></code> for <code class="docutils literal"><span class="pre">&#64;jupyterlab/apputils-extension</span></code>, the
-<code class="docutils literal"><span class="pre">schemaDir</span></code> field is a directory called <code class="docutils literal"><span class="pre">schema</span></code>. Since the
-<code class="docutils literal"><span class="pre">themes</span></code> plugin requires a JSON schema, its schema file location is:
-<code class="docutils literal"><span class="pre">schema/themes.json</span></code>. The plugin’s name is used to automatically
+<p>And in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> for <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/apputils-extension</span></code>, the
+<code class="docutils literal notranslate"><span class="pre">schemaDir</span></code> field is a directory called <code class="docutils literal notranslate"><span class="pre">schema</span></code>. Since the
+<code class="docutils literal notranslate"><span class="pre">themes</span></code> plugin requires a JSON schema, its schema file location is:
+<code class="docutils literal notranslate"><span class="pre">schema/themes.json</span></code>. The plugin’s name is used to automatically
 associate it with its settings file, so this naming convention is
-important. Ensure that the schema files are included in the <code class="docutils literal"><span class="pre">&quot;files&quot;</span></code>
-metadata in <code class="docutils literal"><span class="pre">package.json</span></code>.</p>
+important. Ensure that the schema files are included in the <code class="docutils literal notranslate"><span class="pre">&quot;files&quot;</span></code>
+metadata in <code class="docutils literal notranslate"><span class="pre">package.json</span></code>.</p>
 <p>See the
 <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/packages/fileeditor-extension">fileeditor-extension</a>
 for another example of an extension that uses settings.</p>
-</div>
-<div class="section" id="storing-extension-data">
-<h2>Storing Extension Data<a class="headerlink" href="#storing-extension-data" title="Permalink to this headline">¶</a></h2>
-<p>In addition to the file system that is accessed by using the
-<code class="docutils literal"><span class="pre">&#64;jupyterlab/services</span></code> package, JupyterLab offers two ways for
-extensions to store data: a client-side state database that is built on
-top of <code class="docutils literal"><span class="pre">localStorage</span></code> and a plugin settings system that allows for
-default setting values and user overrides.</p>
-<div class="section" id="state-database">
-<h3>State Database<a class="headerlink" href="#state-database" title="Permalink to this headline">¶</a></h3>
-<p>The state database can be accessed by importing <code class="docutils literal"><span class="pre">IStateDB</span></code> from
-<code class="docutils literal"><span class="pre">&#64;jupyterlab/coreutils</span></code> and adding it to the list of <code class="docutils literal"><span class="pre">requires</span></code> for
-a plugin:</p>
-<div class="code typescript highlight-default"><div class="highlight"><pre><span></span>const id = &#39;foo-extension:IFoo&#39;;
-
-const IFoo = new Token&lt;IFoo&gt;(id);
-
-interface IFoo {}
-
-class Foo implements IFoo {}
-
-const plugin: JupyterLabPlugin&lt;IFoo&gt; = {
-  id,
-  requires: [IStateDB],
-  provides: IFoo,
-  activate: (app: JupyterLab, state: IStateDB): IFoo =&gt; {
-    const foo = new Foo();
-    const key = `${id}:some-attribute`;
-
-    // Load the saved plugin state and apply it once the app
-    // has finished restoring its former layout.
-    Promise.all([state.fetch(key), app.restored])
-      .then(([saved]) =&gt; { /* Update `foo` with `saved`. */ });
-
-    // Fulfill the plugin contract by returning an `IFoo`.
-    return foo;
-  },
-  autoStart: true
-};
+<p>Note: You can override default values of the extension settings by
+defining new default values in an <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code> file in the
+application settings directory. So for example, if you would like
+to set the dark theme by default instead of the light one, an
+<code class="docutils literal notranslate"><span class="pre">overrides.json</span></code> file containing the following lines needs to be
+added in the application settings directory (by default this is the
+<code class="docutils literal notranslate"><span class="pre">share/jupyter/lab/settings</span></code> folder).</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@jupyterlab/apputils-extension:themes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;JupyterLab Dark&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
+</div>
+</div>
+<div class="section" id="state-database">
+<h4>State Database<a class="headerlink" href="#state-database" title="Permalink to this headline">¶</a></h4>
+<p>The state database can be accessed by importing <code class="docutils literal notranslate"><span class="pre">IStateDB</span></code> from
+<code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/statedb</span></code> and adding it to the list of <code class="docutils literal notranslate"><span class="pre">requires</span></code> for
+a plugin:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;foo-extension:IFoo&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">IFoo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Token</span><span class="o">&lt;</span><span class="nx">IFoo</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+
+<span class="kr">interface</span> <span class="nx">IFoo</span> <span class="p">{}</span>
+
+<span class="kr">class</span> <span class="nx">Foo</span> <span class="kr">implements</span> <span class="nx">IFoo</span> <span class="p">{}</span>
+
+<span class="kr">const</span> <span class="nx">plugin</span>: <span class="kt">JupyterFrontEndPlugin</span><span class="o">&lt;</span><span class="nx">IFoo</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">id</span><span class="p">,</span>
+  <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="nx">IStateDB</span><span class="p">],</span>
+  <span class="nx">provides</span>: <span class="kt">IFoo</span><span class="p">,</span>
+  <span class="nx">activate</span><span class="o">:</span> <span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">state</span>: <span class="kt">IStateDB</span><span class="p">)</span><span class="o">:</span> <span class="nx">IFoo</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Foo</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="sb">`</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">:some-attribute`</span><span class="p">;</span>
+
+    <span class="c1">// Load the saved plugin state and apply it once the app</span>
+    <span class="c1">// has finished restoring its former layout.</span>
+    <span class="nx">Promise</span><span class="p">.</span><span class="nx">all</span><span class="p">([</span><span class="nx">state</span><span class="p">.</span><span class="nx">fetch</span><span class="p">(</span><span class="nx">key</span><span class="p">),</span> <span class="nx">app</span><span class="p">.</span><span class="nx">restored</span><span class="p">])</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(([</span><span class="nx">saved</span><span class="p">])</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="cm">/* Update `foo` with `saved`. */</span> <span class="p">});</span>
+
+    <span class="c1">// Fulfill the plugin contract by returning an `IFoo`.</span>
+    <span class="k">return</span> <span class="nx">foo</span><span class="p">;</span>
+  <span class="p">},</span>
+  <span class="nx">autoStart</span>: <span class="kt">true</span>
+<span class="p">};</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="context-menus">
 <h3>Context Menus<a class="headerlink" href="#context-menus" title="Permalink to this headline">¶</a></h3>
 <p>JupyterLab has an application-wide context menu available as
-<code class="docutils literal"><span class="pre">app.contextMenu</span></code>. See the Phosphor
-<a class="reference external" href="http://phosphorjs.github.io/phosphor/api/widgets/interfaces/contextmenu.iitemoptions.html">docs</a>
-for the item creation options. If you wish to preempt the the
+<code class="docutils literal notranslate"><span class="pre">app.contextMenu</span></code>. See the Lumino
+<a class="reference external" href="https://jupyterlab.github.io/lumino/widgets/interfaces/contextmenu.iitemoptions.html">docs</a>
+for the item creation options. If you wish to preempt the
 application context menu, you can use a ‘contextmenu’ event listener and
-call <code class="docutils literal"><span class="pre">event.stopPropagation</span></code> to prevent the application context menu
+call <code class="docutils literal notranslate"><span class="pre">event.stopPropagation</span></code> to prevent the application context menu
 handler from being called (it is listening in the bubble phase on the
-<code class="docutils literal"><span class="pre">document</span></code>). At this point you could show your own Phosphor
-<a class="reference external" href="http://phosphorjs.github.io/phosphor/api/widgets/classes/contextmenu.html">contextMenu</a>,
+<code class="docutils literal notranslate"><span class="pre">document</span></code>). At this point you could show your own Lumino
+<a class="reference external" href="https://jupyterlab.github.io/lumino/widgets/classes/contextmenu.html">contextMenu</a>,
 or simply stop propagation and let the system context menu be shown.
-This would look something like the following in a <code class="docutils literal"><span class="pre">Widget</span></code> subclass:</p>
-<div class="code javascript highlight-default"><div class="highlight"><pre><span></span>// In `onAfterAttach()`
-this.node.addEventListener(&#39;contextmenu&#39;, this);
+This would look something like the following in a <code class="docutils literal notranslate"><span class="pre">Widget</span></code> subclass:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// In `onAfterAttach()`</span>
+<span class="k">this</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;contextmenu&#39;</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
 
-// In `handleEvent()`
-case &#39;contextmenu&#39;:
-  event.stopPropagation();
+<span class="c1">// In `handleEvent()`</span>
+<span class="k">case</span> <span class="s1">&#39;contextmenu&#39;</span><span class="o">:</span>
+  <span class="nx">event</span><span class="p">.</span><span class="nx">stopPropagation</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="using-react">
+<h3>Using React<a class="headerlink" href="#using-react" title="Permalink to this headline">¶</a></h3>
+<p>We also provide support for using <a class="reference internal" href="virtualdom.html#react"><span class="std std-ref">React</span></a> in your JupyterLab
+extensions, as well as in the core codebase.</p>
+</div>
+<div class="section" id="companion-packages">
+<span id="ext-author-companion-packages"></span><h3>Companion Packages<a class="headerlink" href="#companion-packages" title="Permalink to this headline">¶</a></h3>
+<p>If your extensions depends on the presence of one or more packages in the
+kernel, or on a notebook server extension, you can add metadata to indicate
+this to the extension manager by adding metadata to your package.json file.
+The full options available are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;jupyterlab&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;discovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;kernel&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;kernel_spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;regexp for matching kernel language&gt;&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;display_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;regexp for matching kernel display name&gt;&quot;</span>   <span class="o">//</span> <span class="n">optional</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;the name of the kernel package&gt;&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;overrides&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="o">//</span> <span class="n">optional</span>
+          <span class="s2">&quot;&lt;manager name, e.g. &#39;pip&#39;&gt;&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name of kernel package on pip, if it differs from base name&gt;&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;managers&quot;</span><span class="p">:</span> <span class="p">[</span>   <span class="o">//</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">package</span> <span class="n">managers</span> <span class="n">that</span> <span class="n">have</span> <span class="n">your</span> <span class="n">kernel</span> <span class="n">package</span>
+            <span class="s2">&quot;pip&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;conda&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="s2">&quot;server&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;the name of the server extension package&gt;&quot;</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;overrides&quot;</span><span class="p">:</span> <span class="p">{</span>   <span class="o">//</span> <span class="n">optional</span>
+        <span class="s2">&quot;&lt;manager name, e.g. &#39;pip&#39;&gt;&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name of server extension package on pip, if it differs from base name&gt;&quot;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;managers&quot;</span><span class="p">:</span> <span class="p">[</span>   <span class="o">//</span> <span class="nb">list</span> <span class="n">of</span> <span class="n">package</span> <span class="n">managers</span> <span class="n">that</span> <span class="n">have</span> <span class="n">your</span> <span class="n">server</span> <span class="n">extension</span> <span class="n">package</span>
+          <span class="s2">&quot;pip&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;conda&quot;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A typical setup for e.g. a jupyter-widget based package will then be:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;keywords&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;jupyterlab-extension&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jupyter&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;widgets&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jupyterlab&quot;</span>
+<span class="p">],</span>
+<span class="s2">&quot;jupyterlab&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+  <span class="s2">&quot;discovery&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;kernel&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">&quot;kernel_spec&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;language&quot;</span><span class="p">:</span> <span class="s2">&quot;^python&quot;</span><span class="p">,</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;base&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;myipywidgetspackage&quot;</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;managers&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s2">&quot;pip&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;conda&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Currently supported package managers are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conda</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="shipping-packages">
+<h3>Shipping Packages<a class="headerlink" href="#shipping-packages" title="Permalink to this headline">¶</a></h3>
+<p>Most extensions are single JavaScript packages, and can be shipped on npmjs.org.
+This makes them discoverable by the JupyterLab extension manager, provided they
+have the <code class="docutils literal notranslate"><span class="pre">jupyterlab-extension</span></code> keyword  in their <code class="docutils literal notranslate"><span class="pre">package.json</span></code>.  If the package also
+contains a server extension (Python package), the author has two options.
+The server extension and the JupyterLab extension can be shipped in a single package,
+or they can be shipped separately.</p>
+<p>The JupyterLab extension can be bundled in a package on PyPI and conda-forge so
+that it ends up in the user’s application directory.  Note that the user will still have to run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">build</span></code>
+(or build when prompted in the UI) in order to use the extension.
+The general idea is to pack the Jupyterlab extension using <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">pack</span></code>, and then
+use the <code class="docutils literal notranslate"><span class="pre">data_files</span></code> logic in <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> to ensure the file ends up in the
+<code class="docutils literal notranslate"><span class="pre">&lt;jupyterlab_application&gt;/share/jupyter/lab/extensions</span></code>
+directory.</p>
+<p>Note that even if the JupyterLab extension is unusable without the
+server extension, as long as you use the companion package metadata it is still
+useful to publish it to npmjs.org so it is discoverable by the JupyterLab extension manager.</p>
+<p>The server extension can be enabled on install by using <code class="docutils literal notranslate"><span class="pre">data_files</span></code>.
+an example of this approach is <a class="reference external" href="https://github.com/matplotlib/jupyter-matplotlib/tree/ce9cc91e52065d33e57c3265282640f2aa44e08f">jupyterlab-matplotlib</a>.  The file used to enable the server extension is <a class="reference external" href="https://github.com/matplotlib/jupyter-matplotlib/blob/ce9cc91e52065d33e57c3265282640f2aa44e08f/jupyter-matplotlib.json">here</a>.   The logic to ship the JS tarball and server extension
+enabler is in <a class="reference external" href="https://github.com/matplotlib/jupyter-matplotlib/blob/ce9cc91e52065d33e57c3265282640f2aa44e08f/setup.py">setup.py</a>.  Note that the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>
+file has additional logic to automatically create the JS tarball as part of the
+release process, but this could also be done manually.</p>
+<p>Technically, a package that contains only a JupyterLab extension could be created
+and published on <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>, but it would not be discoverable by the JupyterLab
+extension manager.</p>
+</div>
+<div class="section" id="listings">
+<h3>Listings<a class="headerlink" href="#listings" title="Permalink to this headline">¶</a></h3>
+<p>You can develop on the extension manager package and <a class="reference internal" href="../user/extensions.html#extension-listings"><span class="std std-ref">Listings</span></a> with the
+example shipped in the <code class="docutils literal notranslate"><span class="pre">packages/extensionmanager-extension/examples/listings</span></code> folder.</p>
+<p>Follow the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> instructions in that folder.</p>
+</div>
 </div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="documents.html" class="btn btn-neutral float-right" title="Documents" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="repo.html" class="btn btn-neutral" title="General Codebase Orientation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="repo.html" title="previous page">Developer Guide</a>
+    <a class='right-next' id="next-link" href="extension_points.html" title="next page">Common Extension Points</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
     </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
   
 
   <hr/>
@@ -569,47 +1067,5 @@ case &#39;contextmenu&#39;:
 
 </footer>
 
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0 Beta',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>

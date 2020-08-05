@@ -1,0 +1,1196 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Let’s Make an Astronomy Picture of the Day JupyterLab Extension &#8212; JupyterLab 3.0.0a5 documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JupyterLab 1.x to 2.x Extension Migration Guide" href="extension_migration.html" />
+    <link rel="prev" title="Terminology" href="terminology.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="extension_dev.html">Extension Developer Guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_points.html">Common Extension Points</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="contributing.html">Contributing to JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="components.html">Using JupyterLab components</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_components.html">Reusing JupyterLab UI</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents.html">Documents</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebook</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="patterns.html">Design Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="css.html">CSS Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="virtualdom.html">React</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_helpers.html">User Interface Helpers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminology.html">Terminology</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_migration.html">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#set-up-a-development-environment" class="nav-link">Set up a development environment</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#install-conda-using-miniconda" class="nav-link">Install conda using miniconda</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#install-nodejs-jupyterlab-etc-in-a-conda-environment" class="nav-link">Install NodeJS, JupyterLab, etc. in a conda environment</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#create-a-repository" class="nav-link">Create a repository</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#create-an-extension-project" class="nav-link">Create an extension project</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#initialize-the-project-from-a-cookiecutter" class="nav-link">Initialize the project from a cookiecutter</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#build-and-install-the-extension-for-development" class="nav-link">Build and install the extension for development</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#see-the-initial-extension-in-action" class="nav-link">See the initial extension in action</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#commit-what-you-have-to-git" class="nav-link">Commit what you have to git</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#add-an-astronomy-picture-of-the-day-widget" class="nav-link">Add an Astronomy Picture of the Day widget</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#show-an-empty-panel" class="nav-link">Show an empty panel</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#show-a-picture-in-the-panel" class="nav-link">Show a picture in the panel</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#improve-the-widget-behavior" class="nav-link">Improve the widget behavior</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#center-the-image-add-attribution-and-error-messaging" class="nav-link">Center the image, add attribution, and error messaging</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#show-a-new-image-on-demand" class="nav-link">Show a new image on demand</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#restore-panel-state-when-the-browser-refreshes" class="nav-link">Restore panel state when the browser refreshes</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#publish-your-extension-to-npmjs-org" class="nav-link">Publish your extension to npmjs.org</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#learn-more" class="nav-link">Learn more</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="let-s-make-an-astronomy-picture-of-the-day-jupyterlab-extension">
+<span id="extension-tutorial"></span><h1>Let’s Make an Astronomy Picture of the Day JupyterLab Extension<a class="headerlink" href="#let-s-make-an-astronomy-picture-of-the-day-jupyterlab-extension" title="Permalink to this headline">¶</a></h1>
+<p>JupyterLab extensions add features to the user experience. This page
+describes how to create one type of extension, an <em>application plugin</em>,
+that:</p>
+<ul class="simple">
+<li><p>Adds a “Random <a class="reference external" href="https://apod.nasa.gov/apod/astropix.html">Astronomy Picture</a>” command to the
+<em>command palette</em> sidebar</p></li>
+<li><p>Fetches the image and metadata when activated</p></li>
+<li><p>Shows the image and metadata in a tab panel</p></li>
+</ul>
+<p>By working through this tutorial, you’ll learn:</p>
+<ul class="simple">
+<li><p>How to set up an extension development environment from scratch on a
+Linux or OSX machine. (You’ll need to modify the commands slightly if you are on Windows.)</p></li>
+<li><p>How to start an extension project from
+<a class="reference external" href="https://github.com/jupyterlab/extension-cookiecutter-ts">jupyterlab/extension-cookiecutter-ts</a></p></li>
+<li><p>How to iteratively code, build, and load your extension in JupyterLab</p></li>
+<li><p>How to version control your work with git</p></li>
+<li><p>How to release your extension for others to enjoy</p></li>
+</ul>
+<div class="figure align-center" id="id2">
+<img alt="The completed extension, showing the Astronomy Picture of the Day for 24 Jul 2015." class="jp-screenshot" src="../_images/extension_tutorial_complete.png" />
+<p class="caption"><span class="caption-text">The completed extension, showing the <a class="reference external" href="https://apod.nasa.gov/apod/ap150724.html">Astronomy Picture of the Day for 24 Jul 2015</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Sound like fun? Excellent. Here we go!</p>
+<div class="section" id="set-up-a-development-environment">
+<h2>Set up a development environment<a class="headerlink" href="#set-up-a-development-environment" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install-conda-using-miniconda">
+<h3>Install conda using miniconda<a class="headerlink" href="#install-conda-using-miniconda" title="Permalink to this headline">¶</a></h3>
+<p>Start by installing miniconda, following
+<a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html">Conda’s installation documentation</a>.</p>
+</div>
+<div class="section" id="install-nodejs-jupyterlab-etc-in-a-conda-environment">
+<span id="id1"></span><h3>Install NodeJS, JupyterLab, etc. in a conda environment<a class="headerlink" href="#install-nodejs-jupyterlab-etc-in-a-conda-environment" title="Permalink to this headline">¶</a></h3>
+<p>Next create a conda environment that includes:</p>
+<ol class="arabic simple">
+<li><p>the latest release of JupyterLab</p></li>
+<li><p><a class="reference external" href="https://github.com/audreyr/cookiecutter">cookiecutter</a>, the tool
+you’ll use to bootstrap your extension project structure (this is a Python tool
+which we’ll install using conda below).</p></li>
+<li><p><a class="reference external" href="https://nodejs.org">NodeJS</a>, the JavaScript runtime you’ll use to
+compile the web assets (e.g., TypeScript, CSS) for your extension</p></li>
+<li><p><a class="reference external" href="https://git-scm.com">git</a>, a version control system you’ll use to
+take snapshots of your work as you progress through this tutorial</p></li>
+</ol>
+<p>It’s a best practice to leave the root conda environment (i.e., the environment created
+by the miniconda installer) untouched and install your project-specific
+dependencies in a named conda environment. Run this command to create a
+new environment named <code class="docutils literal notranslate"><span class="pre">jupyterlab-ext</span></code>.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n jupyterlab-ext --override-channels --strict-channel-priority -c conda-forge -c anaconda jupyterlab cookiecutter nodejs git
+</pre></div>
+</div>
+<p>Now activate the new environment so that all further commands you run
+work out of that environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate jupyterlab-ext
+</pre></div>
+</div>
+<p>Note: You’ll need to run the command above in each new terminal you open
+before you can work with the tools you installed in the
+<code class="docutils literal notranslate"><span class="pre">jupyterlab-ext</span></code> environment.</p>
+<p>Note: if you have an older version of JupyterLab previously installed, you may need to update
+the version of JupyterLab manually.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge <span class="nv">jupyterlab</span><span class="o">=</span><span class="m">2</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="create-a-repository">
+<h2>Create a repository<a class="headerlink" href="#create-a-repository" title="Permalink to this headline">¶</a></h2>
+<p>Create a new repository for your extension (see, for example, the
+<a class="reference external" href="https://help.github.com/articles/create-a-repo/">GitHub instructions</a>. This is an
+optional step, but highly recommended if you want to share your
+extension.</p>
+</div>
+<div class="section" id="create-an-extension-project">
+<h2>Create an extension project<a class="headerlink" href="#create-an-extension-project" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="initialize-the-project-from-a-cookiecutter">
+<h3>Initialize the project from a cookiecutter<a class="headerlink" href="#initialize-the-project-from-a-cookiecutter" title="Permalink to this headline">¶</a></h3>
+<p>Next use cookiecutter to create a new project for your extension.
+This will create a new folder for your extension in your current directory.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cookiecutter https://github.com/jupyterlab/extension-cookiecutter-ts
+</pre></div>
+</div>
+<p>When prompted, enter values like the following for all of the cookiecutter
+prompts (<code class="docutils literal notranslate"><span class="pre">apod</span></code> stands for Astronomy Picture of the Day, the NASA service we
+are using to fetch pictures).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">author_name</span> <span class="p">[]:</span> <span class="n">Your</span> <span class="n">Name</span>
+<span class="n">extension_name</span> <span class="p">[</span><span class="n">myextension</span><span class="p">]:</span> <span class="n">jupyterlab_apod</span>
+<span class="n">project_short_description</span> <span class="p">[</span><span class="n">A</span> <span class="n">JupyterLab</span> <span class="n">extension</span><span class="o">.</span><span class="p">]:</span> <span class="n">Show</span> <span class="n">a</span> <span class="n">random</span> <span class="n">NASA</span> <span class="n">Astronomy</span> <span class="n">Picture</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Day</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">JupyterLab</span> <span class="n">panel</span>
+<span class="n">has_server_extension</span> <span class="p">[</span><span class="n">n</span><span class="p">]:</span> <span class="n">n</span>
+<span class="n">repository</span> <span class="p">[</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">my_name</span><span class="o">/</span><span class="n">myextension</span><span class="p">]:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">my_name</span><span class="o">/</span><span class="n">jupyterlab_apod</span>
+</pre></div>
+</div>
+<p>Note: if not using a repository, leave the repository field blank. You can come
+back and edit the repository field in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file later.</p>
+<p>Change to the directory the cookiecutter created and list the files.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> jupyterlab_apod
+ls
+</pre></div>
+</div>
+<p>You should see a list like the following.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LICENSE</span>  <span class="n">README</span><span class="o">.</span><span class="n">md</span>  <span class="n">package</span><span class="o">.</span><span class="n">json</span>  <span class="n">src</span>  <span class="n">style</span>  <span class="n">tsconfig</span><span class="o">.</span><span class="n">json</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="build-and-install-the-extension-for-development">
+<h3>Build and install the extension for development<a class="headerlink" href="#build-and-install-the-extension-for-development" title="Permalink to this headline">¶</a></h3>
+<p>Your new extension project has enough code in it to see it working in
+your JupyterLab. Run the following commands to install the initial
+project dependencies and install it in the JupyterLab environment. We
+defer building since it will be built in the next step.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This tutorial uses <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> to install Javascript packages and
+run build commands, which is JupyterLab’s bundled
+version of <code class="docutils literal notranslate"><span class="pre">yarn</span></code>. If you prefer, you can use another Javascript
+package manager like <code class="docutils literal notranslate"><span class="pre">npm</span></code> or <code class="docutils literal notranslate"><span class="pre">yarn</span></code> itself.</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm install
+jupyter labextension install . --no-build
+</pre></div>
+</div>
+<p>After the install completes, open a second terminal. Run these commands
+to activate the <code class="docutils literal notranslate"><span class="pre">jupyterlab-ext</span></code> environment and to start a JupyterLab
+instance in watch mode so that it will keep up with our changes as we
+make them.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda activate jupyterlab-ext
+jupyter lab --watch
+</pre></div>
+</div>
+</div>
+<div class="section" id="see-the-initial-extension-in-action">
+<h3>See the initial extension in action<a class="headerlink" href="#see-the-initial-extension-in-action" title="Permalink to this headline">¶</a></h3>
+<p>After building with your extension, JupyterLab should open in your
+default web browser.</p>
+<p>In that browser window, open the JavaScript console
+by following the instructions for your browser:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.chrome.com/devtools#access">Accessing the DevTools in Google
+Chrome</a></p></li>
+<li><p><a class="reference external" href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Opening_the_Web_Console">Opening the Web Console in
+Firefox</a></p></li>
+</ul>
+<p>After you reload the page with the console open, you should see a message that says
+<code class="docutils literal notranslate"><span class="pre">JupyterLab</span> <span class="pre">extension</span> <span class="pre">jupyterlab_apod</span> <span class="pre">is</span> <span class="pre">activated!</span></code> in the console.
+If you do, congratulations, you’re ready to start modifying the extension!
+If not, go back make sure you didn’t miss a step, and <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/README.md#getting-help">reach
+out</a> if you’re stuck.</p>
+<p>Note: Leave the terminal running the <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--watch</span></code> command
+open.</p>
+</div>
+<div class="section" id="commit-what-you-have-to-git">
+<h3>Commit what you have to git<a class="headerlink" href="#commit-what-you-have-to-git" title="Permalink to this headline">¶</a></h3>
+<p>Run the following commands in your <code class="docutils literal notranslate"><span class="pre">jupyterlab_apod</span></code> folder to
+initialize it as a git repository and commit the current code.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git init
+git add .
+git commit -m <span class="s1">&#39;Seed apod project from cookiecutter&#39;</span>
+</pre></div>
+</div>
+<p>Note: This step is not technically necessary, but it is good practice to
+track changes in version control system in case you need to rollback to
+an earlier version or want to collaborate with others. For example, you
+can compare your work throughout this tutorial with the commits in a
+reference version of <code class="docutils literal notranslate"><span class="pre">jupyterlab_apod</span></code> on GitHub at
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod">https://github.com/jupyterlab/jupyterlab_apod</a>.</p>
+</div>
+</div>
+<div class="section" id="add-an-astronomy-picture-of-the-day-widget">
+<h2>Add an Astronomy Picture of the Day widget<a class="headerlink" href="#add-an-astronomy-picture-of-the-day-widget" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="show-an-empty-panel">
+<h3>Show an empty panel<a class="headerlink" href="#show-an-empty-panel" title="Permalink to this headline">¶</a></h3>
+<p>The <em>command palette</em> is the primary view of all commands available to
+you in JupyterLab. For your first addition, you’re going to add a
+<em>Random Astronomy Picture</em> command to the palette and get it to show an <em>Astronomy Picture</em>
+tab panel when invoked.</p>
+<p>Fire up your favorite text editor and open the <code class="docutils literal notranslate"><span class="pre">src/index.ts</span></code> file in
+your extension project. Change the import at the top of the file to get
+a reference to the command palette interface and the Jupyter front end.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">JupyterFrontEndPlugin</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/application&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">ICommandPalette</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/apputils&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Locate the <code class="docutils literal notranslate"><span class="pre">extension</span></code> object of type <code class="docutils literal notranslate"><span class="pre">JupyterFrontEndPlugin</span></code>. Change the
+definition so that it reads like so:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm"> * Initialization data for the jupyterlab_apod extension.</span>
+<span class="cm"> */</span>
+<span class="kr">const</span> <span class="nx">extension</span>: <span class="kt">JupyterFrontEndPlugin</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;jupyterlab-apod&#39;</span><span class="p">,</span>
+  <span class="nx">autoStart</span>: <span class="kt">true</span><span class="p">,</span>
+  <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="nx">ICommandPalette</span><span class="p">],</span>
+  <span class="nx">activate</span><span class="o">:</span> <span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;JupyterLab extension jupyterlab_apod is activated!&#39;</span><span class="p">);</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;ICommandPalette:&#39;</span><span class="p">,</span> <span class="nx">palette</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">requires</span></code> attribute states that your plugin needs an object that
+implements the <code class="docutils literal notranslate"><span class="pre">ICommandPalette</span></code> interface when it starts. JupyterLab
+will pass an instance of <code class="docutils literal notranslate"><span class="pre">ICommandPalette</span></code> as the second parameter of
+<code class="docutils literal notranslate"><span class="pre">activate</span></code> in order to satisfy this requirement. Defining
+<code class="docutils literal notranslate"><span class="pre">palette:</span> <span class="pre">ICommandPalette</span></code> makes this instance available to your code
+in that function. The second <code class="docutils literal notranslate"><span class="pre">console.log</span></code> line exists only so that
+you can immediately check that your changes work.</p>
+<p>Now you will need to install these dependencies. Run the following commands in the
+repository root folder to install the dependencies and save them to your
+<cite>package.json</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm add @jupyterlab/apputils
+jlpm add @jupyterlab/application
+</pre></div>
+</div>
+<p>Finally, run the following to rebuild your extension.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build
+</pre></div>
+</div>
+<p>JupyterLab will rebuild after the extension does. You can
+see it’s progress in the <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--watch</span></code> window. After that
+finishes, return to the browser tab that opened when you
+started JupyterLab. Refresh it and look in the console. You should see
+the same activation message as before, plus the new message about the
+ICommandPalette instance you just added. If you don’t, check the output
+of the build command for errors and correct your code.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>JupyterLab extension jupyterlab_apod is activated!
+ICommandPalette: Palette {_palette: CommandPalette}
+</pre></div>
+</div>
+<p>Note that we had to run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code> in order for the bundle to
+update, because it is using the compiled JavaScript files in <code class="docutils literal notranslate"><span class="pre">/lib</span></code>.
+If you wish to avoid running <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code> after each change, you
+can open a third terminal, and run the <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">watch</span></code> command from
+your extension directory, which will automatically compile the
+TypeScript files as they change.</p>
+<p>Now return to your editor. Modify the imports at the top of the file to add a few more imports:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">ICommandPalette</span><span class="p">,</span> <span class="nx">MainAreaWidget</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/apputils&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">Widget</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@lumino/widgets&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Install this new dependency as well:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm add @lumino/widgets
+</pre></div>
+</div>
+<p>Then modify the <code class="docutils literal notranslate"><span class="pre">activate</span></code> function again so that it has the following
+code:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">activate</span><span class="o">:</span> <span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;JupyterLab extension jupyterlab_apod is activated!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Create a blank content widget inside of a MainAreaWidget</span>
+  <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Widget</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MainAreaWidget</span><span class="p">({</span><span class="nx">content</span><span class="p">});</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;apod-jupyterlab&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">label</span> <span class="o">=</span> <span class="s1">&#39;Astronomy Picture&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">closable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+  <span class="c1">// Add an application command</span>
+  <span class="kr">const</span> <span class="nx">command</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;apod:open&#39;</span><span class="p">;</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">addCommand</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Random Astronomy Picture&#39;</span><span class="p">,</span>
+    <span class="nx">execute</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">widget</span><span class="p">.</span><span class="nx">isAttached</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Attach the widget to the main work area if it&#39;s not there</span>
+        <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">widget</span><span class="p">,</span> <span class="s1">&#39;main&#39;</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="c1">// Activate the widget</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">activateById</span><span class="p">(</span><span class="nx">widget</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Add the command to the palette.</span>
+  <span class="nx">palette</span><span class="p">.</span><span class="nx">addItem</span><span class="p">({</span><span class="nx">command</span><span class="p">,</span> <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;Tutorial&#39;</span><span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The first new block of code creates a <code class="docutils literal notranslate"><span class="pre">MainAreaWidget</span></code> instance with an empty
+content <code class="docutils literal notranslate"><span class="pre">Widget</span></code> as its child. It also assigns the main area widget a unique
+ID, gives it a label that will appear as its tab title, and makes the tab
+closable by the user.
+The second block of code adds a new command with id <code class="docutils literal notranslate"><span class="pre">apod:open</span></code> and label <em>Random Astronomy Picture</em>
+to JupyterLab. When the command executes,
+it attaches the widget to the main display area if it is not already
+present and then makes it the active tab. The last new line of code uses the command id to add
+the command to the command palette in a section called <em>Tutorial</em>.</p>
+<p>Build your extension again using <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code> (unless you are using
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">watch</span></code> already) and refresh the browser tab. Open the command
+palette on the left side by clicking on <em>Commands</em> and type <em>Astronomy</em> in
+the search box. Your <em>Random Astronomy Picture</em>
+command should appear. Click it or select it with the keyboard and press
+<em>Enter</em>. You should see a new, blank panel appear with the tab title
+<em>Astronomy Picture</em>. Click the <em>x</em> on the tab to close it and activate the
+command again. The tab should reappear. Finally, click one of the
+launcher tabs so that the <em>Astronomy Picture</em> panel is still open but no longer
+active. Now run the <em>Random Astronomy Picture</em> command one more time. The
+single <em>Astronomy Picture</em> tab should come to the foreground.</p>
+<div class="figure align-center" id="id3">
+<img alt="The in-progress extension, showing a blank panel." class="jp-screenshot" src="../_images/extension_tutorial_empty.png" />
+<p class="caption"><span class="caption-text">The in-progress extension, showing a blank panel.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>If your widget is not behaving, compare your code with the reference
+project state at the <a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-01-show-a-panel">01-show-a-panel
+tag</a>.
+Once you’ve got everything working properly, git commit your changes and
+carry on.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Show Astronomy Picture command in palette&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-a-picture-in-the-panel">
+<h3>Show a picture in the panel<a class="headerlink" href="#show-a-picture-in-the-panel" title="Permalink to this headline">¶</a></h3>
+<p>You now have an empty panel. It’s time to add a picture to it. Go back to
+your code editor. Add the following code below the lines that create a
+<code class="docutils literal notranslate"><span class="pre">MainAreaWidget</span></code> instance and above the lines that define the command.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="c1">// Add an image element to the content</span>
+<span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+<span class="nx">content</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+
+<span class="c1">// Get a random date string in YYYY-MM-DD format</span>
+<span class="kd">function</span> <span class="nx">randomDate() {</span>
+  <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">randomDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">end</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()));</span>
+  <span class="k">return</span> <span class="nx">randomDate</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Fetch info about a random picture</span>
+<span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&amp;date=</span><span class="si">${</span><span class="nx">randomDate</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span> <span class="kr">as</span> <span class="nx">APODResponse</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">media_type</span> <span class="o">===</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Populate the image</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+  <span class="nx">img</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Random APOD was not a picture.&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The first two lines create a new HTML <code class="docutils literal notranslate"><span class="pre">&lt;img&gt;</span></code> element and add it to
+the widget DOM node. The next lines define a function get a random date in the form <code class="docutils literal notranslate"><span class="pre">YYYY-MM-DD</span></code> format, and then the function is used to make a request using the HTML
+<a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">fetch</a>
+API that returns information about the Astronomy Picture of the Day for that date. Finally, we set the
+image source and title attributes based on the response.</p>
+<p>Now define the <code class="docutils literal notranslate"><span class="pre">APODResponse</span></code> type that was introduced in the code above. Put
+this definition just under the imports at the top of the file.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">interface</span> <span class="nx">APODResponse</span> <span class="p">{</span>
+  <span class="nx">copyright</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">date</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">explanation</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">media_type</span><span class="o">:</span> <span class="s1">&#39;video&#39;</span> <span class="o">|</span> <span class="s1">&#39;image&#39;</span><span class="p">;</span>
+  <span class="nx">title</span>: <span class="kt">string</span><span class="p">;</span>
+  <span class="nx">url</span>: <span class="kt">string</span><span class="p">;</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>And update the <code class="docutils literal notranslate"><span class="pre">activate</span></code> method to be <code class="docutils literal notranslate"><span class="pre">async</span></code> since we are now using
+<code class="docutils literal notranslate"><span class="pre">await</span></code> in the method body.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">activate</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">)</span> <span class="o">=&gt;</span>
+</pre></div>
+</div>
+<p>Rebuild your extension if necessary (<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code>), refresh your browser
+tab, and run the <em>Random Astronomy Picture</em> command again. You should now see a
+picture in the panel when it opens (if that random date had a picture and not a
+video).</p>
+<div class="figure align-center" id="id4">
+<img alt="../_images/extension_tutorial_single.png" class="jp-screenshot" src="../_images/extension_tutorial_single.png" />
+<p class="caption"><span class="caption-text">The in-progress extension, showing the <a class="reference external" href="https://apod.nasa.gov/apod/ap140119.html">Astronomy Picture of the Day for 19 Jan 2014</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>Note that the image is not centered in the panel nor does the panel
+scroll if the image is larger than the panel area. Also note that the
+image does not update no matter how many times you close and reopen the
+panel. You’ll address both of these problems in the upcoming sections.</p>
+<p>If you don’t see a image at all, compare your code with the
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-02-show-an-image">02-show-an-image
+tag</a>
+in the reference project. When it’s working, make another git commit.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Show a picture in the panel&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="improve-the-widget-behavior">
+<h2>Improve the widget behavior<a class="headerlink" href="#improve-the-widget-behavior" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="center-the-image-add-attribution-and-error-messaging">
+<h3>Center the image, add attribution, and error messaging<a class="headerlink" href="#center-the-image-add-attribution-and-error-messaging" title="Permalink to this headline">¶</a></h3>
+<p>Open <code class="docutils literal notranslate"><span class="pre">style/index.css</span></code> in our extension project directory for editing.
+Add the following lines to it.</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">my-apodWidget</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+  <span class="k">flex-direction</span><span class="p">:</span> <span class="kc">column</span><span class="p">;</span>
+  <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This CSS stacks content vertically within the widget panel and lets the panel
+scroll when the content overflows. This CSS file is included on the page
+automatically by JupyterLab because the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file has a <code class="docutils literal notranslate"><span class="pre">style</span></code>
+field pointing to it. In general, you should import all of your styles into a
+single CSS file, such as this <code class="docutils literal notranslate"><span class="pre">index.css</span></code> file, and put the path to that CSS
+file in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file <code class="docutils literal notranslate"><span class="pre">style</span></code> field.</p>
+<p>Return to the <code class="docutils literal notranslate"><span class="pre">index.ts</span></code> file. Modify the <code class="docutils literal notranslate"><span class="pre">activate</span></code>
+function to apply the CSS classes, the copyright information, and error handling
+for the API response.
+The beginning of the function should read like the following:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="nx">activate</span>: <span class="kt">async</span> <span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;JupyterLab extension jupyterlab_apod is activated!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Create a blank content widget inside of a MainAreaWidget</span>
+  <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Widget</span><span class="p">();</span>
+<span class="hll">  <span class="nx">content</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;my-apodWidget&#39;</span><span class="p">);</span> <span class="c1">// new line</span>
+</span>  <span class="kr">const</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MainAreaWidget</span><span class="p">({</span><span class="nx">content</span><span class="p">});</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;apod-jupyterlab&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">label</span> <span class="o">=</span> <span class="s1">&#39;Astronomy Picture&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">closable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+  <span class="c1">// Add an image element to the content</span>
+  <span class="kd">let</span> <span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+  <span class="nx">content</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">img</span><span class="p">);</span>
+
+<span class="hll">  <span class="kd">let</span> <span class="nx">summary</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+</span><span class="hll">  <span class="nx">content</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">summary</span><span class="p">);</span>
+</span>
+  <span class="c1">// Get a random date string in YYYY-MM-DD format</span>
+  <span class="kd">function</span> <span class="nx">randomDate() {</span>
+    <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">randomDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">end</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()));</span>
+    <span class="k">return</span> <span class="nx">randomDate</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">// Fetch info about a random picture</span>
+<span class="hll">  <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&amp;date=</span><span class="si">${</span><span class="nx">randomDate</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+</span><span class="hll">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+</span><span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">      <span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">      <span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span> <span class="kr">as</span> <span class="nx">APODResponse</span><span class="p">;</span>
+</span><span class="hll">
+</span><span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">media_type</span> <span class="o">===</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">      <span class="c1">// Populate the image</span>
+</span><span class="hll">      <span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+</span><span class="hll">      <span class="nx">img</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+</span><span class="hll">      <span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+</span><span class="hll">      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">copyright</span><span class="p">)</span> <span class="p">{</span>
+</span><span class="hll">        <span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">+=</span> <span class="sb">` (Copyright </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">copyright</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
+</span><span class="hll">      <span class="p">}</span>
+</span><span class="hll">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">      <span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;Random APOD fetched was not an image.&#39;</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span><span class="hll">  <span class="p">}</span>
+</span>
+<span class="c1">// Keep all the remaining command lines the same</span>
+<span class="c1">// as before from here down ...</span>
+</pre></div>
+</div>
+<p>Build your extension if necessary (<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code>) and refresh your
+JupyterLab browser tab. Invoke the <em>Random Astronomy Picture</em> command and
+confirm the image is centered with the copyright information below it. Resize
+the browser window or the panel so that the image is larger than the
+available area. Make sure you can scroll the panel over the entire area
+of the image.</p>
+<p>If anything is not working correctly, compare your code with the reference project
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-03-style-and-attribute">03-style-and-attribute
+tag</a>.
+When everything is working as expected, make another commit.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Add styling, attribution, error handling&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-a-new-image-on-demand">
+<h3>Show a new image on demand<a class="headerlink" href="#show-a-new-image-on-demand" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">activate</span></code> function has grown quite long, and there’s still more
+functionality to add. Let’s refactor the code into two separate
+parts:</p>
+<ol class="arabic simple">
+<li><p>An <code class="docutils literal notranslate"><span class="pre">APODWidget</span></code> that encapsulates the Astronomy Picture panel elements,
+configuration, and soon-to-be-added update behavior</p></li>
+<li><p>An <code class="docutils literal notranslate"><span class="pre">activate</span></code> function that adds the widget instance to the UI and
+decide when the picture should refresh</p></li>
+</ol>
+<p>Start by refactoring the widget code into the new <code class="docutils literal notranslate"><span class="pre">APODWidget</span></code> class.
+Add the following additional import to the top of the file.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">Message</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@lumino/messaging&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Install this dependency:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm add @lumino/messaging
+</pre></div>
+</div>
+<p>Then add the class just below the definition of <code class="docutils literal notranslate"><span class="pre">APODResponse</span></code> in the <code class="docutils literal notranslate"><span class="pre">index.ts</span></code>
+file.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">class</span> <span class="nx">APODWidget</span> <span class="kr">extends</span> <span class="nx">Widget</span> <span class="p">{</span>
+  <span class="cm">/**</span>
+<span class="cm">  * Construct a new APOD widget.</span>
+<span class="cm">  */</span>
+  <span class="kr">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;my-apodWidget&#39;</span><span class="p">);</span>
+
+    <span class="c1">// Add an image element to the panel</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">img</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;img&#39;</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">img</span><span class="p">);</span>
+
+    <span class="c1">// Add a summary element to the panel</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">summary</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">node</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="cm">/**</span>
+<span class="cm">  * The image element associated with the widget.</span>
+<span class="cm">  */</span>
+  <span class="nx">readonly</span> <span class="nx">img</span>: <span class="kt">HTMLImageElement</span><span class="p">;</span>
+
+  <span class="cm">/**</span>
+<span class="cm">  * The summary text element associated with the widget.</span>
+<span class="cm">  */</span>
+  <span class="nx">readonly</span> <span class="nx">summary</span>: <span class="kt">HTMLParagraphElement</span><span class="p">;</span>
+
+  <span class="cm">/**</span>
+<span class="cm">  * Handle update requests for the widget.</span>
+<span class="cm">  */</span>
+  <span class="nx">async</span> <span class="nx">onUpdateRequest</span><span class="p">(</span><span class="nx">msg</span>: <span class="kt">Message</span><span class="p">)</span><span class="o">:</span> <span class="nx">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&amp;date=</span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">randomDate</span><span class="p">()</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">response</span><span class="p">.</span><span class="nx">ok</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">response</span><span class="p">.</span><span class="nx">statusText</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span> <span class="kr">as</span> <span class="nx">APODResponse</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">media_type</span> <span class="o">===</span> <span class="s1">&#39;image&#39;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// Populate the image</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">img</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">url</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">img</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">copyright</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">+=</span> <span class="sb">` (Copyright </span><span class="si">${</span><span class="nx">data</span><span class="p">.</span><span class="nx">copyright</span><span class="si">}</span><span class="sb">)`</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="s1">&#39;Random APOD fetched was not an image.&#39;</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="cm">/**</span>
+<span class="cm">  * Get a random date string in YYYY-MM-DD format.</span>
+<span class="cm">  */</span>
+  <span class="nx">randomDate</span><span class="p">()</span><span class="o">:</span> <span class="kt">string</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">start</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="kr">const</span> <span class="nx">end</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="kr">const</span> <span class="nx">randomDate</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span><span class="o">*</span><span class="p">(</span><span class="nx">end</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span> <span class="o">-</span> <span class="nx">start</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()));</span>
+    <span class="k">return</span> <span class="nx">randomDate</span><span class="p">.</span><span class="nx">toISOString</span><span class="p">().</span><span class="nx">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You’ve written all of the code before. All you’ve done is restructure it
+to use instance variables and move the image request to its own
+function.</p>
+<p>Next move the remaining logic in <code class="docutils literal notranslate"><span class="pre">activate</span></code> to a new, top-level
+function just below the <code class="docutils literal notranslate"><span class="pre">APODWidget</span></code> class definition. Modify the code
+to create a widget when one does not exist in the main JupyterLab area
+or to refresh the image in the existing widget when the command runs again.
+The code for the <code class="docutils literal notranslate"><span class="pre">activate</span></code> function should read as follows after
+these changes:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="cm">/**</span>
+<span class="cm">* Activate the APOD widget extension.</span>
+<span class="cm">*/</span>
+<span class="kd">function</span> <span class="nx">activate</span><span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;JupyterLab extension jupyterlab_apod is activated!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Create a single widget</span>
+  <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">APODWidget</span><span class="p">();</span>
+  <span class="kr">const</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MainAreaWidget</span><span class="p">({</span><span class="nx">content</span><span class="p">});</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;apod-jupyterlab&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">label</span> <span class="o">=</span> <span class="s1">&#39;Astronomy Picture&#39;</span><span class="p">;</span>
+  <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">closable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+  <span class="c1">// Add an application command</span>
+  <span class="kr">const</span> <span class="nx">command</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;apod:open&#39;</span><span class="p">;</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">addCommand</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Random Astronomy Picture&#39;</span><span class="p">,</span>
+    <span class="nx">execute</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">widget</span><span class="p">.</span><span class="nx">isAttached</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Attach the widget to the main work area if it&#39;s not there</span>
+        <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">widget</span><span class="p">,</span> <span class="s1">&#39;main&#39;</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="c1">// Refresh the picture in the widget</span>
+      <span class="nx">content</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+      <span class="c1">// Activate the widget</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">activateById</span><span class="p">(</span><span class="nx">widget</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Add the command to the palette.</span>
+  <span class="nx">palette</span><span class="p">.</span><span class="nx">addItem</span><span class="p">({</span> <span class="nx">command</span><span class="p">,</span> <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;Tutorial&#39;</span> <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Remove the <code class="docutils literal notranslate"><span class="pre">activate</span></code> function definition from the
+<code class="docutils literal notranslate"><span class="pre">JupyterFrontEndPlugin</span></code> object and refer instead to the top-level function
+like this:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">extension</span>: <span class="kt">JupyterFrontEndPlugin</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;jupyterlab_apod&#39;</span><span class="p">,</span>
+  <span class="nx">autoStart</span>: <span class="kt">true</span><span class="p">,</span>
+  <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="nx">ICommandPalette</span><span class="p">],</span>
+  <span class="nx">activate</span>: <span class="kt">activate</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Make sure you retain the <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">default</span> <span class="pre">extension;</span></code> line in the file.
+Now build the extension again and refresh the JupyterLab browser tab.
+Run the <em>Random Astronomy Picture</em> command more than once without closing the
+panel. The picture should update each time you execute the command. Close
+the panel, run the command, and it should both reappear and show a new
+image.</p>
+<p>If anything is not working correctly, compare your code with the
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-04-refactor-and-refresh">04-refactor-and-refresh
+tag</a>
+to debug. Once it is working properly, commit it.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Refactor, refresh image&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="restore-panel-state-when-the-browser-refreshes">
+<h3>Restore panel state when the browser refreshes<a class="headerlink" href="#restore-panel-state-when-the-browser-refreshes" title="Permalink to this headline">¶</a></h3>
+<p>You may notice that every time you refresh your browser tab, the Astronomy Picture
+panel disappears, even if it was open before you refreshed. Other open
+panels, like notebooks, terminals, and text editors, all reappear and
+return to where you left them in the panel layout. You can make your
+extension behave this way too.</p>
+<p>Update the imports at the top of your <code class="docutils literal notranslate"><span class="pre">index.ts</span></code> file so that the
+entire list of import statements looks like the following:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+<span class="hll">  <span class="nx">ILayoutRestorer</span><span class="p">,</span> <span class="nx">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">JupyterFrontEndPlugin</span>
+</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/application&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span>
+<span class="hll">  <span class="nx">ICommandPalette</span><span class="p">,</span> <span class="nx">MainAreaWidget</span><span class="p">,</span> <span class="nx">WidgetTracker</span>
+</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/apputils&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">Message</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@lumino/messaging&#39;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">Widget</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@lumino/widgets&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Then add the <code class="docutils literal notranslate"><span class="pre">ILayoutRestorer</span></code> interface to the <code class="docutils literal notranslate"><span class="pre">JupyterFrontEndPlugin</span></code>
+definition. This addition passes the global <code class="docutils literal notranslate"><span class="pre">LayoutRestorer</span></code> as the
+third parameter of the <code class="docutils literal notranslate"><span class="pre">activate</span></code> function.</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">extension</span>: <span class="kt">JupyterFrontEndPlugin</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;jupyterlab_apod&#39;</span><span class="p">,</span>
+  <span class="nx">autoStart</span>: <span class="kt">true</span><span class="p">,</span>
+<span class="hll">  <span class="nx">requires</span><span class="o">:</span> <span class="p">[</span><span class="nx">ICommandPalette</span><span class="p">,</span> <span class="nx">ILayoutRestorer</span><span class="p">],</span>
+</span>  <span class="nx">activate</span>: <span class="kt">activate</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>Finally, rewrite the <code class="docutils literal notranslate"><span class="pre">activate</span></code> function so that it:</p>
+<ol class="arabic simple">
+<li><p>Declares a widget variable, but does not create an instance
+immediately.</p></li>
+<li><p>Constructs a <code class="docutils literal notranslate"><span class="pre">WidgetTracker</span></code> and tells the <code class="docutils literal notranslate"><span class="pre">ILayoutRestorer</span></code>
+to use it to save/restore panel state.</p></li>
+<li><p>Creates, tracks, shows, and refreshes the widget panel appropriately.</p></li>
+</ol>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">activate</span><span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">palette</span>: <span class="kt">ICommandPalette</span><span class="p">,</span> <span class="nx">restorer</span>: <span class="kt">ILayoutRestorer</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;JupyterLab extension jupyterlab_apod is activated!&#39;</span><span class="p">);</span>
+
+  <span class="c1">// Declare a widget variable</span>
+  <span class="kd">let</span> <span class="nx">widget</span>: <span class="kt">MainAreaWidget</span><span class="o">&lt;</span><span class="nx">APODWidget</span><span class="o">&gt;</span><span class="p">;</span>
+
+  <span class="c1">// Add an application command</span>
+  <span class="kr">const</span> <span class="nx">command</span>: <span class="kt">string</span> <span class="o">=</span> <span class="s1">&#39;apod:open&#39;</span><span class="p">;</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">commands</span><span class="p">.</span><span class="nx">addCommand</span><span class="p">(</span><span class="nx">command</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">label</span><span class="o">:</span> <span class="s1">&#39;Random Astronomy Picture&#39;</span><span class="p">,</span>
+    <span class="nx">execute</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">widget</span> <span class="o">||</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">isDisposed</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Create a new widget if one does not exist</span>
+        <span class="c1">// or if the previous one was disposed after closing the panel</span>
+        <span class="kr">const</span> <span class="nx">content</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">APODWidget</span><span class="p">();</span>
+        <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MainAreaWidget</span><span class="p">({</span><span class="nx">content</span><span class="p">});</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="s1">&#39;apod-jupyterlab&#39;</span><span class="p">;</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">label</span> <span class="o">=</span> <span class="s1">&#39;Astronomy Picture&#39;</span><span class="p">;</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">title</span><span class="p">.</span><span class="nx">closable</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">tracker</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="nx">widget</span><span class="p">))</span> <span class="p">{</span>
+        <span class="c1">// Track the state of the widget for later restoration</span>
+        <span class="nx">tracker</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">widget</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">widget</span><span class="p">.</span><span class="nx">isAttached</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// Attach the widget to the main work area if it&#39;s not there</span>
+        <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="nx">widget</span><span class="p">,</span> <span class="s1">&#39;main&#39;</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="nx">widget</span><span class="p">.</span><span class="nx">content</span><span class="p">.</span><span class="nx">update</span><span class="p">();</span>
+
+      <span class="c1">// Activate the widget</span>
+      <span class="nx">app</span><span class="p">.</span><span class="nx">shell</span><span class="p">.</span><span class="nx">activateById</span><span class="p">(</span><span class="nx">widget</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+
+  <span class="c1">// Add the command to the palette.</span>
+  <span class="nx">palette</span><span class="p">.</span><span class="nx">addItem</span><span class="p">({</span> <span class="nx">command</span><span class="p">,</span> <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;Tutorial&#39;</span> <span class="p">});</span>
+
+  <span class="c1">// Track and restore the widget state</span>
+  <span class="kd">let</span> <span class="nx">tracker</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WidgetTracker</span><span class="o">&lt;</span><span class="nx">MainAreaWidget</span><span class="o">&lt;</span><span class="nx">APODWidget</span><span class="o">&gt;&gt;</span><span class="p">({</span>
+    <span class="nx">namespace</span><span class="o">:</span> <span class="s1">&#39;apod&#39;</span>
+  <span class="p">});</span>
+  <span class="nx">restorer</span><span class="p">.</span><span class="nx">restore</span><span class="p">(</span><span class="nx">tracker</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">command</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">&#39;apod&#39;</span>
+  <span class="p">});</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Rebuild your extension one last time and refresh your browser tab.
+Execute the <em>Random Astronomy Picture</em> command and validate that the panel
+appears with an image in it. Refresh the browser tab again. You should
+see an Astronomy Picture panel reappear immediately without running the command. Close
+the panel and refresh the browser tab. You should then not see an Astronomy Picture tab
+after the refresh.</p>
+<div class="figure align-center" id="id5">
+<img alt="The completed extension, showing the Astronomy Picture of the Day for 24 Jul 2015." class="jp-screenshot" src="../_images/extension_tutorial_complete.png" />
+<p class="caption"><span class="caption-text">The completed extension, showing the <a class="reference external" href="https://apod.nasa.gov/apod/ap150724.html">Astronomy Picture of the Day for 24 Jul 2015</a>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>Refer to the <a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-05-restore-panel-state">05-restore-panel-state
+tag</a>
+if your extension is not working correctly. Make a commit when the state of your
+extension persists properly.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Restore panel state&#39;</span>
+</pre></div>
+</div>
+<p>Congratulations! You’ve implemented all of the behaviors laid out at the start
+of this tutorial. Now how about sharing it with the world?</p>
+</div>
+</div>
+<div class="section" id="publish-your-extension-to-npmjs-org">
+<span id="publish-your-extension-to-npmjsorg"></span><h2>Publish your extension to npmjs.org<a class="headerlink" href="#publish-your-extension-to-npmjs-org" title="Permalink to this headline">¶</a></h2>
+<p>npm is both a JavaScript package manager and the de facto registry for
+JavaScript software. You can <a class="reference external" href="https://www.npmjs.com/signup">sign up for an account on the npmjs.com
+site</a> or create an account from the
+command line by running <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">adduser</span></code> and entering values when
+prompted. Create an account now if you do not already have one. If you
+already have an account, login by running <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">login</span></code> and answering
+the prompts.</p>
+<p>Next, open the project <code class="docutils literal notranslate"><span class="pre">package.json</span></code> file in your text editor. Prefix
+the <code class="docutils literal notranslate"><span class="pre">name</span></code> field value with <code class="docutils literal notranslate"><span class="pre">&#64;your-npm-username&gt;/</span></code> so that the
+entire field reads <code class="docutils literal notranslate"><span class="pre">&quot;name&quot;:</span> <span class="pre">&quot;&#64;your-npm-username/jupyterlab_apod&quot;</span></code> where
+you’ve replaced the string <code class="docutils literal notranslate"><span class="pre">your-npm-username</span></code> with your real
+username. Review the homepage, repository, license, and <a class="reference external" href="https://docs.npmjs.com/files/package.json">other supported
+package.json</a> fields while
+you have the file open. Then open the <code class="docutils literal notranslate"><span class="pre">README.md</span></code> file and adjust the
+command in the <em>Installation</em> section so that it includes the full,
+username-prefixed package name you just included in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code>
+file. For example:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension install @your-npm-username/jupyterlab_apod
+</pre></div>
+</div>
+<p>Return to your terminal window and make one more git commit:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add .
+git commit -m <span class="s1">&#39;Prepare to publish package&#39;</span>
+</pre></div>
+</div>
+<p>Now run the following command to publish your package:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>npm publish --access<span class="o">=</span>public
+</pre></div>
+</div>
+<p>Check that your package appears on the npm website. You can either
+search for it from the homepage or visit
+<code class="docutils literal notranslate"><span class="pre">https://www.npmjs.com/package/&#64;your-username/jupyterlab_apod</span></code>
+directly. If it doesn’t appear, make sure you’ve updated the package
+name properly in the <code class="docutils literal notranslate"><span class="pre">package.json</span></code> and run the npm command correctly.
+Compare your work with the state of the reference project at the
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab_apod/tree/2.0-06-prepare-to-publish">06-prepare-to-publish
+tag</a>
+for further debugging.</p>
+<p>You can now try installing your extension as a user would. Open a new
+terminal and run the following commands, again substituting your npm
+username where appropriate
+(make sure to stop the existing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--watch</span></code> command first):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda create -n jupyterlab-apod jupyterlab nodejs
+conda activate jupyterlab-apod
+jupyter labextension install @your-npm-username/jupyterlab_apod
+jupyter lab
+</pre></div>
+</div>
+<p>You should see a fresh JupyterLab browser tab appear. When it does,
+execute the <em>Random Astronomy Picture</em> command to prove that your extension
+works when installed from npm.</p>
+</div>
+<div class="section" id="learn-more">
+<h2>Learn more<a class="headerlink" href="#learn-more" title="Permalink to this headline">¶</a></h2>
+<p>You’ve completed the tutorial. Nicely done! If you want to keep
+learning, here are some suggestions about what to try next:</p>
+<ul class="simple">
+<li><p>Add the image description that comes in the API response to the panel.</p></li>
+<li><p>Assign a default hotkey to the <em>Random Astronomy Picture</em> command.</p></li>
+<li><p>Make the image a link to the picture on the NASA website (URLs are of the form <code class="docutils literal notranslate"><span class="pre">https://apod.nasa.gov/apod/apYYMMDD.html</span></code>).</p></li>
+<li><p>Make the image title and description update after the image loads so that the picture and description are always synced.</p></li>
+<li><p>Give users the ability to pin pictures in separate, permanent panels.</p></li>
+<li><p>Add a setting for the user to put in their <a class="reference external" href="https://api.nasa.gov/#authentication">API key</a> so they can make many more requests per hour than the demo key allows.</p></li>
+<li><p>Push your extension git repository to GitHub.</p></li>
+<li><p>Learn how to write <a class="reference internal" href="extension_dev.html#developer-extensions"><span class="std std-ref">other kinds of extensions</span></a>.</p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="terminology.html" title="previous page">Terminology</a>
+    <a class='right-next' id="next-link" href="extension_migration.html" title="next page">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Project Jupyter.<br/>
+        The Jupyter Trademark is registered with the U.S. Patent &amp Trademark Office.
+        
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+  </body>
+</html>

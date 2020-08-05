@@ -1,383 +1,866 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Extensions &mdash; JupyterLab 1.0 Beta documentation</title>
-  
 
-  
-  
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Extensions &#8212; JupyterLab 3.0.0a5 documentation</title>
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="JupyterLab 1.0 Beta documentation" href="../index.html"/>
-        <link rel="next" title="General Codebase Orientation" href="../developer/repo.html"/>
-        <link rel="prev" title="File and Output Formats" href="file_formats.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-   
-  <div class="wy-grid-for-nav">
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-          
-            <a href="../index.html" class="icon icon-home"> JupyterLab
-          
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
-          
-          </a>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
 
-          
-            
-            
-              <div class="version">
-                1.0 Beta
-              </div>
-            
-          
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="JupyterLab on JupyterHub" href="jupyterhub.html" />
+    <link rel="prev" title="File and Output Formats" href="file_formats.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../developer/repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/starting.html">Starting JupyterLab</a></li>
-</ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="interface.html">The JupyterLab Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Working with Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file_editor.html">Text Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code_console.html">Code Consoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">Managing Kernels and Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Palette</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documents_kernels.html">Documents and kernels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file_formats.html">File and Output Formats</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Extensions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installing-extensions">Installing Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#disabling-extensions">Disabling Extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#advanced-usage">Advanced Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#jupyterlab-build-process">JupyterLab Build Process</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#jupyterlab-application-directory">JupyterLab Application Directory</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#extensions-1">extensions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#schemas">schemas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#settings">settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#staging-and-static">staging and static</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#themes">themes</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../developer/repo.html">General Codebase Orientation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/extension_dev.html">Extension Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/documents.html">Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/notebook.html">Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/patterns.html">Design Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/css.html">CSS Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/documentation.html">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/virtualdom.html">Virtual DOM and React</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/adding_content.html">Adding Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/xkcd_extension_tutorial.html">Let’s Make an xkcd JupyterLab Extension</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
     </nav>
+    
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">JupyterLab</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
+    <div class="container-xl">
+      <div class="row">
           
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
 
 
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Extensions</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/user/extensions.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
+  <div class="bd-toc-item active">
   
-  <hr/>
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="urls.html">JupyterLab URLs</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="files.html">Working with Files</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="file_editor.html">Text Editor</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebooks</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="code_console.html">Code Consoles</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminal.html">Terminals</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="running.html">Managing Kernels and Terminals</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="commands.html">Command Palette</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents_kernels.html">Documents and Kernels</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="file_formats.html">File and Output Formats</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Extensions</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="jupyterhub.html">JupyterLab on JupyterHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="export.html">Exporting Notebooks</a>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-the-extension-manager" class="nav-link">Using the Extension Manager</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#disclaimer" class="nav-link">Disclaimer</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#finding-extensions" class="nav-link">Finding Extensions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installing-an-extension" class="nav-link">Installing an Extension</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#disabling-rebuild-checks" class="nav-link">Disabling Rebuild Checks</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#managing-installed-extensions" class="nav-link">Managing Installed Extensions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#companion-packages" class="nav-link">Companion packages</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#listings" class="nav-link">Listings</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#default-mode" class="nav-link">Default mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#blacklist-mode" class="nav-link">Blacklist mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#whitelist-mode" class="nav-link">Whitelist mode</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#listing-configuration" class="nav-link">Listing Configuration</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#using-the-terminal" class="nav-link">Using the Terminal</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installing-extensions" class="nav-link">Installing Extensions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#disabling-extensions" class="nav-link">Disabling Extensions</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#advanced-usage" class="nav-link">Advanced Usage</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#jupyterlab-build-process" class="nav-link">JupyterLab Build Process</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#jupyterlab-application-directory" class="nav-link">JupyterLab Application Directory</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#extensions-1" class="nav-link">extensions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#schemas" class="nav-link">schemas</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#settings" class="nav-link">settings</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#staging-and-static" class="nav-link">staging and static</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#themes" class="nav-link">themes</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#jupyterlab-user-settings-directory" class="nav-link">JupyterLab User Settings Directory</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#jupyterlab-workspaces-directory" class="nav-link">JupyterLab Workspaces Directory</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="extensions">
 <span id="user-extensions"></span><h1>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h1>
-<p>JupyterLab extensions add functionality to the JupyterLab application.
-They can provide new file viewer types, launcher activities, and output
-renderers, among many other things. JupyterLab extensions are
-<a class="reference external" href="https://www.npmjs.com/">npm</a> packages (the standard package format
-in Javascript development). For information about developing extensions,
+<p>Fundamentally, JupyterLab is designed as an extensible environment. JupyterLab
+extensions can customize or enhance any part of JupyterLab. They can provide new
+themes, file viewers and editors, or renderers for rich outputs in notebooks.
+Extensions can add items to the menu or command palette, keyboard shortcuts, or
+settings in the settings system. Extensions can provide an API for other
+extensions to use and can depend on other extensions. In fact, the whole of
+JupyterLab itself is simply a collection of extensions that are no more powerful
+or privileged than any custom extension.</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#using-the-extension-manager" id="id14">Using the Extension Manager</a></p></li>
+<li><p><a class="reference internal" href="#disabling-rebuild-checks" id="id15">Disabling Rebuild Checks</a></p></li>
+<li><p><a class="reference internal" href="#listings" id="id16">Listings</a></p></li>
+<li><p><a class="reference internal" href="#using-the-terminal" id="id17">Using the Terminal</a></p></li>
+<li><p><a class="reference internal" href="#advanced-usage" id="id18">Advanced Usage</a></p></li>
+<li><p><a class="reference internal" href="#jupyterlab-workspaces-directory" id="id19">JupyterLab Workspaces Directory</a></p></li>
+</ul>
+</div>
+<p>JupyterLab extensions are <a class="reference external" href="https://www.npmjs.com/">npm</a> packages (the
+standard package format in Javascript development). You can search for the
+keyword <a class="reference external" href="https://www.npmjs.com/search?q=keywords%3Ajupyterlab-extension">jupyterlab-extension</a> on the
+npm registry to find extensions. For information about developing extensions,
 see the <a class="reference internal" href="../developer/extension_dev.html#developer-extensions"><span class="std std-ref">developer documentation</span></a>.</p>
-<p>In order to install JupyterLab extensions, you need to have Node.js
-version 4+ installed.</p>
-<p>If you use <code class="docutils literal"><span class="pre">conda</span></code>, you can get it with:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">nodejs</span>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are a JupyterLab extension developer, please note that the extension
+developer API is not stable and will evolve in the near future.</p>
+</div>
+<p>In order to install JupyterLab extensions, you need to have <a class="reference external" href="https://nodejs.org/">Node.js</a> installed.</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code> with <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code> packages, you can get it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge nodejs
 </pre></div>
 </div>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code> with default Anaconda packages (i.e., you don’t normally use <code class="docutils literal notranslate"><span class="pre">conda-forge</span></code>), you should install nodejs with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">nodejs</span></code> instead.</p>
 <p>If you use <a class="reference external" href="https://brew.sh/">Homebrew</a> on Mac OS X:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">node</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install node
 </pre></div>
 </div>
+<p>You can also download Node.js from the <a class="reference external" href="https://nodejs.org/">Node.js website</a> and
+install it directly.</p>
+<div class="section" id="using-the-extension-manager">
+<h2><a class="toc-backref" href="#id14">Using the Extension Manager</a><a class="headerlink" href="#using-the-extension-manager" title="Permalink to this headline">¶</a></h2>
+<p>To manage your extensions, you can use the extension manager. By default, the
+manager is disabled. You can enable it by searching <strong>Extension Manager</strong> in the command palette.</p>
+<div class="figure align-center" id="id5">
+<img alt="../_images/extension_manager_enable_manager.png" class="jp-screenshot" src="../_images/extension_manager_enable_manager.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> Enable extension manager by searching in the command palette</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can also enable it with the following steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go into advanced settings editor.</p></li>
+<li><p>Open the Extension Manager section.</p></li>
+<li><p>Add the entry “enabled”: true.</p></li>
+<li><p>Save the settings.</p></li>
+<li><p>If prompted whether you are sure, read the warning, and click “Enable”
+if you are still sure.</p></li>
+</ul>
+</div></blockquote>
+<p>Once enabled, you should see a new tab appear in the <a class="reference internal" href="interface.html#left-sidebar"><span class="std std-ref">left sidebar</span></a>.</p>
+<div class="figure align-center" id="id6">
+<img alt="../_images/extension_manager_default.png" class="jp-screenshotls" src="../_images/extension_manager_default.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> The default view has three components: a search bar, an “Installed”
+section, and a “Discover” section.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="disclaimer">
+<h3>Disclaimer<a class="headerlink" href="#disclaimer" title="Permalink to this headline">¶</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Installing an extension allows it to execute arbitrary code on the
+server, kernel, and in the client’s browser. Therefore we ask you
+to explicitly acknowledge this.</p>
+</div>
+<p>By default, the disclaimer is not acknowledged.</p>
+<div class="figure align-center" id="id7">
+<img alt="../_images/disclaimer_unchecked.png" class="jp-screenshot" src="../_images/disclaimer_unchecked.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> User has not acknowledged the disclaimer</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>As the disclaimer is not acknowledged, you can search for an extension,
+but can not install it (no install button is available).</p>
+<div class="figure align-center" id="id8">
+<img alt="../_images/disclaimer_unchecked_noinstall.png" class="jp-screenshot" src="../_images/disclaimer_unchecked_noinstall.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> With Disclaimer unchecked, you can not install an extension</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<p>To install an extension, you first have to explicitly acknowledge the disclaimer.
+Once done, this will remain across sessions and the user does not have to
+check it again.</p>
+<div class="figure align-center" id="id9">
+<img alt="../_images/disclaimer_checked.png" class="jp-screenshot" src="../_images/disclaimer_checked.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> Disclaimer checked</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<p>For ease of use, you can hide the disclaimer so it takes less space on
+your screen.</p>
+<div class="figure align-center" id="id10">
+<img alt="../_images/disclaimer_hidden.png" class="jp-screenshot" src="../_images/disclaimer_hidden.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> Disclaimer is hidden</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="finding-extensions">
+<h3>Finding Extensions<a class="headerlink" href="#finding-extensions" title="Permalink to this headline">¶</a></h3>
+<p>You can use the extension manager to find extensions for JupyterLab. To discovery
+freely among the currently available extensions, expand the “Discovery” section.
+This triggers a search for all JupyterLab extensions on the NPM registry, and
+the results are listed according to the <a class="reference external" href="https://docs.npmjs.com/searching-for-and-choosing-packages-to-download#package-search-rank-criteria">registry’s sort order</a>.
+An exception to this sort order is that extensions released by the Jupyter
+organization are always placed first. These extensions are distinguished by
+a small Jupyter icon next to their name.</p>
+<img alt="Screenshot showing the discovery extension listing." class="jp-screenshot align-center" src="../_images/extension_manager_discover.png" />
+<p>Alternatively, you can limit your discovery by using the search bar. This
+performs a free-text search of JupyterLab extensions on the NPM registry.</p>
+<img alt="Screenshot showing an example search result" class="jp-screenshot align-center" src="../_images/extension_manager_search.png" />
+</div>
+<div class="section" id="installing-an-extension">
+<h3>Installing an Extension<a class="headerlink" href="#installing-an-extension" title="Permalink to this headline">¶</a></h3>
+<p>Once you have found an extension that you think is interesting, install
+it by clicking the “Install” button of the extension list entry.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Installing an extension allows it to execute arbitrary code on the
+server, kernel, and in the client’s browser. You should therefore
+avoid installing extensions you do not trust, and watch out for
+any extensions trying to masquerade as a trusted extension.</p>
+</div>
+<p>A short while after starting the install of an extension, a drop-down should
+appear under the search bar indicating that the extension has been
+downloaded, but that a rebuild is needed to complete the installation.</p>
+<img alt="Screenshot showing the rebuild indicator" class="jp-screenshot align-center" src="../_images/extension_manager_rebuild.png" />
+<p>If you want to install/uninstall other extensions as well, you can ignore
+the rebuild notice until you have made all the changes you want. Once satisfied,
+click the ‘Rebuild’ button to start a rebuild in the background.
+Once the rebuild completes, a dialog will pop up, indicating that a reload of
+the page is needed in order to load the latest build into the browser.</p>
+<p>If you ignore the rebuild notice by mistake, simply refresh your browser
+window to trigger a new rebuild check.</p>
+</div>
+</div>
+<div class="section" id="disabling-rebuild-checks">
+<h2><a class="toc-backref" href="#id15">Disabling Rebuild Checks</a><a class="headerlink" href="#disabling-rebuild-checks" title="Permalink to this headline">¶</a></h2>
+<p>In some cases, such as automated testing, you may wish to disable the startup
+rebuild checks altogether. This can be achieved through setting <code class="docutils literal notranslate"><span class="pre">buildCheck</span></code>
+and <code class="docutils literal notranslate"><span class="pre">buildAvailable</span></code> in <code class="docutils literal notranslate"><span class="pre">jupyter_notebook_config.json</span></code> (or <code class="docutils literal notranslate"><span class="pre">.py</span></code> equivalent)
+in any of the <code class="docutils literal notranslate"><span class="pre">config</span></code> locations returned by <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">--paths</span></code>.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;LabApp&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tornado_settings&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;page_config_data&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;buildCheck&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;buildAvailable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="managing-installed-extensions">
+<h3>Managing Installed Extensions<a class="headerlink" href="#managing-installed-extensions" title="Permalink to this headline">¶</a></h3>
+<p>When there are some installed extensions, they will be shown in the “Installed”
+section. These can then be uninstalled or disabled. Disabling an extension will
+prevent it from being activated, but without rebuilding the application.</p>
+</div>
+<div class="section" id="companion-packages">
+<h3>Companion packages<a class="headerlink" href="#companion-packages" title="Permalink to this headline">¶</a></h3>
+<p>During installation of an extension, JupyterLab will inspect the package
+metadata for any
+<a class="reference internal" href="../developer/extension_dev.html#ext-author-companion-packages"><span class="std std-ref">instructions on companion packages</span></a>.
+Companion packages can be:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Notebook server extensions (or any other packages that need to be
+installed on the Notebook server).</p></li>
+<li><p>Kernel packages. An example of companion packages for the
+kernel are Jupyter Widget packages, like the <a class="reference external" href="https://ipywidgets.readthedocs.io/en/stable">ipywidgets</a>
+Python package for the
+<a class="reference external" href="https://www.npmjs.com/package/&#64;jupyter-widgets/jupyterlab-manager">&#64;jupyter-widgets/jupyterlab-manager package</a>.</p></li>
+</ul>
+</div></blockquote>
+<p>If JupyterLab finds instructions for companion packages, it will present
+a dialog to notify you about these. These are informational only, and it
+will be up to you to take these into account or not.</p>
+</div>
+</div>
+<div class="section" id="listings">
+<span id="extension-listings"></span><h2><a class="toc-backref" href="#id16">Listings</a><a class="headerlink" href="#listings" title="Permalink to this headline">¶</a></h2>
+<p>When searching extensions, JupyterLab displays the complete search result and
+the user is free to install any extension. This is the <a class="reference internal" href="#default-mode"><span class="std std-ref">Default mode</span></a>.</p>
+<p>To bring more security, you or your administrator can enable <code class="docutils literal notranslate"><span class="pre">blacklists</span></code> or <code class="docutils literal notranslate"><span class="pre">whitelists</span></code>
+mode. JupyterLab will check the extensions against the defined listings.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Only one mode at a time is allowed. If you or your server administrator configures
+both black and white listings, the JupyterLab server will not start.</p>
+</div>
+<div class="figure align-center" id="id11">
+<img alt="../_images/simultaneous_black_white_listings.png" class="jp-screenshot" src="../_images/simultaneous_black_white_listings.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> Simultaneous black and white listings</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+<p>The following details the behavior for the <a class="reference internal" href="#blacklist-mode"><span class="std std-ref">Blacklist mode</span></a> and the <a class="reference internal" href="#whitelist-mode"><span class="std std-ref">Whitelist mode</span></a>.
+The details to enable configure the listings can be read <a class="reference internal" href="#listings-conf"><span class="std std-ref">Listing Configuration</span></a>.</p>
+<div class="section" id="default-mode">
+<span id="id1"></span><h3>Default mode<a class="headerlink" href="#default-mode" title="Permalink to this headline">¶</a></h3>
+<p>In the <code class="docutils literal notranslate"><span class="pre">default</span></code> mode, no listing is enabled and the search behavior is unchanged and
+is the one described previously.</p>
+</div>
+<div class="section" id="blacklist-mode">
+<span id="id2"></span><h3>Blacklist mode<a class="headerlink" href="#blacklist-mode" title="Permalink to this headline">¶</a></h3>
+<p>Extensions can be freely downloaded without going through a vetting process.
+However, users can add malicious extensions to a blacklist. The extension manager
+will show all extensions except for those that have
+been explicitly added to the blacklist. Therfore, the extension manager
+does not allow you to install blacklisted extensions.</p>
+<p>If you, or your administrator, has enabled the blacklist mode,
+JupyterLab will use the blacklist and remove all blacklisted
+extensions from your search result.</p>
+<p>If you have installed an extension before it has been blacklisted,
+the extension entry in the installed list will be highlighted
+in red. It is recommended that you uninstall it. You can move
+your mouse on the question mark icon to read the instructions.</p>
+<div class="figure align-center" id="id12">
+<img alt="../_images/installed_blacklisted.png" class="jp-screenshot" src="../_images/installed_blacklisted.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> Blacklisted installed extension which should be removed</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="whitelist-mode">
+<span id="id3"></span><h3>Whitelist mode<a class="headerlink" href="#whitelist-mode" title="Permalink to this headline">¶</a></h3>
+<p>A whitelist maintains a set of approved extensions that users can freely
+search and install. Extensions need to go through some sort of vetting process
+before they are added to the whitelist. When using a whitelist, the extension manager
+will only show extensions that have been explicitly added to the whitelist.</p>
+<p>If you, or your administrator, has enabled the whitelist mode
+JupyterLab will use the whitelist and only show extensions present
+in the withelist. The other extensions will not be show in the search result.</p>
+<p>If you have installed a whitelisted extension and at some point
+in time that extension is removed from the whitelist, the extension entry
+in the installed list will be highlighted in red. It is recommended that
+you uninstall it. You can move your mouse on the question mark icon to
+read the instructions.</p>
+<div class="figure align-center" id="id13">
+<img alt="../_images/installed_whitelisted.png" class="jp-screenshot" src="../_images/installed_whitelisted.png" />
+<p class="caption"><span class="caption-text"><strong>Figure:</strong> The second of the installed extensions was removed from the whitelist and should be removed</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="listing-configuration">
+<span id="listings-conf"></span><h3>Listing Configuration<a class="headerlink" href="#listing-configuration" title="Permalink to this headline">¶</a></h3>
+<p>You or your administrator can use the following traits to define the listings loading.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blacklist_uris</span></code>: A list of comma-separated URIs to fetch a blacklist file from</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">whitelist_uris</span></code>: A list of comma-separated URIs to fetch a whitelist file from</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listings_refresh_seconds</span></code>: The interval delay in seconds to refresh the lists</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listings_request_options</span></code>: The optional kwargs to use for the listings HTTP requests</p></li>
+</ul>
+<p>For example, to enable blacklist, launch the server with <code class="docutils literal notranslate"><span class="pre">--LabServerApp.blacklist_uris=http://example.com/blacklist.json</span></code> where <code class="docutils literal notranslate"><span class="pre">http://example.com/blacklist.json</span></code> is a blacklist JSON file as described below.</p>
+<p>The details for the listings_request_options are listed
+on <a class="reference external" href="https://2.python-requests.org/en/v2.7.0/api/#requests.request">this page</a>
+(for example, you could pass <code class="docutils literal notranslate"><span class="pre">{'timeout':</span> <span class="pre">10}</span></code> to change the HTTP request timeout value).</p>
+<p>The listings are json files hosted on the URIs you have given.</p>
+<p>For each entry, you have to define the <cite>name</cite> of the extension as published in the NPM registry.
+The <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute supports regular expressions.</p>
+<p>Optionally, you can also add some more fields for your records (<code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">reason</span></code>, <code class="docutils literal notranslate"><span class="pre">creation_date</span></code>,
+<code class="docutils literal notranslate"><span class="pre">last_update_date</span></code>). These optional fields are not used in the user interface.</p>
+<p>This is an example of a blacklist file.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;blacklist&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;@jupyterlab-examples/launcher&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;jupyterlab&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;@jupyterlab-examples/launcher is blacklisted for test purpose - Do NOT take this for granted!!!&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;creation_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-11T03:28:56.782Z&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;last_update_date&quot;</span><span class="p">:</span>  <span class="s2">&quot;2020-03-11T03:28:56.782Z&quot;</span>
+   <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the following whitelist example a <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/*</span></code> will whitelist
+all jupyterlab organization extensions.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;whitelist&quot;</span><span class="p">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;@jupyterlab/*&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;jupyterlab&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;reason&quot;</span><span class="p">:</span> <span class="s2">&quot;All @jupyterlab org extensions are whitelisted, of course...&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;creation_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-03-11T03:28:56.782Z&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;last_update_date&quot;</span><span class="p">:</span>  <span class="s2">&quot;2020-03-11T03:28:56.782Z&quot;</span>
+   <span class="p">}</span>
+<span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-terminal">
+<h2><a class="toc-backref" href="#id17">Using the Terminal</a><a class="headerlink" href="#using-the-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Another way of managing your extensions is from the terminal on the server,
+using the <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span></code> entry point. In general, a simple help text
+is available by typing <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">--help</span></code>.</p>
 <div class="section" id="installing-extensions">
-<h2>Installing Extensions<a class="headerlink" href="#installing-extensions" title="Permalink to this headline">¶</a></h2>
-<p>The base JupyterLab application includes a core set of extensions, which
-provide the features described in this user guide (notebook, terminal,
-text editor, etc.) You can install new extensions into the application
+<h3>Installing Extensions<a class="headerlink" href="#installing-extensions" title="Permalink to this headline">¶</a></h3>
+<p>You can install new extensions into the application
 using the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">foo</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension install my-extension
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">&lt;foo&gt;</span></code> is the name of a valid JupyterLab extension npm package
-on <a class="reference external" href="https://www.npmjs.com">npm</a>. Use the <code class="docutils literal"><span class="pre">&lt;foo&gt;&#64;&lt;foo</span> <span class="pre">version&gt;</span></code>
+<p>where <code class="docutils literal notranslate"><span class="pre">my-extension</span></code> is the name of a valid JupyterLab extension npm package
+on <a class="reference external" href="https://www.npmjs.com">npm</a>. Use the <code class="docutils literal notranslate"><span class="pre">my-extension&#64;version</span></code>
 syntax to install a specific version of an extension, for example:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">foo</span><span class="o">&gt;</span><span class="nd">@1</span><span class="o">.</span><span class="mf">2.3</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension install my-extension@1.2.3
 </pre></div>
 </div>
 <p>You can also install an extension that is not uploaded to npm, i.e.,
-<code class="docutils literal"><span class="pre">&lt;foo&gt;</span></code> can be a local directory containing the extension, a gzipped
+<code class="docutils literal notranslate"><span class="pre">my-extension</span></code> can be a local directory containing the extension, a gzipped
 tarball, or a URL to a gzipped tarball.</p>
-<p>We encourage extension authors to add the <code class="docutils literal"><span class="pre">jupyterlab-extensions</span></code>
+<p>We encourage extension authors to add the <code class="docutils literal notranslate"><span class="pre">jupyterlab-extension</span></code>
 GitHub topic to any repository with a JupyterLab extension to facilitate
 discovery. You can see a list of extensions by searching GitHub for the
 <a class="reference external" href="https://github.com/search?utf8=%E2%9C%93&amp;q=topic%3Ajupyterlab-extension&amp;type=Repositories">jupyterlab-extension</a>
 topic.</p>
 <p>You can list the currently installed extensions by running the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="nb">list</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension list
 </pre></div>
 </div>
 <p>Uninstall an extension by running the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">uninstall</span> <span class="o">&lt;</span><span class="n">bar</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension uninstall my-extension
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">&lt;bar&gt;</span></code> is the name of the extension, as printed in the
+<p>where <code class="docutils literal notranslate"><span class="pre">my-extension</span></code> is the name of the extension, as printed in the
 extension list. You can also uninstall core extensions using this
-command (which can later be re-installed).</p>
+command (you can always re-install core extensions later).</p>
 <p>Installing and uninstalling extensions can take some time, as they are
 downloaded, bundled with the core extensions, and the whole application
 is rebuilt. You can install/uninstall more than one extension in the
-same command by listing their names after the <code class="docutils literal"><span class="pre">install</span></code> command.</p>
+same command by listing their names after the <code class="docutils literal notranslate"><span class="pre">install</span></code> command.</p>
 <p>If you are installing/uninstalling several extensions in several stages,
 you may want to defer rebuilding the application by including the flag
-<code class="docutils literal"><span class="pre">--no-build</span></code> in the install/uninstall step. Once you are ready to
+<code class="docutils literal notranslate"><span class="pre">--no-build</span></code> in the install/uninstall step. Once you are ready to
 rebuild, you can run the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span> <span class="n">build</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab build
 </pre></div>
 </div>
+<p><strong>Note</strong>
+If using Windows, you may encounter a <cite>FileNotFoundError</cite> due to the default PATH length on
+Windows.  Node modules are stored in a nested file structure, so the path can get quite
+long.  If you have administrative access and are on Windows 8 or 10, you can update the
+registry setting using these instructions: <a class="reference external" href="https://stackoverflow.com/a/37528731">https://stackoverflow.com/a/37528731</a>.</p>
 </div>
 <div class="section" id="disabling-extensions">
-<h2>Disabling Extensions<a class="headerlink" href="#disabling-extensions" title="Permalink to this headline">¶</a></h2>
+<h3>Disabling Extensions<a class="headerlink" href="#disabling-extensions" title="Permalink to this headline">¶</a></h3>
 <p>You can disable specific JupyterLab extensions (including core
 extensions) without rebuilding the application by running the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">disable</span> <span class="o">&lt;</span><span class="n">bar</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension disable my-extension
 </pre></div>
 </div>
-<p>where <code class="docutils literal"><span class="pre">&lt;bar&gt;</span></code> is the name of the extension. This will prevent the
-extension from loading in the browser, but does not require a rebuild.</p>
+<p>This will prevent the extension from loading in the browser, but does not
+require a rebuild.</p>
 <p>You can re-enable an extension using the command:</p>
-<div class="code bash highlight-default"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">enable</span> <span class="o">&lt;</span><span class="n">foo</span><span class="o">&gt;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter labextension <span class="nb">enable</span> my-extension
 </pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="advanced-usage">
-<h2>Advanced Usage<a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h2>
-<p>The JupyterLab application directory (where the application assets are
-built and the settings reside) can be overridden using <code class="docutils literal"><span class="pre">--app-dir</span></code> in
-any of the JupyterLab commands, or by setting the <code class="docutils literal"><span class="pre">JUPYTERLAB_DIR</span></code>
+<h2><a class="toc-backref" href="#id18">Advanced Usage</a><a class="headerlink" href="#advanced-usage" title="Permalink to this headline">¶</a></h2>
+<p>Any information that JupyterLab persists is stored in its application directory,
+including settings and built assets.
+This is separate from where the Python package is installed (like in <code class="docutils literal notranslate"><span class="pre">site_packages</span></code>)
+so that the install directory is immutable.</p>
+<p>The application directory can be overridden using <code class="docutils literal notranslate"><span class="pre">--app-dir</span></code> in
+any of the JupyterLab commands, or by setting the <code class="docutils literal notranslate"><span class="pre">JUPYTERLAB_DIR</span></code>
 environment variable. If not specified, it will default to
-<code class="docutils literal"><span class="pre">&lt;sys-prefix&gt;/share/jupyter/lab</span></code>, where <code class="docutils literal"><span class="pre">&lt;sys-prefix&gt;</span></code> is the
+<code class="docutils literal notranslate"><span class="pre">&lt;sys-prefix&gt;/share/jupyter/lab</span></code>, where <code class="docutils literal notranslate"><span class="pre">&lt;sys-prefix&gt;</span></code> is the
 site-specific directory prefix of the current Python environment. You
-can query the current application path by running <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">path</span></code>.</p>
+can query the current application path by running <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">path</span></code>.
+Note that the application directory is expected to contain the JupyterLab
+static assets (e.g. <cite>static/index.html</cite>).  If JupyterLab is launched
+and the static assets are not present, it will display an error in the console and in the browser.</p>
 <div class="section" id="jupyterlab-build-process">
 <h3>JupyterLab Build Process<a class="headerlink" href="#jupyterlab-build-process" title="Permalink to this headline">¶</a></h3>
-<p>To rebuild the app directory, run <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">build</span></code>. By default the
-<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> command builds the application, so you
-typically do not need to call <code class="docutils literal"><span class="pre">build</span></code> directly.</p>
+<p>To rebuild the app directory, run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">build</span></code>. By default, the
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span></code> command builds the application, so you
+typically do not need to call <code class="docutils literal notranslate"><span class="pre">build</span></code> directly.</p>
 <p>Building consists of:</p>
 <ul class="simple">
-<li>Populating the <code class="docutils literal"><span class="pre">staging/</span></code> directory using template files</li>
-<li>Handling any locally installed packages</li>
-<li>Ensuring all installed assets are available</li>
-<li>Bundling the assets</li>
-<li>Copying the assets to the <code class="docutils literal"><span class="pre">static</span></code> directory</li>
+<li><p>Populating the <code class="docutils literal notranslate"><span class="pre">staging/</span></code> directory using template files</p></li>
+<li><p>Handling any locally installed packages</p></li>
+<li><p>Ensuring all installed assets are available</p></li>
+<li><p>Bundling the assets</p></li>
+<li><p>Copying the bundled assets to the <code class="docutils literal notranslate"><span class="pre">static</span></code> directory</p></li>
 </ul>
+<p>Note that building will always use the latest JavaScript packages that meet
+the dependency requirements of JupyterLab itself and any installed extensions.
+If you wish to run JupyterLab with the set of pinned requirements that was
+shipped with the Python package, you can launch as
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--core-mode</span></code>.</p>
+<p><strong>Note</strong></p>
+<p>The build process uses a specific <code class="docutils literal notranslate"><span class="pre">yarn</span></code> version with a default working
+combination of npm packages stored in a <code class="docutils literal notranslate"><span class="pre">yarn.lock</span></code> file shipped with
+JupyterLab. Those package source urls point to the default yarn registry.
+But if you defined your own yarn registry in yarn configuration, the
+default yarn registry will be replaced by your custom registry.</p>
+<p>If then you switch back to the default yarn registry, you will need to
+clean your <code class="docutils literal notranslate"><span class="pre">staging</span></code> folder before building:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab clean
+jupyter lab build
+</pre></div>
+</div>
 </div>
 <div class="section" id="jupyterlab-application-directory">
 <h3>JupyterLab Application Directory<a class="headerlink" href="#jupyterlab-application-directory" title="Permalink to this headline">¶</a></h3>
 <p>The JupyterLab application directory contains the subdirectories
-<code class="docutils literal"><span class="pre">extensions</span></code>, <code class="docutils literal"><span class="pre">schemas</span></code>, <code class="docutils literal"><span class="pre">settings</span></code>, <code class="docutils literal"><span class="pre">staging</span></code>, <code class="docutils literal"><span class="pre">static</span></code>, and
-<code class="docutils literal"><span class="pre">themes</span></code>.</p>
+<code class="docutils literal notranslate"><span class="pre">extensions</span></code>, <code class="docutils literal notranslate"><span class="pre">schemas</span></code>, <code class="docutils literal notranslate"><span class="pre">settings</span></code>, <code class="docutils literal notranslate"><span class="pre">staging</span></code>, <code class="docutils literal notranslate"><span class="pre">static</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">themes</span></code>.  The default application directory mirrors the location where
+JupyterLab was installed.  For example, in a conda environment, it is in
+<code class="docutils literal notranslate"><span class="pre">&lt;conda_root&gt;/envs/&lt;env_name&gt;/share/jupyter/lab</span></code>.  The directory can be
+overridden by setting a <code class="docutils literal notranslate"><span class="pre">JUPYTERLAB_DIR</span></code> environment variable.</p>
+<p>It is not recommended to install JupyterLab in a root location (on Unix-like
+systems).  Instead, use a conda environment or <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">jupyterlab</span></code>
+so that the application directory ends up in a writable location.</p>
+<p>Note: this folder location and semantics do <em>not</em> follow the standard Jupyter
+config semantics because we need to build a single unified application, and the
+default config location for Jupyter is at the user level (user’s home directory).
+By explicitly using a directory alongside the currently installed JupyterLab,
+we can ensure better isolation between conda or other virtual environments.</p>
 <div class="section" id="extensions-1">
-<span id="id1"></span><h4>extensions<a class="headerlink" href="#extensions-1" title="Permalink to this headline">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">extensions</span></code> directory has the packed tarballs for each of the
+<span id="id4"></span><h4>extensions<a class="headerlink" href="#extensions-1" title="Permalink to this headline">¶</a></h4>
+<p>The <code class="docutils literal notranslate"><span class="pre">extensions</span></code> directory has the packed tarballs for each of the
 installed extensions for the app. If the application directory is not
-the same as the <code class="docutils literal"><span class="pre">sys-prefix</span></code> directory, the extensions installed in
-the <code class="docutils literal"><span class="pre">sys-prefix</span></code> directory will be used in the app directory. If an
+the same as the <code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> directory, the extensions installed in
+the <code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> directory will be used in the app directory. If an
 extension is installed in the app directory that exists in the
-<code class="docutils literal"><span class="pre">sys-prefix</span></code> directory, it will shadow the <code class="docutils literal"><span class="pre">sys-prefix</span></code> version.
+<code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> directory, it will shadow the <code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> version.
 Uninstalling an extension will first uninstall the shadowed extension,
-and then attempt to uninstall the <code class="docutils literal"><span class="pre">sys-prefix</span></code> version if called
-again. If the <code class="docutils literal"><span class="pre">sys-prefix</span></code> version cannot be uninstalled, its plugins
-can still be ignored using <code class="docutils literal"><span class="pre">ignoredPackages</span></code> metadata in <code class="docutils literal"><span class="pre">settings</span></code>.</p>
+and then attempt to uninstall the <code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> version if called
+again. If the <code class="docutils literal notranslate"><span class="pre">sys-prefix</span></code> version cannot be uninstalled, its plugins
+can still be ignored using <code class="docutils literal notranslate"><span class="pre">ignoredPackages</span></code> metadata in <code class="docutils literal notranslate"><span class="pre">settings</span></code>.</p>
 </div>
 <div class="section" id="schemas">
 <h4>schemas<a class="headerlink" href="#schemas" title="Permalink to this headline">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">schemas</span></code> directory contains <a class="reference external" href="http://json-schema.org/">JSON
+<p>The <code class="docutils literal notranslate"><span class="pre">schemas</span></code> directory contains <a class="reference external" href="http://json-schema.org/">JSON
 Schemas</a> that describe the settings used by
 individual extensions. Users may edit these settings using the
 JupyterLab Settings Editor.</p>
 </div>
 <div class="section" id="settings">
 <h4>settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">settings</span></code> directory contains <code class="docutils literal"><span class="pre">page_config.json</span></code> and
-<code class="docutils literal"><span class="pre">build_config.json</span></code> files.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">settings</span></code> directory may contain <code class="docutils literal notranslate"><span class="pre">page_config.json</span></code>, <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code>, and/or
+<code class="docutils literal notranslate"><span class="pre">build_config.json</span></code> files, depending on which configurations are
+set on your system.</p>
 <p id="page-configjson">page_config.json</p>
-<p>The <code class="docutils literal"><span class="pre">page_config.json</span></code> data is used to provide config data to the
+<p>The <code class="docutils literal notranslate"><span class="pre">page_config.json</span></code> data is used to provide configuration data to the
 application environment.</p>
-<p>Two important fields in the <code class="docutils literal"><span class="pre">page_config.json</span></code> file allow control of
-which plugins load:</p>
+<p>The following configurations may be present in this file:</p>
 <ol class="arabic simple">
-<li><code class="docutils literal"><span class="pre">disabledExtensions</span></code> for extensions that should not load at all.</li>
-<li><code class="docutils literal"><span class="pre">deferredExtensions</span></code> for extensions that do not load until they are
-required by something, irrespective of whether they set <code class="docutils literal"><span class="pre">autostart</span></code>
-to <code class="docutils literal"><span class="pre">true</span></code>.</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">terminalsAvailable</span></code> identifies whether a terminal (i.e. <code class="docutils literal notranslate"><span class="pre">bash/tsch</span></code>
+on Mac/Linux OR <code class="docutils literal notranslate"><span class="pre">PowerShell</span></code> on Windows) is available to be launched
+via the Launcher. (This configuration was predominantly required for
+Windows prior to PowerShell access being enabled in Jupyter Lab.) The
+value for this field is a Boolean: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">disabledExtensions</span></code> controls which extensions should not load at all.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deferredExtensions</span></code> controls which extensions should not load until
+they are required by something, irrespective of whether they set
+<code class="docutils literal notranslate"><span class="pre">autoStart</span></code> to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ol>
-<p>The value for each field is an array of strings. The following sequence
-of checks are performed against the patterns in <code class="docutils literal"><span class="pre">disabledExtensions</span></code>
-and <code class="docutils literal"><span class="pre">deferredExtensions</span></code>.</p>
+<p>The value for the <code class="docutils literal notranslate"><span class="pre">disabledExtensions</span></code> and <code class="docutils literal notranslate"><span class="pre">deferredExtensions</span></code> fields
+are an array of strings. The following sequence of checks are performed
+against the patterns in <code class="docutils literal notranslate"><span class="pre">disabledExtensions</span></code> and <code class="docutils literal notranslate"><span class="pre">deferredExtensions</span></code>.</p>
 <ul class="simple">
-<li>If an identical string match occurs between a config value and a
-package name (e.g., <code class="docutils literal"><span class="pre">&quot;&#64;jupyterlab/apputils-extension&quot;</span></code>), then the
-entire package is disabled (or deferred).</li>
-<li>If the string value is compiled as a regular expression and tests
+<li><p>If an identical string match occurs between a config value and a
+package name (e.g., <code class="docutils literal notranslate"><span class="pre">&quot;&#64;jupyterlab/apputils-extension&quot;</span></code>), then the
+entire package is disabled (or deferred).</p></li>
+<li><p>If the string value is compiled as a regular expression and tests
 positive against a package name (e.g.,
-<code class="docutils literal"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;&#64;jupyterlab/apputils*$&quot;]</span></code>), then the
-entire package is disabled (or deferred).</li>
-<li>If an identical string match occurs between a config value and an
+<code class="docutils literal notranslate"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;&#64;jupyterlab/apputils*$&quot;]</span></code>), then the
+entire package is disabled (or deferred).</p></li>
+<li><p>If an identical string match occurs between a config value and an
 individual plugin ID within a package (e.g.,
-<code class="docutils literal"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;&#64;jupyterlab/apputils-extension:settings&quot;]</span></code>),
-then that specific plugin is disabled (or deferred).</li>
-<li>If the string value is compiled as a regular expression and tests
+<code class="docutils literal notranslate"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;&#64;jupyterlab/apputils-extension:settings&quot;]</span></code>),
+then that specific plugin is disabled (or deferred).</p></li>
+<li><p>If the string value is compiled as a regular expression and tests
 positive against an individual plugin ID within a package (e.g.,
-<code class="docutils literal"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;^&#64;jupyterlab/apputils-extension:set.*$&quot;]</span></code>),
-then that specific plugin is disabled (or deferred).</li>
+<code class="docutils literal notranslate"><span class="pre">&quot;disabledExtensions&quot;:</span> <span class="pre">[&quot;^&#64;jupyterlab/apputils-extension:set.*$&quot;]</span></code>),
+then that specific plugin is disabled (or deferred).</p></li>
 </ul>
+<p>An example of a <code class="docutils literal notranslate"><span class="pre">page_config.json</span></code> file is:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;disabledExtensions&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;@jupyterlab/toc&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;terminalsAvailable&quot;</span><span class="p">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p id="overridesjson">overrides.json</p>
+<p>You can override default values of the extension settings by
+defining new default values in an <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code> file.
+So for example, if you would like
+to set the dark theme by default instead of the light one, an
+<code class="docutils literal notranslate"><span class="pre">overrides.json</span></code> file containing the following lines needs to be
+added in the application settings directory (by default this is the
+<code class="docutils literal notranslate"><span class="pre">share/jupyter/lab/settings</span></code> folder).</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;@jupyterlab/apputils-extension:themes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;theme&quot;</span><span class="p">:</span> <span class="s2">&quot;JupyterLab Dark&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 <p id="build-configjson">build_config.json</p>
-<p>The <code class="docutils literal"><span class="pre">build_config.json</span></code> file is used to track the local directories
+<p>The <code class="docutils literal notranslate"><span class="pre">build_config.json</span></code> file is used to track the local directories
 that have been installed using
-<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span> <span class="pre">&lt;directory&gt;</span></code>, as well as core extensions
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">labextension</span> <span class="pre">install</span> <span class="pre">&lt;directory&gt;</span></code>, as well as core extensions
 that have been explicitly uninstalled. An example of a
-<code class="docutils literal"><span class="pre">build_config.json</span></code> file is:</p>
-<div class="code json highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;uninstalled_core_extensions&quot;</span><span class="p">:</span> <span class="p">[</span>
+<code class="docutils literal notranslate"><span class="pre">build_config.json</span></code> file is:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;uninstalled_core_extensions&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="s2">&quot;@jupyterlab/markdownwidget-extension&quot;</span>
     <span class="p">],</span>
-    <span class="s2">&quot;local_extensions&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&quot;@jupyterlab/python-tests&quot;</span><span class="p">:</span> <span class="s2">&quot;/path/to/my/extension&quot;</span>
+    <span class="nt">&quot;local_extensions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;@jupyterlab/python-tests&quot;</span><span class="p">:</span> <span class="s2">&quot;/path/to/my/extension&quot;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -385,39 +868,67 @@ that have been explicitly uninstalled. An example of a
 </div>
 <div class="section" id="staging-and-static">
 <h4>staging and static<a class="headerlink" href="#staging-and-static" title="Permalink to this headline">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">static</span></code> directory contains the assets that will be loaded by the
-JuptyerLab application. The <code class="docutils literal"><span class="pre">staging</span></code> directory is used to create the
-build and then populate the <code class="docutils literal"><span class="pre">static</span></code> directory.</p>
-<p>Running <code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">lab</span></code> will attempt to run the <code class="docutils literal"><span class="pre">static</span></code> assets in the
+<p>The <code class="docutils literal notranslate"><span class="pre">static</span></code> directory contains the assets that will be loaded by the
+JupyterLab application. The <code class="docutils literal notranslate"><span class="pre">staging</span></code> directory is used to create the
+build and then populate the <code class="docutils literal notranslate"><span class="pre">static</span></code> directory.</p>
+<p>Running <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span></code> will attempt to run the <code class="docutils literal notranslate"><span class="pre">static</span></code> assets in the
 application directory if they exist. You can run
-<code class="docutils literal"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--core-mode</span></code> to load the core JupyterLab application
+<code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--core-mode</span></code> to load the core JupyterLab application
 (i.e., the application without any extensions) instead.</p>
 </div>
 <div class="section" id="themes">
 <h4>themes<a class="headerlink" href="#themes" title="Permalink to this headline">¶</a></h4>
-<p>The <code class="docutils literal"><span class="pre">themes</span></code> directory contains assets (such as CSS and icons) for
+<p>The <code class="docutils literal notranslate"><span class="pre">themes</span></code> directory contains assets (such as CSS and icons) for
 JupyterLab theme extensions.</p>
 </div>
 </div>
+<div class="section" id="jupyterlab-user-settings-directory">
+<h3>JupyterLab User Settings Directory<a class="headerlink" href="#jupyterlab-user-settings-directory" title="Permalink to this headline">¶</a></h3>
+<p>The user settings directory contains the user-level settings for Jupyter extensions.
+By default, the location is <code class="docutils literal notranslate"><span class="pre">~/.jupyter/lab/user-settings/</span></code>, where <code class="docutils literal notranslate"><span class="pre">~</span></code> is the user’s home directory. This folder is not in the JupyterLab application directory,
+because these settings are typically shared across Python environments.
+The location can be modified using the <code class="docutils literal notranslate"><span class="pre">JUPYTERLAB_SETTINGS_DIR</span></code> environment variable. Files are automatically created in this folder as modifications are made
+to settings from the JupyterLab UI. They can also be manually created.  The files
+follow the pattern of <code class="docutils literal notranslate"><span class="pre">&lt;package_name&gt;/&lt;extension_name&gt;.jupyterlab-settings</span></code>.
+They are JSON files with optional comments. These values take precedence over the
+default values given by the extensions, but can be overridden by an <code class="docutils literal notranslate"><span class="pre">overrides.json</span></code>
+file in the application’s settings directory.</p>
+</div>
+</div>
+<div class="section" id="jupyterlab-workspaces-directory">
+<h2><a class="toc-backref" href="#id19">JupyterLab Workspaces Directory</a><a class="headerlink" href="#jupyterlab-workspaces-directory" title="Permalink to this headline">¶</a></h2>
+<p>JupyterLab sessions always reside in a workspace. Workspaces contain the state
+of JupyterLab: the files that are currently open, the layout of the application
+areas and tabs, etc. When the page is refreshed, the workspace is restored.
+By default, the location is <code class="docutils literal notranslate"><span class="pre">~/.jupyter/lab/workspaces/</span></code>, where <code class="docutils literal notranslate"><span class="pre">~</span></code> is the user’s home directory. This folder is not in the JupyterLab application directory,
+because these files are typically shared across Python environments.
+The location can be modified using the <code class="docutils literal notranslate"><span class="pre">JUPYTERLAB_WORKSPACES_DIR</span></code> environment variable. These files can be imported and exported to create default “profiles”,
+using the <a class="reference internal" href="urls.html#url-workspaces-cli"><span class="std std-ref">workspace command line tool</span></a>.</p>
 </div>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../developer/repo.html" class="btn btn-neutral float-right" title="General Codebase Orientation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="file_formats.html" class="btn btn-neutral" title="File and Output Formats" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="file_formats.html" title="previous page">File and Output Formats</a>
+    <a class='right-next' id="next-link" href="jupyterhub.html" title="next page">JupyterLab on JupyterHub</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
     </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
   
 
   <hr/>
@@ -434,47 +945,5 @@ JupyterLab theme extensions.</p>
 
 </footer>
 
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0 Beta',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>

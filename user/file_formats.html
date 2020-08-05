@@ -1,205 +1,270 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>File and Output Formats &mdash; JupyterLab 1.0 Beta documentation</title>
-  
 
-  
-  
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>File and Output Formats &#8212; JupyterLab 3.0.0a5 documentation</title>
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="JupyterLab 1.0 Beta documentation" href="../index.html"/>
-        <link rel="next" title="Extensions" href="extensions.html"/>
-        <link rel="prev" title="Documents and kernels" href="documents_kernels.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-   
-  <div class="wy-grid-for-nav">
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-          
-            <a href="../index.html" class="icon icon-home"> JupyterLab
-          
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
-          
-          </a>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
 
-          
-            
-            
-              <div class="version">
-                1.0 Beta
-              </div>
-            
-          
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Extensions" href="extensions.html" />
+    <link rel="prev" title="Documents and Kernels" href="documents_kernels.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../developer/repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/starting.html">Starting JupyterLab</a></li>
-</ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="interface.html">The JupyterLab Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="files.html">Working with Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="file_editor.html">Text Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebook.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="code_console.html">Code Consoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminal.html">Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="running.html">Managing Kernels and Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="commands.html">Command Palette</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documents_kernels.html">Documents and kernels</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">File and Output Formats</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#markdown">Markdown</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#images">Images</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#csv">CSV</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#json">JSON</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#html">HTML</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#latex">LaTeX</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pdf">PDF</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#vega-vega-lite">Vega/Vega-Lite</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#virtual-dom">Virtual DOM</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="extensions.html">Extensions</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../developer/repo.html">General Codebase Orientation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/extension_dev.html">Extension Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/documents.html">Documents</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/notebook.html">Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/patterns.html">Design Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/css.html">CSS Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/documentation.html">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/virtualdom.html">Virtual DOM and React</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/adding_content.html">Adding Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../developer/xkcd_extension_tutorial.html">Let’s Make an xkcd JupyterLab Extension</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
     </nav>
+    
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">JupyterLab</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
+    <div class="container-xl">
+      <div class="row">
           
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
 
 
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>File and Output Formats</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/user/file_formats.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
+  <div class="bd-toc-item active">
   
-  <hr/>
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="urls.html">JupyterLab URLs</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="files.html">Working with Files</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="file_editor.html">Text Editor</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebooks</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="code_console.html">Code Consoles</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminal.html">Terminals</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="running.html">Managing Kernels and Terminals</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="commands.html">Command Palette</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents_kernels.html">Documents and Kernels</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">File and Output Formats</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extensions.html">Extensions</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="jupyterhub.html">JupyterLab on JupyterHub</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="export.html">Exporting Notebooks</a>
+              </li>
+          
+        
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#markdown" class="nav-link">Markdown</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#images" class="nav-link">Images</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#delimiter-separated-values" class="nav-link">Delimiter-separated Values</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#json" class="nav-link">JSON</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#html" class="nav-link">HTML</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#latex" class="nav-link">LaTeX</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#pdf" class="nav-link">PDF</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#vega-vega-lite" class="nav-link">Vega/Vega-Lite</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#virtual-dom" class="nav-link">Virtual DOM</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="file-and-output-formats">
 <span id="id1"></span><h1>File and Output Formats<a class="headerlink" href="#file-and-output-formats" title="Permalink to this headline">¶</a></h1>
 <p>JupyterLab provides a unified architecture for viewing and editing data
@@ -209,7 +274,7 @@ code console.</p>
 <p>For files, the data format is detected by the extension of the file (or
 the whole filename if there is no extension). A single file extension
 may have multiple editors or viewers registered. For example, a Markdown
-file (<code class="docutils literal"><span class="pre">.md</span></code>) can be edited in the file editor or rendered and
+file (<code class="docutils literal notranslate"><span class="pre">.md</span></code>) can be edited in the file editor or rendered and
 displayed as HTML. You can open different editors and viewers for a file
 by right-clicking on the filename in the file browser and using the
 “Open With” submenu:</p>
@@ -218,7 +283,7 @@ by right-clicking on the filename in the file browser and using the
 console, you can use the relevant display API for the kernel you are
 using. For example, the IPython kernel provides a variety of convenience
 classes for displaying rich output:</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
 <span class="n">display</span><span class="p">(</span><span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;h1&gt;Hello World&lt;/h1&gt;&#39;</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -227,24 +292,25 @@ code console cell:</p>
 <img alt="../_images/file_formats_html_display.png" class="jp-screenshot align-center" src="../_images/file_formats_html_display.png" />
 <p>The IPython display function can also construct a raw rich output
 message from a dictionary of keys (MIME types) and values (MIME data):</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
 <span class="n">display</span><span class="p">({</span><span class="s1">&#39;text/html&#39;</span><span class="p">:</span> <span class="s1">&#39;&lt;h1&gt;Hello World&lt;/h1&gt;&#39;</span><span class="p">,</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">:</span> <span class="s1">&#39;Hello World&#39;</span><span class="p">},</span> <span class="n">raw</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Other Jupyter kernels offer similar APIs.</p>
 <p>The rest of this section highlights some of the common data formats that
-JupyterLab supports.</p>
+JupyterLab supports by default. JupyterLab extensions can also add support for
+other file formats.</p>
 <div class="section" id="markdown">
-<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<span id="id2"></span><h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.md</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">text/markdown</span></code></li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.md</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">text/markdown</span></code></p></li>
 </ul>
 <p>Markdown is a simple and popular markup language used for text cells in
 the Jupyter Notebook.</p>
-<p>Markdown documents can be edited as text files or rendered inline:</p>
+<p id="edit-markdown">Markdown documents can be edited as text files or rendered inline:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/eQsRlqK-z1c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/eQsRlqK-z1c?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div><p>The Markdown syntax supported in this mode is the same syntax used in
 the Jupyter Notebook (for example, LaTeX equations work). As seen in the
 animation, edits to the Markdown source are immediately reflected in the
@@ -253,58 +319,87 @@ rendered version.</p>
 <div class="section" id="images">
 <h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extensions: <code class="docutils literal"><span class="pre">.bmp</span></code>, <code class="docutils literal"><span class="pre">.gif</span></code>, <code class="docutils literal"><span class="pre">.jpeg</span></code>, <code class="docutils literal"><span class="pre">.jpg</span></code>, <code class="docutils literal"><span class="pre">.png</span></code>,
-<code class="docutils literal"><span class="pre">.svg</span></code></li>
-<li>MIME types: <code class="docutils literal"><span class="pre">image/bmp</span></code>, <code class="docutils literal"><span class="pre">image/gif</span></code>, <code class="docutils literal"><span class="pre">image/jpeg</span></code>,
-<code class="docutils literal"><span class="pre">image/png</span></code>, <code class="docutils literal"><span class="pre">image/svg+xml</span></code></li>
+<li><p>File extensions: <code class="docutils literal notranslate"><span class="pre">.bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">.gif</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpeg</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.png</span></code>,
+<code class="docutils literal notranslate"><span class="pre">.svg</span></code></p></li>
+<li><p>MIME types: <code class="docutils literal notranslate"><span class="pre">image/bmp</span></code>, <code class="docutils literal notranslate"><span class="pre">image/gif</span></code>, <code class="docutils literal notranslate"><span class="pre">image/jpeg</span></code>,
+<code class="docutils literal notranslate"><span class="pre">image/png</span></code>, <code class="docutils literal notranslate"><span class="pre">image/svg+xml</span></code></p></li>
 </ul>
 <p>JupyterLab supports image data in cell output and as files in the above
 formats. In the image file viewer, you can use keyboard shortcuts such
-as <code class="docutils literal"><span class="pre">+</span></code> and <code class="docutils literal"><span class="pre">-</span></code> to zoom the image and <code class="docutils literal"><span class="pre">0</span></code> to reset the zoom level.
-To edit an SVG image as a text file, right-click on the SVG filename in
+as <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">-</span></code> to zoom the image, <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code> to rotate the image,
+and <code class="docutils literal notranslate"><span class="pre">H</span></code> and <code class="docutils literal notranslate"><span class="pre">V</span></code> to flip the image horizontally and vertically. Use
+<code class="docutils literal notranslate"><span class="pre">I</span></code> to invert the colors, and use <code class="docutils literal notranslate"><span class="pre">0</span></code> to reset the image.</p>
+<p id="edit-svg">To edit an SVG image as a text file, right-click on the SVG filename in
 the file browser and select the “Editor” item in the “Open With”
 submenu:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y_ydmAmVdCA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/y_ydmAmVdCA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div></div>
-<div class="section" id="csv">
-<h2>CSV<a class="headerlink" href="#csv" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="delimiter-separated-values">
+<span id="csv"></span><h2>Delimiter-separated Values<a class="headerlink" href="#delimiter-separated-values" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.csv</span></code></li>
-<li>MIME type: None</li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.csv</span></code></p></li>
+<li><p>MIME type: None</p></li>
 </ul>
-<p>Files with rows of comma-separated values (CSV files) are a common
-format for tabular data. The default viewer for CSV files in JupyterLab
-is a high-performance data grid viewer (which can also handle tab- and
-semicolon-separated values):</p>
+<p id="view-csv">Files with rows of delimiter-separated values, such as CSV files, are a common format for
+tabular data. The default viewer for these files in JupyterLab is a
+high-performance data grid viewer which can display comma-separated, tab-separated, and
+semicolon-separated values:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/z6xuZ9H3Imo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div><p>To edit a CSV file as a text file, right-click on the file in the file
+  <iframe src="https://www.youtube-nocookie.com/embed/z6xuZ9H3Imo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>While tab-separated value files can be read by the grid viewer, it currently does not automatically recognize <code class="docutils literal notranslate"><span class="pre">.tsv</span></code> files.
+To view, you must change the extension to <code class="docutils literal notranslate"><span class="pre">.csv</span></code> and set the delimiter to tabs.</p>
+<p id="edit-csv">To edit a CSV file as a text file, right-click on the file in the file
 browser and select the “Editor” item in the “Open With” submenu:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/b5oAoVB3Wd4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div></div>
+  <iframe src="https://www.youtube-nocookie.com/embed/b5oAoVB3Wd4?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>JupyterLab’s grid viewer can open large files, up to the maximum string size of the particular browser.
+Below is a table that shows the sizes of the largest test files we successfully opened in each browser we support:</p>
+<table class="table">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Browser</p></th>
+<th class="head"><p>Max Size</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Firefox</p></td>
+<td><p>1.04GB</p></td>
+</tr>
+<tr class="row-odd"><td><p>Chrome</p></td>
+<td><p>730MB</p></td>
+</tr>
+<tr class="row-even"><td><p>Safari</p></td>
+<td><p>1.8GB</p></td>
+</tr>
+</tbody>
+</table>
+<p>The actual maximum size of files that can be successfully loaded will vary depending on the browser version and file content.</p>
+</div>
 <div class="section" id="json">
 <h2>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.json</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">application/json</span></code></li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.json</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">application/json</span></code></p></li>
 </ul>
-<p>JavaScript Object Notation (JSON) files are common in data science.
+<p id="view-json">JavaScript Object Notation (JSON) files are common in data science.
 JupyterLab supports displaying JSON data in cell output or viewing a
 JSON file using a searchable tree view:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FRj1r7-7kiQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div><p>To edit the JSON as a text file, right-click on the filename in the file
+  <iframe src="https://www.youtube-nocookie.com/embed/FRj1r7-7kiQ?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p id="edit-json">To edit the JSON as a text file, right-click on the filename in the file
 browser and select the “Editor” item in the “Open With” submenu:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/HKcJAGZngzw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/HKcJAGZngzw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div></div>
 <div class="section" id="html">
 <h2>HTML<a class="headerlink" href="#html" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.html</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">text/html</span></code></li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.html</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">text/html</span></code></p></li>
 </ul>
 <p>JupyterLab supports rendering HTML in cell output and editing HTML files
 as text in the file editor.</p>
@@ -312,8 +407,8 @@ as text in the file editor.</p>
 <div class="section" id="latex">
 <h2>LaTeX<a class="headerlink" href="#latex" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.tex</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">text/latex</span></code></li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.tex</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">text/latex</span></code></p></li>
 </ul>
 <p>JupyterLab supports rendering LaTeX equations in cell output and editing
 LaTeX files as text in the file editor.</p>
@@ -321,45 +416,45 @@ LaTeX files as text in the file editor.</p>
 <div class="section" id="pdf">
 <h2>PDF<a class="headerlink" href="#pdf" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extension: <code class="docutils literal"><span class="pre">.pdf</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">application/pdf</span></code></li>
+<li><p>File extension: <code class="docutils literal notranslate"><span class="pre">.pdf</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">application/pdf</span></code></p></li>
 </ul>
-<p>PDF is a common standard file format for documents. To view a PDF file
+<p id="view-pdf">PDF is a common standard file format for documents. To view a PDF file
 in JupyterLab, double-click on the file in the file browser:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vLAEzD5dxQw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/vLAEzD5dxQw?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div></div>
 <div class="section" id="vega-vega-lite">
-<h2>Vega/Vega-Lite<a class="headerlink" href="#vega-vega-lite" title="Permalink to this headline">¶</a></h2>
+<span id="vega-lite"></span><h2>Vega/Vega-Lite<a class="headerlink" href="#vega-vega-lite" title="Permalink to this headline">¶</a></h2>
 <p>Vega:</p>
 <ul class="simple">
-<li>File extensions: <code class="docutils literal"><span class="pre">.vg</span></code>, <code class="docutils literal"><span class="pre">.vg.json</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">application/vnd.vega.v2+json</span></code></li>
+<li><p>File extensions: <code class="docutils literal notranslate"><span class="pre">.vg</span></code>, <code class="docutils literal notranslate"><span class="pre">.vg.json</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">application/vnd.vega.v5+json</span></code></p></li>
 </ul>
 <p>Vega-Lite:</p>
 <ul class="simple">
-<li>File extensions: <code class="docutils literal"><span class="pre">.vl</span></code>, <code class="docutils literal"><span class="pre">.vl.json</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">application/vnd.vegalite.v1+json</span></code></li>
+<li><p>File extensions: <code class="docutils literal notranslate"><span class="pre">.vl</span></code>, <code class="docutils literal notranslate"><span class="pre">.vl.json</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">application/vnd.vegalite.v3+json</span></code></p></li>
 </ul>
-<p>Vega and Vega-Lite are declarative visualization grammars that allow
+<p>Vega and Vega-Lite are declarative visualization grammars that enable
 visualizations to be encoded as JSON data. For more information, see the
 documentation of Vega or Vega-Lite. JupyterLab supports rendering Vega
-2.x and Vega-Lite 1.x data in files and cell output.</p>
-<p>Vega-Lite 1.x files, with a <code class="docutils literal"><span class="pre">.vl</span></code> or <code class="docutils literal"><span class="pre">.vl.json</span></code> file extension, can
+5.x and Vega-Lite 3.x data in files and cell output.</p>
+<p id="open-vega">Vega-Lite 1.x files, with a <code class="docutils literal notranslate"><span class="pre">.vl</span></code> or <code class="docutils literal notranslate"><span class="pre">.vl.json</span></code> file extension, can
 be opened by double-clicking the file in the file browser:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Dddtyz5fWkU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div><p>The files can also be opened in the JSON viewer or file editor through
+  <iframe src="https://www.youtube-nocookie.com/embed/Dddtyz5fWkU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p id="open-vega-with">The files can also be opened in the JSON viewer or file editor through
 the “Open With…” submenu in the file browser content menu:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qaiGRXh4jxc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div><p>As with other files in JupyterLab, multiple views of a single file
-remain synchronized, allowing you to interactively edit and render
+  <iframe src="https://www.youtube-nocookie.com/embed/qaiGRXh4jxc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p id="vega-multiple-views">As with other files in JupyterLab, multiple views of a single file
+remain synchronized, enabling you to interactively edit and render
 Vega/Vega-Lite visualizations:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4Me4rCeS8To?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div><p>The same workflow also works for Vega 2.x files, with a <code class="docutils literal"><span class="pre">.vg</span></code> or
-<code class="docutils literal"><span class="pre">.vg.json</span></code> file extension.</p>
+  <iframe src="https://www.youtube-nocookie.com/embed/4Me4rCeS8To?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>The same workflow also works for Vega 2.x files, with a <code class="docutils literal notranslate"><span class="pre">.vg</span></code> or
+<code class="docutils literal notranslate"><span class="pre">.vg.json</span></code> file extension.</p>
 <p>Output support for Vega/Vega-Lite in a notebook or code console is
 provided through third-party libraries such as Altair (Python), the
 vegalite R package, or Vegas (Scala/Spark).</p>
@@ -370,8 +465,8 @@ found <a class="reference external" href="https://github.com/jupyterlab/jupyter-
 <div class="section" id="virtual-dom">
 <h2>Virtual DOM<a class="headerlink" href="#virtual-dom" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>File extensions: <code class="docutils literal"><span class="pre">.vdom</span></code>, <code class="docutils literal"><span class="pre">.json</span></code></li>
-<li>MIME type: <code class="docutils literal"><span class="pre">application/vdom.v1+json</span></code></li>
+<li><p>File extensions: <code class="docutils literal notranslate"><span class="pre">.vdom</span></code>, <code class="docutils literal notranslate"><span class="pre">.json</span></code></p></li>
+<li><p>MIME type: <code class="docutils literal notranslate"><span class="pre">application/vdom.v1+json</span></code></p></li>
 </ul>
 <p>Virtual DOM libraries such as <a class="reference external" href="https://reactjs.org/">react.js</a> have
 greatly improved the experience of rendering interactive content in
@@ -379,11 +474,11 @@ HTML. The nteract project, which collaborates closely with Project
 Jupyter, has created a <a class="reference external" href="https://github.com/nteract/vdom">declarative JSON
 format</a> for virtual DOM data.
 JupyterLab can render this data using react.js. This works for both VDOM
-files with the <code class="docutils literal"><span class="pre">.vdom</span></code> extension, or within notebook output.</p>
-<p>Here is an example of a <code class="docutils literal"><span class="pre">.vdom</span></code> file being edited and rendered
+files with the <code class="docutils literal notranslate"><span class="pre">.vdom</span></code> extension, or within notebook output.</p>
+<p id="edit-vdom">Here is an example of a <code class="docutils literal notranslate"><span class="pre">.vdom</span></code> file being edited and rendered
 interactively:</p>
 <div class="jp-youtube-video">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/fObR8xeKCJU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <iframe src="https://www.youtube-nocookie.com/embed/fObR8xeKCJU?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </div><p>The <a class="reference external" href="https://github.com/nteract/vdom">nteract/vdom</a> library provides
 a Python API for creating VDOM output that is rendered in nteract and
 JupyterLab:</p>
@@ -392,21 +487,27 @@ JupyterLab:</p>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="extensions.html" class="btn btn-neutral float-right" title="Extensions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="documents_kernels.html" class="btn btn-neutral" title="Documents and kernels" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="documents_kernels.html" title="previous page">Documents and Kernels</a>
+    <a class='right-next' id="next-link" href="extensions.html" title="next page">Extensions</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
     </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
   
 
   <hr/>
@@ -423,47 +524,5 @@ JupyterLab:</p>
 
 </footer>
 
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0 Beta',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>

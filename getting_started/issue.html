@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reporting an issue &#8212; JupyterLab 3.0.0a5 documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Frequently Asked Questions (FAQ)" href="faq.html" />
+    <link rel="prev" title="Starting JupyterLab" href="starting.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../developer/repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+        
+          
+              <li class="">
+                  <a href="installation.html">Installation</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="starting.html">Starting JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Reporting an issue</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="faq.html">Frequently Asked Questions (FAQ)</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="changelog.html">JupyterLab Changelog</a>
+              </li>
+          
+        
+      
+      
+      
+      
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#diagnosing-an-issue" class="nav-link">Diagnosing an Issue</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#creating-an-issue" class="nav-link">Creating an issue</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="reporting-an-issue">
+<span id="issue"></span><h1>Reporting an issue<a class="headerlink" href="#reporting-an-issue" title="Permalink to this headline">¶</a></h1>
+<p>Thank you for providing feedback about JupyterLab.</p>
+<div class="section" id="diagnosing-an-issue">
+<h2>Diagnosing an Issue<a class="headerlink" href="#diagnosing-an-issue" title="Permalink to this headline">¶</a></h2>
+<p>If you find a problem in JupyterLab, please follow the steps below to diagnose and report the issue. Following these steps helps you diagnose if the problem is likely from JupyterLab or from a different project.</p>
+<ol class="arabic">
+<li><p>Try to reproduce the issue in a new environment with the latest official JupyterLab installed and no extra packages.</p>
+<p>If you are using conda:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>create a new environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">jlab</span><span class="o">-</span><span class="n">test</span> <span class="o">--</span><span class="n">override</span><span class="o">-</span><span class="n">channels</span> <span class="o">--</span><span class="n">strict</span><span class="o">-</span><span class="n">channel</span><span class="o">-</span><span class="n">priority</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="o">-</span><span class="n">c</span> <span class="n">anaconda</span> <span class="n">jupyterlab</span>
+</pre></div>
+</div>
+</li>
+<li><p>Activate the environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">jlab</span><span class="o">-</span><span class="n">test</span>
+</pre></div>
+</div>
+</li>
+<li><p>Start JupyterLab:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li><p>I cannot reproduce this issue in a clean environment: The problem is probably not in JupyterLab itself. Go to step 2.</p></li>
+<li><p>I can reproduce this issue in a clean environment: Go to step 3.</p></li>
+</ul>
+</li>
+<li><p>Perhaps the issue is in one of the JupyterLab extensions you had installed. Install any JupyterLab extensions you had one at a time, checking for the issue after each one.</p>
+<ul class="simple">
+<li><p>I can reproduce the issue after installing a particular extension: That extension may be causing the problem. File an issue with that extension’s issue tracker. Be sure to mention what you have done here to narrow the problem down.</p></li>
+<li><p>I cannot reproduce the issue after installing all my extensions: Good news! Likely all you have to do is update your JupyterLab and extensions. If that fixes the issue, great! If it doesn’t fix the issue, you may have a more complicated issue. Go directly to <a class="reference internal" href="#create-issue"><span class="std std-ref">Creating an issue</span></a>.</p></li>
+</ul>
+</li>
+<li><p>Try to reproduce the issue in the classic Jupyter Notebook. Launch the classic notebook from the JupyterLab help menu to ensure you are getting exactly the same notebook server that JupyterLab is using.</p>
+<ul class="simple">
+<li><p>I can reproduce the issue with the classic Jupyter Notebook: The problem is probably not from JupyterLab. It may be in the <a class="reference external" href="https://github.com/jupyter/notebook">Jupyter Notebook server</a>, your kernel, etc. Use your best judgement to file an issue with the appropriate project.</p></li>
+<li><p>I cannot reproduce the issue in classic Jupyter Notebook: Go to step 4.</p></li>
+</ul>
+</li>
+<li><p>Try to reproduce the issue in your browser incognito or private browsing mode. Running in private browser mode ensures your browser state is clean.</p>
+<ul class="simple">
+<li><p>I cannot reproduce the issue in private browsing mode: Perhaps resetting your cookies or other browser state would help.</p></li>
+<li><p>I can reproduce the issue in private browsing mode: Go to <a class="reference internal" href="#create-issue"><span class="std std-ref">Creating an issue</span></a>.</p></li>
+</ul>
+</li>
+</ol>
+<p>You might also check your system for:</p>
+<ul class="simple">
+<li><p>Security software that might be preventing access to files or network interfaces</p></li>
+<li><p>Network equipment, routers, or proxies that might be preventing communication between the browser and the server</p></li>
+<li><p>Browser extensions that might be changing the JupyterLab code or application page</p></li>
+</ul>
+</div>
+<div class="section" id="creating-an-issue">
+<span id="create-issue"></span><h2>Creating an issue<a class="headerlink" href="#creating-an-issue" title="Permalink to this headline">¶</a></h2>
+<p>Before creating an issue, search in the issue tracker for relevant issues. If you find an issue describing your problem, comment there with the following information instead of creating a new issue. If you find a relevant resolved issue (closed and locked for discussion), create a new issue and reference the resolved issue.</p>
+<p>To create an issue, collect the following contextual information:</p>
+<ul class="simple">
+<li><p>relevant package versions, including:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> and <code class="docutils literal notranslate"><span class="pre">notebook</span></code> versions</p></li>
+<li><p>browser versions affected (please try to reproduce in Chrome and Firefox at least)</p></li>
+<li><p>operating system and version</p></li>
+</ul>
+</li>
+<li><p>relevant server and JavaScript error messages</p></li>
+<li><p>screenshots or short screencasts illustrating the issue</p></li>
+</ul>
+<p><a class="reference external" href="https://github.com/jupyterlab/jupyterlab/issues/new">Create a new issue</a>. Include the contextual information from above. Describe how you followed the diagnosis steps above to conclude this was a JupyterLab issue.</p>
+<p>Communication in JupyterLab follows the Jupyter <a class="reference external" href="https://jupyter.readthedocs.io/en/latest/community/content-community.html">Community Guides</a>.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="starting.html" title="previous page">Starting JupyterLab</a>
+    <a class='right-next' id="next-link" href="faq.html" title="next page">Frequently Asked Questions (FAQ)</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Project Jupyter.<br/>
+        The Jupyter Trademark is registered with the U.S. Patent &amp Trademark Office.
+        
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+  </body>
+</html>

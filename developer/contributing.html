@@ -1,0 +1,1268 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Contributing to JupyterLab &#8212; JupyterLab 3.0.0a5 documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Using JupyterLab components" href="components.html" />
+    <link rel="prev" title="Common Extension Points" href="extension_points.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="extension_dev.html">Extension Developer Guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_points.html">Common Extension Points</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Contributing to JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="components.html">Using JupyterLab components</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_components.html">Reusing JupyterLab UI</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents.html">Documents</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebook</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="patterns.html">Design Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="css.html">CSS Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="virtualdom.html">React</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_helpers.html">User Interface Helpers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminology.html">Terminology</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_tutorial.html">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_migration.html">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#general-guidelines-for-contributing" class="nav-link">General Guidelines for Contributing</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#submitting-a-pull-request-contribution" class="nav-link">Submitting a Pull Request Contribution</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#issue-management" class="nav-link">Issue Management</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#tag-issues-with-labels" class="nav-link">Tag Issues with Labels</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#setting-up-a-development-environment" class="nav-link">Setting Up a Development Environment</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#installing-node-js-and-jlpm" class="nav-link">Installing Node.js and jlpm</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#installing-jupyterlab" class="nav-link">Installing JupyterLab</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#run-jupyterlab" class="nav-link">Run JupyterLab</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#build-and-run-the-tests" class="nav-link">Build and Run the Tests</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#vscode-debugging" class="nav-link">VSCode Debugging</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#chrome-debugging" class="nav-link">Chrome Debugging</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#testing-utilities" class="nav-link">Testing Utilities</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#performance-testing" class="nav-link">Performance Testing</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#using-throttling" class="nav-link">Using throttling</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#comparing-results" class="nav-link">Comparing results</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#build-and-run-the-stand-alone-examples" class="nav-link">Build and run the stand-alone examples</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#debugging-in-the-browser" class="nav-link">Debugging in the Browser</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#high-level-architecture" class="nav-link">High level Architecture</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-npm-packages" class="nav-link">The NPM Packages</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#build-the-npm-packages-from-source" class="nav-link">Build the NPM Packages from Source</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#writing-documentation" class="nav-link">Writing Documentation</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#writing-style" class="nav-link">Writing Style</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#user-interface-naming-conventions" class="nav-link">User Interface Naming Conventions</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#documents-files-and-activities" class="nav-link">Documents, Files, and Activities</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#element-names" class="nav-link">Element Names</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#the-jupyter-server-extension" class="nav-link">The Jupyter Server Extension</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#build-the-jupyterlab-server-extension" class="nav-link">Build the JupyterLab server extension</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#build-utilities" class="nav-link">Build Utilities</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#testing-changes-to-external-packages" class="nav-link">Testing Changes to External Packages</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#linking-unlinking-packages-to-jupyterlab" class="nav-link">Linking/Unlinking Packages to JupyterLab</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#possible-linking-pitfalls" class="nav-link">Possible Linking Pitfalls</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#keyboard-shortcuts" class="nav-link">Keyboard Shortcuts</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#screenshots-and-animations" class="nav-link">Screenshots and Animations</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#notes" class="nav-link">Notes</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="contributing-to-jupyterlab">
+<h1>Contributing to JupyterLab<a class="headerlink" href="#contributing-to-jupyterlab" title="Permalink to this headline">¶</a></h1>
+<p>If you’re reading this section, you’re probably interested in
+contributing to JupyterLab. Welcome and thanks for your interest in
+contributing!</p>
+<p>Please take a look at the Contributor documentation, familiarize
+yourself with using JupyterLab, and introduce yourself to the community
+(on the mailing list or discourse) and share what area of the project
+you are interested in working on. Please also see the Jupyter <a class="reference external" href="https://jupyter.readthedocs.io/en/latest/community/content-community.html">Community
+Guides</a>.</p>
+<p>We have labeled some issues as <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22">good first
+issue</a>
+or <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22">help
+wanted</a>
+that we believe are good examples of small, self-contained changes. We
+encourage those that are new to the code base to implement and/or ask
+questions about these issues.</p>
+<p>If you believe you’ve found a security vulnerability in JupyterLab or
+any Jupyter project, please report it to <a class="reference external" href="mailto:security&#37;&#52;&#48;ipython&#46;org">security<span>&#64;</span>ipython<span>&#46;</span>org</a>. If you
+prefer to encrypt your security reports, you can use <a class="reference external" href="https://raw.githubusercontent.com/jupyter/notebook/master/docs/source/ipython_security.asc">this PGP public
+key</a>.</p>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#general-guidelines-for-contributing" id="id1">General Guidelines for Contributing</a></p></li>
+<li><p><a class="reference internal" href="#submitting-a-pull-request-contribution" id="id2">Submitting a Pull Request Contribution</a></p></li>
+<li><p><a class="reference internal" href="#setting-up-a-development-environment" id="id3">Setting Up a Development Environment</a></p></li>
+<li><p><a class="reference internal" href="#installing-jupyterlab" id="id4">Installing JupyterLab</a></p></li>
+<li><p><a class="reference internal" href="#performance-testing" id="id5">Performance Testing</a></p></li>
+<li><p><a class="reference internal" href="#build-and-run-the-stand-alone-examples" id="id6">Build and run the stand-alone examples</a></p></li>
+<li><p><a class="reference internal" href="#debugging-in-the-browser" id="id7">Debugging in the Browser</a></p></li>
+<li><p><a class="reference internal" href="#high-level-architecture" id="id8">High level Architecture</a></p></li>
+<li><p><a class="reference internal" href="#the-npm-packages" id="id9">The NPM Packages</a></p></li>
+<li><p><a class="reference internal" href="#writing-documentation" id="id10">Writing Documentation</a></p></li>
+<li><p><a class="reference internal" href="#the-jupyter-server-extension" id="id11">The Jupyter Server Extension</a></p></li>
+<li><p><a class="reference internal" href="#build-utilities" id="id12">Build Utilities</a></p></li>
+<li><p><a class="reference internal" href="#testing-changes-to-external-packages" id="id13">Testing Changes to External Packages</a></p></li>
+<li><p><a class="reference internal" href="#keyboard-shortcuts" id="id14">Keyboard Shortcuts</a></p></li>
+<li><p><a class="reference internal" href="#screenshots-and-animations" id="id15">Screenshots and Animations</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id16">Notes</a></p></li>
+</ul>
+</div>
+<div class="section" id="general-guidelines-for-contributing">
+<h2><a class="toc-backref" href="#id1">General Guidelines for Contributing</a><a class="headerlink" href="#general-guidelines-for-contributing" title="Permalink to this headline">¶</a></h2>
+<p>For general documentation about contributing to Jupyter projects, see
+the <a class="reference external" href="https://jupyter.readthedocs.io/en/latest/contributing/content-contributor.html">Project Jupyter Contributor
+Documentation</a>
+and <a class="reference external" href="https://github.com/jupyter/governance/blob/master/conduct/code_of_conduct.md">Code of
+Conduct</a>.</p>
+<p>All source code is written in
+<a class="reference external" href="http://www.typescriptlang.org/Handbook">TypeScript</a>. See the <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/wiki/TypeScript-Style-Guide">Style
+Guide</a>.</p>
+<p>All source code is formatted using <a class="reference external" href="https://prettier.io">prettier</a>.
+When code is modified and committed, all staged files will be
+automatically formatted using pre-commit git hooks (with help from the
+<a class="reference external" href="https://github.com/okonet/lint-staged">lint-staged</a> and
+<a class="reference external" href="https://github.com/typicode/husky">husky</a> libraries). The benefit of
+using a code formatter like prettier is that it removes the topic of
+code style from the conversation when reviewing pull requests, thereby
+speeding up the review process.</p>
+<p>You may also use the prettier npm script (e.g. <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">prettier</span></code> or
+<code class="docutils literal notranslate"><span class="pre">yarn</span> <span class="pre">prettier</span></code> or <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">prettier</span></code>) to format the entire code base.
+We recommend installing a prettier extension for your code editor and
+configuring it to format your code with a keyboard shortcut or
+automatically on save.</p>
+</div>
+<div class="section" id="submitting-a-pull-request-contribution">
+<h2><a class="toc-backref" href="#id2">Submitting a Pull Request Contribution</a><a class="headerlink" href="#submitting-a-pull-request-contribution" title="Permalink to this headline">¶</a></h2>
+<p>Generally, an issue should be opened describing a piece of proposed work
+and the issues it solves before a pull request is opened.</p>
+<div class="section" id="issue-management">
+<h3>Issue Management<a class="headerlink" href="#issue-management" title="Permalink to this headline">¶</a></h3>
+<p>Opening an issue lets community members participate in the design
+discussion, makes others aware of work being done, and sets the stage
+for a fruitful community interaction. A pull request should reference
+the issue it is addressing. Once the pull request is merged, the issue
+related to it will also be closed. If there is additional discussion
+around implemementation the issue may be re-opened. Once 30 days have
+passed with no additional discussion, the <a class="reference external" href="https://github.com/apps/lock">lock
+bot</a> will lock the issue. If additional
+discussion is desired, or if the pull request doesn’t fully address the
+locked issue, please open a new issue referencing the locked issue.</p>
+</div>
+<div class="section" id="tag-issues-with-labels">
+<h3>Tag Issues with Labels<a class="headerlink" href="#tag-issues-with-labels" title="Permalink to this headline">¶</a></h3>
+<p>Users without the commit rights to the JupyterLab repository can tag
+issues with labels using the <code class="docutils literal notranslate"><span class="pre">&#64;meeseeksdev</span></code> bot. For example: To apply
+the label <code class="docutils literal notranslate"><span class="pre">foo</span></code> and <code class="docutils literal notranslate"><span class="pre">bar</span> <span class="pre">baz</span></code> to an issue, comment
+<code class="docutils literal notranslate"><span class="pre">&#64;meeseeksdev</span> <span class="pre">tag</span> <span class="pre">foo</span> <span class="pre">&quot;bar</span> <span class="pre">baz&quot;</span></code> on the issue.</p>
+</div>
+</div>
+<div class="section" id="setting-up-a-development-environment">
+<h2><a class="toc-backref" href="#id3">Setting Up a Development Environment</a><a class="headerlink" href="#setting-up-a-development-environment" title="Permalink to this headline">¶</a></h2>
+<p>You can launch a binder with the latest JupyterLab master to test
+something (this may take a few minutes to load):</p>
+<a class="reference external image-reference" href="https://mybinder.org/v2/gh/jupyterlab/jupyterlab/master?urlpath=lab-dev/"><img alt="https://mybinder.org/badge_logo.svg" src="https://mybinder.org/badge_logo.svg" /></a>
+<div class="section" id="installing-node-js-and-jlpm">
+<h3>Installing Node.js and jlpm<a class="headerlink" href="#installing-node-js-and-jlpm" title="Permalink to this headline">¶</a></h3>
+<p>Building JupyterLab from its GitHub source code requires Node.js. The
+development version requires Node.js version 10+, as defined in the
+<code class="docutils literal notranslate"><span class="pre">engines</span></code> specification in
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab/blob/master/dev_mode/package.json">dev_mode/package.json</a>.</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code>, you can get it with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge <span class="s1">&#39;nodejs&#39;</span>
+</pre></div>
+</div>
+<p>If you use <a class="reference external" href="http://brew.sh">Homebrew</a> on Mac OS X:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install node
+</pre></div>
+</div>
+<p>You can also use the installer from the <a class="reference external" href="https://nodejs.org">Node.js</a>
+website.</p>
+<p>To check which version of Node.js is installed:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node -v
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="installing-jupyterlab">
+<h2><a class="toc-backref" href="#id4">Installing JupyterLab</a><a class="headerlink" href="#installing-jupyterlab" title="Permalink to this headline">¶</a></h2>
+<p>JupyterLab requires Jupyter Notebook version 4.3 or later.</p>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">conda</span></code>, you can install notebook using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge notebook
+</pre></div>
+</div>
+<p>You may also want to install <code class="docutils literal notranslate"><span class="pre">nb_conda_kernels</span></code> to have a kernel
+option for different <a class="reference external" href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda
+environments</a></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda install -c conda-forge nb_conda_kernels
+</pre></div>
+</div>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you can install notebook using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install notebook
+</pre></div>
+</div>
+<p>Fork the JupyterLab
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab">repository</a>.</p>
+<p>Once you have installed the dependencies mentioned above, use the
+following steps:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;your-github-username&gt;/jupyterlab.git
+<span class="nb">cd</span> jupyterlab
+pip install -e .
+jlpm install
+jlpm run build  <span class="c1"># Build the dev mode assets (optional)</span>
+jlpm run build:core  <span class="c1"># Build the core mode assets (optional)</span>
+jupyter lab build  <span class="c1"># Build the app dir assets (optional)</span>
+</pre></div>
+</div>
+<p>Notes:</p>
+<ul class="simple">
+<li><p>A few of the scripts will run “python”. If your target python is
+called something else (such as “python3”) then parts of the build
+will fail. You may wish to build in a conda environment, or make an
+alias.</p></li>
+<li><p>Some of the packages used in the development environment require
+Python 3.0 or higher. If you encounter an ImportError during the
+installation, make sure Python 3.0+ is installed. Also, try using the
+Python 3.0+ version of <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> command to
+install JupyterLab from the forked repository.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command is a JupyterLab-provided, locked version of the
+<a class="reference external" href="https://yarnpkg.com/en">yarn</a> package manager. If you have
+<code class="docutils literal notranslate"><span class="pre">yarn</span></code> installed already, you can use the <code class="docutils literal notranslate"><span class="pre">yarn</span></code> command when
+developing, and it will use the local version of <code class="docutils literal notranslate"><span class="pre">yarn</span></code> in
+<code class="docutils literal notranslate"><span class="pre">jupyterlab/yarn.js</span></code> when run in the repository or a built
+application directory.</p></li>
+<li><p>If you decide to use the <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> command and encounter the
+<code class="docutils literal notranslate"><span class="pre">jlpm:</span> <span class="pre">command</span> <span class="pre">not</span> <span class="pre">found</span></code> error, try adding the user-level bin
+directory to your <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable. You already
+installed <code class="docutils literal notranslate"><span class="pre">jlpm</span></code> along with JupyterLab in the previous command, but
+<code class="docutils literal notranslate"><span class="pre">jlpm</span></code> might not be accessible due to <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable
+related issues. If you are using a Unix derivative (FreeBSD, GNU /
+Linux, OS X), you can achieve this by using
+<code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">PATH=&quot;$HOME/.local/bin:$PATH&quot;</span></code> command.</p></li>
+<li><p>At times, it may be necessary to clean your local repo with the
+command <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">clean:slate</span></code>. This will clean the repository, and
+re-install and rebuild.</p></li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">pip</span></code> gives a <code class="docutils literal notranslate"><span class="pre">VersionConflict</span></code> error, it usually means that
+the installed version of <code class="docutils literal notranslate"><span class="pre">jupyterlab_server</span></code> is out of date. Run
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--upgrade</span> <span class="pre">jupyterlab_server</span></code> to get the latest
+version.</p></li>
+<li><p>To install JupyterLab in isolation for a single conda/virtual
+environment, you can add the <code class="docutils literal notranslate"><span class="pre">--sys-prefix</span></code> flag to the extension
+activation above; this will tie the installation to the
+<code class="docutils literal notranslate"><span class="pre">sys.prefix</span></code> location of your environment, without writing anything
+in your user-wide settings area (which are visible to all your envs):</p></li>
+<li><p>You can run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build:dev:prod</span></code> to build more accurate
+sourcemaps that show the original Typescript code when debugging.
+However, it takes a bit longer to build the sources, so is used only
+to build for production by default.</p></li>
+</ul>
+<p>If you are using a version of Jupyter Notebook earlier than 5.3, then
+you must also run the following command to enable the JupyterLab server
+extension:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter serverextension <span class="nb">enable</span> --py --sys-prefix jupyterlab
+</pre></div>
+</div>
+<p>For installation instructions to write documentation, please see
+<a class="reference external" href="#writing-documentation">Writing Documentation</a></p>
+<div class="section" id="run-jupyterlab">
+<h3>Run JupyterLab<a class="headerlink" href="#run-jupyterlab" title="Permalink to this headline">¶</a></h3>
+<p>Start JupyterLab in development mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --dev-mode
+</pre></div>
+</div>
+<p>Development mode ensures that you are running the JavaScript assets that
+are built in the dev-installed Python package. Note that when running in
+dev mode, extensions will not be activated by default.</p>
+<p>When running in dev mode, a red stripe will appear at the top of the
+page; this is to indicate running an unreleased version.</p>
+</div>
+<div class="section" id="build-and-run-the-tests">
+<h3>Build and Run the Tests<a class="headerlink" href="#build-and-run-the-tests" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build:testutils
+jlpm <span class="nb">test</span>
+</pre></div>
+</div>
+<p>You can run tests for an individual package by changing to the
+appropriate package folder:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> packages/notebook
+jlpm run build:test
+jlpm <span class="nb">test</span>
+</pre></div>
+</div>
+<p>We use <code class="docutils literal notranslate"><span class="pre">jest</span></code> for all tests, so standard <code class="docutils literal notranslate"><span class="pre">jest</span></code> workflows apply.
+Tests can be debugged in either VSCode or Chrome. It can help to add an
+<code class="docutils literal notranslate"><span class="pre">it.only</span></code> to a specific test when debugging. All of the <code class="docutils literal notranslate"><span class="pre">test*</span></code>
+scripts in each package accept <code class="docutils literal notranslate"><span class="pre">jest</span></code> <a class="reference external" href="https://jestjs.io/docs/en/cli.html">cli
+options</a>.</p>
+<div class="section" id="vscode-debugging">
+<h4>VSCode Debugging<a class="headerlink" href="#vscode-debugging" title="Permalink to this headline">¶</a></h4>
+<p>To debug in VSCode, open a package folder in VSCode. We provide a launch
+configuration in each package folder. In a terminal, run
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">test:debug:watch</span></code>. In VSCode, select “Attach to Jest” from the
+“Run” sidebar to begin debugging. See <a class="reference external" href="https://code.visualstudio.com/docs/editor/debugging">VSCode docs on
+debugging</a> for
+more details.</p>
+</div>
+<div class="section" id="chrome-debugging">
+<h4>Chrome Debugging<a class="headerlink" href="#chrome-debugging" title="Permalink to this headline">¶</a></h4>
+<p>To debug in Chrome, run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">test:debug:watch</span></code> in the terminal. Open
+Chrome and go to <code class="docutils literal notranslate"><span class="pre">chrome://inspect/</span></code>. Select the remote device and
+begin debugging.</p>
+</div>
+<div class="section" id="testing-utilities">
+<h4>Testing Utilities<a class="headerlink" href="#testing-utilities" title="Permalink to this headline">¶</a></h4>
+<p>There are some helper functions in <code class="docutils literal notranslate"><span class="pre">testutils</span></code> (which is a public npm
+package called <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/testutils</span></code>) that are used by many of the
+tests.</p>
+<p>For tests that rely on <code class="docutils literal notranslate"><span class="pre">&#64;jupyterlab/services</span></code> (starting kernels,
+interacting with files, etc.), there are two options. If a simple
+interaction is needed, the <code class="docutils literal notranslate"><span class="pre">Mock</span></code> namespace exposed by <code class="docutils literal notranslate"><span class="pre">testutils</span></code>
+has a number of mock implmentations (see <code class="docutils literal notranslate"><span class="pre">testutils/src/mock.ts</span></code>). If
+a full server interaction is required, use the <code class="docutils literal notranslate"><span class="pre">JupyterServer</span></code> class.</p>
+<p>We have a helper function called <code class="docutils literal notranslate"><span class="pre">testEmission</span></code> to help with writing
+tests that use <code class="docutils literal notranslate"><span class="pre">Lumino</span></code> signals, as well as a <code class="docutils literal notranslate"><span class="pre">framePromise</span></code>
+function to get a <code class="docutils literal notranslate"><span class="pre">Promise</span></code> for a <code class="docutils literal notranslate"><span class="pre">requestAnimationFrame</span></code>. We
+sometimes have to set a sentinel value inside a <code class="docutils literal notranslate"><span class="pre">Promise</span></code> and then
+check that the sentinel was set if we need a promise to run without
+blocking.</p>
+</div>
+</div>
+</div>
+<div class="section" id="performance-testing">
+<h2><a class="toc-backref" href="#id5">Performance Testing</a><a class="headerlink" href="#performance-testing" title="Permalink to this headline">¶</a></h2>
+<p>If you are making a change that might affect how long it takes to load
+JupyterLab in the browser, we recommend doing some performance testing
+using <a class="reference external" href="https://github.com/GoogleChrome/lighthouse">Lighthouse</a>. It
+let’s you easily compute a number of metrics, like page load time, for
+the site.</p>
+<p>To use it, first build JupyterLab in dev mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build:dev
+</pre></div>
+</div>
+<p>Then, start JupyterLab using the dev build:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --dev --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span>  --no-browser
+</pre></div>
+</div>
+<p>Now run Lighthouse against this local server and show the results:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run lighthouse --view
+</pre></div>
+</div>
+<img alt="../_images/lighthouse.png" src="../_images/lighthouse.png" />
+<div class="section" id="using-throttling">
+<h3>Using throttling<a class="headerlink" href="#using-throttling" title="Permalink to this headline">¶</a></h3>
+<p>Lighthouse recommends using the system level
+<a class="reference external" href="https://github.com/tylertreat/comcast">comcast</a> tool to throttle
+your network connection and emulate different scenarios. To use it,
+first install that tool using <code class="docutils literal notranslate"><span class="pre">go</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>go get github.com/tylertreat/comcast
+</pre></div>
+</div>
+<p>Then, before you run Lighthouse, enable the throttling (this requires
+sudo):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>run lighthouse:throttling:start
+</pre></div>
+</div>
+<p>This enables the “WIFI (good)” preset of comcast, which should emulate
+loading JupyterLab over a local network.</p>
+<p>Then run the lighthouse tests:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run lighthouse <span class="o">[</span>...<span class="o">]</span>
+</pre></div>
+</div>
+<p>Then disable the throttling after you are done:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run lighthouse:throttling:stop
+</pre></div>
+</div>
+</div>
+<div class="section" id="comparing-results">
+<h3>Comparing results<a class="headerlink" href="#comparing-results" title="Permalink to this headline">¶</a></h3>
+<p>Performance results are usually only useful in comparison to other
+results. For that reason, we have included a comparison script that can
+take two lighthouse results and show the changes between them.</p>
+<p>Let’s say we want to compare the results of the production build of
+JupyterLab with the normal build. The production build minifies all the
+JavaScript, so should load a bit faster.</p>
+<p>First, we build JupyterLab normally, start it up, profile it and save
+the results:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm build:dev
+jupyter lab --dev --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser
+
+<span class="c1"># in new window</span>
+jlpm run lighthouse --output json --output-path normal.json
+</pre></div>
+</div>
+<p>Then rebuild with the production build and retest:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build:dev:prod
+jupyter lab --dev --NotebookApp.token<span class="o">=</span><span class="s1">&#39;&#39;</span> --no-browser
+
+<span class="c1"># in new window</span>
+jlpm run lighthouse --output json --output-path prod.json
+</pre></div>
+</div>
+<p>Now we can use compare the two outputs:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run lighthouse:compare normal.json prod.json
+</pre></div>
+</div>
+<p>This gives us a report of the relative differences between the audits in
+the two reports:</p>
+<div class="admonition-resulting-output admonition">
+<p class="admonition-title">Resulting Output</p>
+<p><code class="docutils literal notranslate"><span class="pre">normal.json</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">prod.json</span></code></p>
+<div class="line-block">
+<div class="line"><strong>First Contentful Paint</strong></div>
+<div class="line">- -62% Δ</div>
+<div class="line">- 1.9 s -&gt; 0.7 s</div>
+<div class="line">- First Contentful Paint marks the time at which the first text or
+image is painted. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/first-contentful-paint">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>First Meaningful Paint</strong></div>
+<div class="line">- -50% Δ</div>
+<div class="line">- 2.5 s -&gt; 1.3 s</div>
+<div class="line">- First Meaningful Paint measures when the primary content of a
+page is visible. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/first-meaningful-paint">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Speed Index</strong></div>
+<div class="line">- -48% Δ</div>
+<div class="line">- 2.6 s -&gt; 1.3 s</div>
+<div class="line">- Speed Index shows how quickly the contents of a page are visibly
+populated. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/speed-index">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Estimated Input Latency</strong></div>
+<div class="line">- 0% Δ</div>
+<div class="line">- 20 ms -&gt; 20 ms</div>
+<div class="line">- Estimated Input Latency is an estimate of how long your app takes
+to respond to user input, in milliseconds, during the busiest 5s
+window of page load. If your latency is higher than 50 ms, users
+may perceive your app as laggy. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/estimated-input-latency">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Max Potential First Input Delay</strong></div>
+<div class="line">- 9% Δ</div>
+<div class="line">- 200 ms -&gt; 210 ms</div>
+<div class="line">- The maximum potential First Input Delay that your users could
+experience is the duration, in milliseconds, of the longest task.
+<a class="reference external" href="https://developers.google.com/web/updates/2018/05/first-input-delay">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>First CPU Idle</strong></div>
+<div class="line">- -50% Δ</div>
+<div class="line">- 2.5 s -&gt; 1.3 s</div>
+<div class="line">- First CPU Idle marks the first time at which the page’s main
+thread is quiet enough to handle input. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/first-interactive">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Time to Interactive</strong></div>
+<div class="line">- -52% Δ</div>
+<div class="line">- 2.5 s -&gt; 1.2 s</div>
+<div class="line">- Time to interactive is the amount of time it takes for the page
+to become fully interactive. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/consistently-interactive">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Avoid multiple page redirects</strong></div>
+<div class="line">- -2% Δ</div>
+<div class="line">- Potential savings of 10 ms -&gt; Potential savings of 10 ms</div>
+<div class="line">- Redirects introduce additional delays before the page can be
+loaded. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/redirects">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Minimize main-thread work</strong></div>
+<div class="line">- -54% Δ</div>
+<div class="line">- 2.1 s -&gt; 1.0 s</div>
+<div class="line">- Consider reducing the time spent parsing, compiling and executing
+JS. You may find delivering smaller JS payloads helps with this.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>JavaScript execution time</strong></div>
+<div class="line">- -49% Δ</div>
+<div class="line">- 1.1 s -&gt; 0.6 s</div>
+<div class="line">- Consider reducing the time spent parsing, compiling, and
+executing JS. You may find delivering smaller JS payloads helps
+with this. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/bootup">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Preload key requests</strong></div>
+<div class="line">- -100% Δ</div>
+<div class="line">- Potential savings of 240 ms -&gt;</div>
+<div class="line">- Consider using &lt;link rel=preload&gt; to prioritize fetching
+resources that are currently requested later in page load. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/preload">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Uses efficient cache policy on static assets</strong></div>
+<div class="line">- 0% Δ</div>
+<div class="line">- 1 resource found -&gt; 1 resource found</div>
+<div class="line">- A long cache lifetime can speed up repeat visits to your page.
+<a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/cache-policy">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Avoid enormous network payloads</strong></div>
+<div class="line">- -86% Δ</div>
+<div class="line">- Total size was 30,131 KB -&gt; Total size was 4,294 KB</div>
+<div class="line">- Large network payloads cost users real money and are highly
+correlated with long load times. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/network-payloads">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Minify JavaScript</strong></div>
+<div class="line">- -100% Δ</div>
+<div class="line">- Potential savings of 23,041 KB -&gt;</div>
+<div class="line">- Minifying JavaScript files can reduce payload sizes and script
+parse time. <a class="reference external" href="https://developers.google.com/speed/docs/insights/MinifyResources">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Enable text compression</strong></div>
+<div class="line">- -86% Δ</div>
+<div class="line">- Potential savings of 23,088 KB -&gt; Potential savings of 3,112 KB</div>
+<div class="line">- Text-based resources should be served with compression (gzip,
+deflate or brotli) to minimize total network bytes. <a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/text-compression">Learn
+more</a>.</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Avoid an excessive DOM size</strong></div>
+<div class="line">- 0% Δ</div>
+<div class="line">- 1,268 elements -&gt; 1,268 elements</div>
+<div class="line">- Browser engineers recommend pages contain fewer than ~1,500 DOM
+elements. The sweet spot is a tree depth &lt; 32 elements and fewer
+than 60 children/parent element. A large DOM can increase memory
+usage, cause longer <a class="reference external" href="https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations">style
+calculations</a>,
+and produce costly <a class="reference external" href="https://developers.google.com/speed/articles/reflow">layout
+reflows</a>.
+<a class="reference external" href="https://developers.google.com/web/tools/lighthouse/audits/dom-size">Learn
+more</a>.</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="build-and-run-the-stand-alone-examples">
+<h2><a class="toc-backref" href="#id6">Build and run the stand-alone examples</a><a class="headerlink" href="#build-and-run-the-stand-alone-examples" title="Permalink to this headline">¶</a></h2>
+<p>To install and build the examples in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build:examples
+</pre></div>
+</div>
+<p>To run a specific example, change to the examples directory (i.e.
+<code class="docutils literal notranslate"><span class="pre">examples/filebrowser</span></code>) and enter:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python main.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="debugging-in-the-browser">
+<h2><a class="toc-backref" href="#id7">Debugging in the Browser</a><a class="headerlink" href="#debugging-in-the-browser" title="Permalink to this headline">¶</a></h2>
+<p>All methods of building JupyterLab produce source maps. The source maps
+should be available in the source files view of your browser’s
+development tools under the <code class="docutils literal notranslate"><span class="pre">webpack://</span></code> header.</p>
+<p>When running JupyterLab normally, expand the <code class="docutils literal notranslate"><span class="pre">~</span></code> header to see the
+source maps for individual packages.</p>
+<p>When running in <code class="docutils literal notranslate"><span class="pre">--dev-mode</span></code>, the core packages are available under
+<code class="docutils literal notranslate"><span class="pre">packages/</span></code>, while the third party libraries are available under
+<code class="docutils literal notranslate"><span class="pre">~</span></code>. Note: it is recommended to use <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--watch</span> <span class="pre">--dev-mode</span></code>
+while debugging.</p>
+<p>When running a test, the packages will be available at the top level
+(e.g. <code class="docutils literal notranslate"><span class="pre">application/src</span></code>), and the current set of test files available
+under <code class="docutils literal notranslate"><span class="pre">/src</span></code>. Note: it is recommended to use <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">watch</span></code> in the
+test folder while debugging test options. See
+<a class="reference external" href="#build-and-run-the-tests">above</a> for more info.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="high-level-architecture">
+<h2><a class="toc-backref" href="#id8">High level Architecture</a><a class="headerlink" href="#high-level-architecture" title="Permalink to this headline">¶</a></h2>
+<p>The JupyterLab application is made up of two major parts:</p>
+<ul class="simple">
+<li><p>an npm package</p></li>
+<li><p>a Jupyter server extension (Python package)</p></li>
+</ul>
+<p>Each part is named <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code>. The <a class="reference internal" href="repo.html#developer-guide"><span class="std std-ref">developer tutorial
+documentation</span></a>
+provides additional architecture information.</p>
+</div>
+<div class="section" id="the-npm-packages">
+<h2><a class="toc-backref" href="#id9">The NPM Packages</a><a class="headerlink" href="#the-npm-packages" title="Permalink to this headline">¶</a></h2>
+<p>The repository consists of many npm packages that are managed using the
+lerna build tool. The npm package source files are in the <code class="docutils literal notranslate"><span class="pre">packages/</span></code>
+subdirectory.</p>
+<div class="section" id="build-the-npm-packages-from-source">
+<h3>Build the NPM Packages from Source<a class="headerlink" href="#build-the-npm-packages-from-source" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/jupyterlab/jupyterlab.git
+<span class="nb">cd</span> jupyterlab
+pip install -e .
+jlpm
+jlpm run build:packages
+</pre></div>
+</div>
+<p><strong>Rebuild</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run clean
+jlpm run build:packages
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-documentation">
+<h2><a class="toc-backref" href="#id10">Writing Documentation</a><a class="headerlink" href="#writing-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation is written in Markdown and reStructuredText. In
+particular, the documentation on our Read the Docs page is written in
+reStructuredText. To ensure that the Read the Docs page builds, you’ll
+need to install the documentation dependencies with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -r docs/requirements.txt
+</pre></div>
+</div>
+<p>To test the docs run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>py.test --check-links -k .md . <span class="o">||</span> py.test --check-links -k .md --lf .
+</pre></div>
+</div>
+<p>The Read the Docs pages can be built using <code class="docutils literal notranslate"><span class="pre">make</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> docs
+make html
+</pre></div>
+</div>
+<p>Or with <code class="docutils literal notranslate"><span class="pre">jlpm</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run docs
+</pre></div>
+</div>
+<div class="section" id="writing-style">
+<h3>Writing Style<a class="headerlink" href="#writing-style" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The documentation should be written in the second person, referring
+to the reader as “you” and not using the first person plural “we.”
+The author of the documentation is not sitting next to the user, so
+using “we” can lead to frustration when things don’t work as
+expected.</p></li>
+<li><p>Avoid words that trivialize using JupyterLab such as “simply” or
+“just.” Tasks that developers find simple or easy may not be for
+users.</p></li>
+<li><p>Write in the active tense, so “drag the notebook cells…” rather
+than “notebook cells can be dragged…”</p></li>
+<li><p>The beginning of each section should begin with a short (1-2
+sentence) high-level description of the topic, feature or component.</p></li>
+<li><p>Use “enable” rather than “allow” to indicate what JupyterLab makes
+possible for users. Using “allow” connotes that we are giving them
+permission, whereas “enable” connotes empowerment.</p></li>
+</ul>
+</div>
+<div class="section" id="user-interface-naming-conventions">
+<h3>User Interface Naming Conventions<a class="headerlink" href="#user-interface-naming-conventions" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="documents-files-and-activities">
+<h4>Documents, Files, and Activities<a class="headerlink" href="#documents-files-and-activities" title="Permalink to this headline">¶</a></h4>
+<p>Files are referrred to as either files or documents, depending on the
+context.</p>
+<p>Documents are more human centered. If human viewing, interpretation,
+interaction is an important part of the experience, it is a document in
+that context. For example, notebooks and markdown files will often be
+referring to as documents unless referring to the file-ness aspect of it
+(e.g., the notebook filename).</p>
+<p>Files are used in a less human-focused context. For example, we refer to
+files in relation to a file system or file name.</p>
+<p>Activities can be either a document or another UI panel that is not file
+backed, such as terminals, consoles or the inspector. An open document
+or file is an activity in that it is represented by a panel that you can
+interact with.</p>
+</div>
+<div class="section" id="element-names">
+<h4>Element Names<a class="headerlink" href="#element-names" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>The generic content area of a tabbed UI is a panel, but prefer to
+refer to the more specific name, such as “File browser.” Tab bars
+have tabs which toggle panels.</p></li>
+<li><p>The menu bar contains menu items, which have their own submenus.</p></li>
+<li><p>The main work area can be referred to as the work area when the name
+is unambiguous.</p></li>
+<li><p>When describing elements in the UI, colloquial names are preferred
+(e.g., “File browser” instead of “Files panel”).</p></li>
+</ul>
+<p>The majority of names are written in lower case. These names include:</p>
+<ul class="simple">
+<li><p>tab</p></li>
+<li><p>panel</p></li>
+<li><p>menu bar</p></li>
+<li><p>sidebar</p></li>
+<li><p>file</p></li>
+<li><p>document</p></li>
+<li><p>activity</p></li>
+<li><p>tab bar</p></li>
+<li><p>main work area</p></li>
+<li><p>file browser</p></li>
+<li><p>command palette</p></li>
+<li><p>cell inspector</p></li>
+<li><p>code console</p></li>
+</ul>
+<p>The following sections of the user interface should be in title case,
+directly quoting a word in the UI:</p>
+<ul class="simple">
+<li><p>File menu</p></li>
+<li><p>Files tab</p></li>
+<li><p>Running panel</p></li>
+<li><p>Tabs panel</p></li>
+<li><p>Single-Document Mode</p></li>
+</ul>
+<p>The capitalized words match the label of the UI element the user is
+clicking on because there does not exist a good colloquial name for the
+tool, such as “file browser” or “command palette”.</p>
+<p>See <a class="reference internal" href="../user/interface.html#interface"><span class="std std-ref">User Guide</span></a> for descriptions of elements in the UI.</p>
+</div>
+</div>
+</div>
+<div class="section" id="the-jupyter-server-extension">
+<h2><a class="toc-backref" href="#id11">The Jupyter Server Extension</a><a class="headerlink" href="#the-jupyter-server-extension" title="Permalink to this headline">¶</a></h2>
+<p>The Jupyter server extension source files are in the jupyterlab/
+subdirectory. To use this extension, make sure the Jupyter Notebook
+server version 4.3 or later is installed.</p>
+<div class="section" id="build-the-jupyterlab-server-extension">
+<h3>Build the JupyterLab server extension<a class="headerlink" href="#build-the-jupyterlab-server-extension" title="Permalink to this headline">¶</a></h3>
+<p>When you make a change to JupyterLab npm package source files, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jlpm run build
+</pre></div>
+</div>
+<p>to build the changes, and then refresh your browser to see the changes.</p>
+<p>To have the system build after each source file change, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter lab --dev-mode --watch
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="build-utilities">
+<h2><a class="toc-backref" href="#id12">Build Utilities</a><a class="headerlink" href="#build-utilities" title="Permalink to this headline">¶</a></h2>
+<p>There is a range of build utilities for maintaining the repository. To
+get a suggested version for a library use
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">get:dependency</span> <span class="pre">foo</span></code>. To update the version of a library
+across the repo use <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">update:dependency</span> <span class="pre">foo</span> <span class="pre">^latest</span></code>. To
+remove an unwanted dependency use <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">remove:dependency</span> <span class="pre">foo</span></code>.</p>
+<p>The key utility is <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">integrity</span></code>, which ensures the integrity
+of the packages in the repo. It will:</p>
+<ul class="simple">
+<li><p>Ensure the core package version dependencies match everywhere.</p></li>
+<li><p>Ensure imported packages match dependencies.</p></li>
+<li><p>Ensure a consistent version of all packages.</p></li>
+<li><p>Manage the meta package.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">packages/metapackage</span></code> package is used to build all of the
+TypeScript in the repository at once, instead of 50+ individual builds.</p>
+<p>The integrity script also allows you to automatically add a dependency
+for a package by importing from it in the TypeScript file, and then
+running: <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">integrity</span></code> from the repo root.</p>
+<p>We also have scripts for creating and removing packages in
+<code class="docutils literal notranslate"><span class="pre">packages/</span></code>, <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">create:package</span></code> and
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">remove:package</span></code>. When creating a package, if it is meant to
+be included in the core bundle, add the
+<code class="docutils literal notranslate"><span class="pre">jupyterlab:</span> <span class="pre">{</span> <span class="pre">coreDependency:</span> <span class="pre">true</span> <span class="pre">}</span></code> metadata to the
+<code class="docutils literal notranslate"><span class="pre">package.json</span></code>. Packages with <code class="docutils literal notranslate"><span class="pre">extension</span></code> or <code class="docutils literal notranslate"><span class="pre">mimeExtension</span></code>
+metadata are considered to be a core dependency unless they are
+explicitly marked otherwise.</p>
+</div>
+<div class="section" id="testing-changes-to-external-packages">
+<h2><a class="toc-backref" href="#id13">Testing Changes to External Packages</a><a class="headerlink" href="#testing-changes-to-external-packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="linking-unlinking-packages-to-jupyterlab">
+<h3>Linking/Unlinking Packages to JupyterLab<a class="headerlink" href="#linking-unlinking-packages-to-jupyterlab" title="Permalink to this headline">¶</a></h3>
+<p>If you want to make changes to one of JupyterLab’s external packages
+(for example, <a class="reference external" href="https://github.com/jupyterlab/lumino">Lumino</a> and test
+them out against your copy of JupyterLab, you can easily do so using the
+<code class="docutils literal notranslate"><span class="pre">link</span></code> command:</p>
+<ol class="arabic simple">
+<li><p>Make your changes and then build the external package</p></li>
+<li><p>Register a link to the modified external package</p>
+<ul class="simple">
+<li><p>navigate to the external package dir and run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">link</span></code></p></li>
+</ul>
+</li>
+<li><p>Link JupyterLab to modded package</p>
+<ul class="simple">
+<li><p>navigate to top level of your JupyterLab repo, then run
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">link</span> <span class="pre">&quot;&lt;package-of-interest&gt;&quot;</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>You can then (re)build JupyterLab (eg <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">run</span> <span class="pre">build</span></code>) and your
+changes should be picked up by the build.</p>
+<p>To restore JupyterLab to its original state, you use the <code class="docutils literal notranslate"><span class="pre">unlink</span></code>
+command:</p>
+<ol class="arabic simple">
+<li><p>Unlink JupyterLab and modded package</p>
+<ul class="simple">
+<li><p>navigate to top level of your JupyterLab repo, then run
+<code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">unlink</span> <span class="pre">&quot;&lt;package-of-interest&gt;&quot;</span></code></p></li>
+</ul>
+</li>
+<li><p>Reinstall original version of the external package in JupyterLab</p>
+<ul class="simple">
+<li><p>run <code class="docutils literal notranslate"><span class="pre">jlpm</span> <span class="pre">install</span> <span class="pre">--check-files</span></code></p></li>
+</ul>
+</li>
+</ol>
+<p>You can then (re)build JupyterLab and everything should be back to
+default.</p>
+</div>
+<div class="section" id="possible-linking-pitfalls">
+<h3>Possible Linking Pitfalls<a class="headerlink" href="#possible-linking-pitfalls" title="Permalink to this headline">¶</a></h3>
+<p>If you’re working on an external project with more than one package,
+you’ll probably have to link in your copies of every package in the
+project, including those you made no changes to. Failing to do so may
+cause issues relating to duplication of shared state.</p>
+<p>Specifically, when working with Lumino, you’ll probably have to link
+your copy of the <code class="docutils literal notranslate"><span class="pre">&quot;&#64;lumino/messaging&quot;</span></code> package (in addition to
+whatever packages you actually made changes to). This is due to
+potential duplication of objects contained in the <code class="docutils literal notranslate"><span class="pre">MessageLoop</span></code>
+namespace provided by the <code class="docutils literal notranslate"><span class="pre">messaging</span></code> package.</p>
+</div>
+</div>
+<div class="section" id="keyboard-shortcuts">
+<h2><a class="toc-backref" href="#id14">Keyboard Shortcuts</a><a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>Typeset keyboard shortcuts as follows:</p>
+<ul class="simple">
+<li><p>Monospace typeface, with spaces between individual keys:
+<code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">Enter</span></code>.</p></li>
+<li><p>For modifiers, use the platform independent word describing key:
+<code class="docutils literal notranslate"><span class="pre">Shift</span></code>.</p></li>
+<li><p>For the <code class="docutils literal notranslate"><span class="pre">Accel</span></code> key use the phrase: <code class="docutils literal notranslate"><span class="pre">Command/Ctrl</span></code>.</p></li>
+<li><p>Don’t use platform specific icons for modifier keys, as they are
+difficult to display in a platform specific way on Sphinx/RTD.</p></li>
+</ul>
+</div>
+<div class="section" id="screenshots-and-animations">
+<h2><a class="toc-backref" href="#id15">Screenshots and Animations</a><a class="headerlink" href="#screenshots-and-animations" title="Permalink to this headline">¶</a></h2>
+<p>Our documentation should contain screenshots and animations that
+illustrate and demonstrate the software. Here are some guidelines for
+preparing them:</p>
+<ul class="simple">
+<li><p>Make sure the screenshot does not contain copyrighted material
+(preferable), or the license is allowed in our documentation and
+clearly stated.</p></li>
+<li><p>If taking a png screenshot, use the Firefox or Chrome developer tools
+to do the following:</p>
+<ul>
+<li><p>set the browser viewport to 1280x720 pixels</p></li>
+<li><p>set the device pixel ratio to 1:1 (i.e., non-hidpi, non-retina)</p></li>
+<li><p>screenshot the entire <em>viewport</em> using the browser developer
+tools. Screenshots should not include any browser elements such as
+the browser address bar, browser title bar, etc., and should not
+contain any desktop background.</p></li>
+</ul>
+</li>
+<li><p>If creating a movie, adjust the settings as above (1280x720 viewport
+resolution, non-hidpi) and use a screen capture utility of your
+choice to capture just the browser viewport.</p></li>
+<li><p>For PNGs, reduce their size using <code class="docutils literal notranslate"><span class="pre">pngquant</span> <span class="pre">--speed</span> <span class="pre">1</span> <span class="pre">&lt;filename&gt;</span></code>.
+The resulting filename will have <code class="docutils literal notranslate"><span class="pre">-fs8</span></code> appended, so make sure to
+rename it and use the resulting file. Commit the optimized png file
+to the main repository. Each png file should be no more than a few
+hundred kilobytes.</p></li>
+<li><p>For movies, upload them to the IPython/Jupyter YouTube channel and
+add them to the
+<a class="reference external" href="https://github.com/jupyterlab/jupyterlab-media">jupyterlab-media</a>
+repository. To embed a movie in the documentation, use the
+<code class="docutils literal notranslate"><span class="pre">www.youtube-nocookie.com</span></code> website, which can be found by clicking
+on the ‘privacy-enhanced’ embedding option in the Share dialog on
+YouTube. Add the following parameters the end of the URL
+<code class="docutils literal notranslate"><span class="pre">?rel=0&amp;amp;showinfo=0</span></code>. This disables the video title and related
+video suggestions.</p></li>
+<li><p>Screenshots or animations should be preceded by a sentence describing
+the content, such as “To open a file, double-click on its name in the
+File Browser:”.</p></li>
+<li><p>We have custom CSS that will add box shadows, and proper sizing of
+screenshots and embedded YouTube videos. See examples in the
+documentation for how to embed these assets.</p></li>
+</ul>
+<p>To help us organize screenshots and animations, please name the files
+with a prefix that matches the names of the source file in which they
+are used:</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sourcefile</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">sourcefile_filebrowser</span><span class="o">.</span><span class="n">png</span>
+<span class="n">sourcefile_editmenu</span><span class="o">.</span><span class="n">png</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>This will help us to keep track of the images as documentation content
+evolves.</p>
+</div>
+<div class="section" id="notes">
+<h2><a class="toc-backref" href="#id16">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>By default, the application will load from the JupyterLab staging
+directory (default is <code class="docutils literal notranslate"><span class="pre">&lt;sys-prefix&gt;/share/jupyter/lab/build</span></code>. If
+you wish to run the core application in
+<code class="docutils literal notranslate"><span class="pre">&lt;git</span> <span class="pre">root&gt;/jupyterlab/build</span></code>, run <code class="docutils literal notranslate"><span class="pre">jupyter</span> <span class="pre">lab</span> <span class="pre">--core-mode</span></code>.
+This is the core application that will be shipped.</p></li>
+<li><p>If working with extensions, see the <a class="reference internal" href="extension_dev.html#developer-extensions"><span class="std std-ref">extension documentation</span></a>.</p></li>
+<li><p>The npm modules are fully compatible with Node/Babel/ES6/ES5. Simply
+omit the type declarations when using a language other than
+TypeScript.</p></li>
+</ul>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="extension_points.html" title="previous page">Common Extension Points</a>
+    <a class='right-next' id="next-link" href="components.html" title="next page">Using JupyterLab components</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Project Jupyter.<br/>
+        The Jupyter Trademark is registered with the U.S. Patent &amp Trademark Office.
+        
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+  </body>
+</html>

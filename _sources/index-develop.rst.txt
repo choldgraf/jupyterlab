@@ -1,0 +1,24 @@
+===============
+Developer Guide
+===============
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Developer Guide
+
+   developer/repo
+   developer/extension_dev
+   developer/extension_points
+   developer/contributing
+   developer/components
+   developer/ui_components
+   developer/documents
+   developer/notebook
+   developer/patterns
+   developer/css
+   developer/virtualdom
+   developer/ui_helpers
+   developer/terminology
+   developer/extension_tutorial
+   developer/extension_migration
+

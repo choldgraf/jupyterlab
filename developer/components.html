@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Using JupyterLab components &#8212; JupyterLab 3.0.0a5 documentation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reusing JupyterLab UI" href="ui_components.html" />
+    <link rel="prev" title="Contributing to JupyterLab" href="contributing.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
+
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
+
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+
+  <div class="bd-toc-item active">
+  
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="extension_dev.html">Extension Developer Guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_points.html">Common Extension Points</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="contributing.html">Contributing to JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Using JupyterLab components</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_components.html">Reusing JupyterLab UI</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents.html">Documents</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="notebook.html">Notebook</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="patterns.html">Design Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="css.html">CSS Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="virtualdom.html">React</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_helpers.html">User Interface Helpers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminology.html">Terminology</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_tutorial.html">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_migration.html">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#dissecting-the-filebrowser-example" class="nav-link">Dissecting the ‘filebrowser’ example</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#directory-structure-of-filebrowser-example" class="nav-link">Directory structure of ‘filebrowser’ example</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="using-jupyterlab-components">
+<h1>Using JupyterLab components<a class="headerlink" href="#using-jupyterlab-components" title="Permalink to this headline">¶</a></h1>
+<p>JupyterLab is built with many re-usable components that are
+independently <a class="reference external" href="https://www.npmjs.com/search?q=%40jupyterlab">published on npm</a>.
+JupyterLab itself assembles these components together to provide a full,
+IDE-like experience. However, developers are encouraged to use these to bring
+to life their own visions of what a computational environment should look
+like.</p>
+<p>The JupyterLab repository has <a class="reference external" href="https://github.com/jupyterlab/jupyterlab/tree/master/examples">many examples</a>
+to get you started.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory contains:</p>
+<ul class="simple">
+<li><p>several stand-alone examples (<code class="docutils literal notranslate"><span class="pre">console</span></code>, <code class="docutils literal notranslate"><span class="pre">filebrowser</span></code>,
+<code class="docutils literal notranslate"><span class="pre">notebook</span></code>, <code class="docutils literal notranslate"><span class="pre">terminal</span></code>)</p></li>
+<li><p>a more complex example (<code class="docutils literal notranslate"><span class="pre">lab</span></code>).</p></li>
+</ul>
+<p>Installation instructions for the examples are found in the project’s
+README.</p>
+<p>After installing the jupyter notebook server 4.2+, follow the steps for
+installing the development version of JupyterLab. To build the examples,
+enter from the <code class="docutils literal notranslate"><span class="pre">jupyterlab</span></code> repo root directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jlpm</span> <span class="n">run</span> <span class="n">build</span><span class="p">:</span><span class="n">examples</span>
+</pre></div>
+</div>
+<p>To run a particular example, navigate to the example’s subdirectory in
+the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory and enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<div class="section" id="dissecting-the-filebrowser-example">
+<h2>Dissecting the ‘filebrowser’ example<a class="headerlink" href="#dissecting-the-filebrowser-example" title="Permalink to this headline">¶</a></h2>
+<p>The filebrowser example provides a stand-alone implementation of a
+filebrowser. Here’s what the filebrowser’s user interface looks like:</p>
+<p><img alt="filebrowser user interface" src="../_images/filebrowser_example.png" /></p>
+<p>Let’s take a closer look at the source code in <code class="docutils literal notranslate"><span class="pre">examples/filebrowser</span></code>.</p>
+<div class="section" id="directory-structure-of-filebrowser-example">
+<h3>Directory structure of ‘filebrowser’ example<a class="headerlink" href="#directory-structure-of-filebrowser-example" title="Permalink to this headline">¶</a></h3>
+<p>The filebrowser in <code class="docutils literal notranslate"><span class="pre">examples/filebrowser</span></code> is comprised by a handful of
+files and the <code class="docutils literal notranslate"><span class="pre">src</span></code> directory:</p>
+<p><img alt="filebrowser source code" src="../_images/filebrowser_source.png" /></p>
+<p>The filebrowser example has two key source files:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">src/index.ts</span></code>: the TypeScript file that defines the functionality</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">main.py</span></code>: the Python file that enables the example to be run</p></li>
+</ul>
+<p>Reviewing the source code of each file will help you see the role that
+each file plays in the stand-alone filebrowser example.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="contributing.html" title="previous page">Contributing to JupyterLab</a>
+    <a class='right-next' id="next-link" href="ui_components.html" title="next page">Reusing JupyterLab UI</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Project Jupyter.<br/>
+        The Jupyter Trademark is registered with the U.S. Patent &amp Trademark Office.
+        
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+  </body>
+</html>

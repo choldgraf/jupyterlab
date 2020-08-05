@@ -1,228 +1,309 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Notebook &mdash; JupyterLab 1.0 Beta documentation</title>
-  
 
-  
-  
-  
-  
-
-  
-
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Notebook &#8212; JupyterLab 3.0.0a5 documentation</title>
     
-
-  
-
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-    <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="JupyterLab 1.0 Beta documentation" href="../index.html"/>
-        <link rel="next" title="Design Patterns" href="patterns.html"/>
-        <link rel="prev" title="Documents" href="documents.html"/> 
-
-  
-  <script src="../_static/js/modernizr.min.js"></script>
-
-</head>
-
-<body class="wy-body-for-nav" role="document">
-
-   
-  <div class="wy-grid-for-nav">
+  <link rel="stylesheet" href="../_static/css/index.d431a4ee1c1efae0e38bdfebc22debff.css">
 
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
-          
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-          
-            <a href="../index.html" class="icon icon-home"> JupyterLab
-          
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
-          
-          </a>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.30270b6e4c972e43c488.js">
 
-          
-            
-            
-              <div class="version">
-                1.0 Beta
-              </div>
-            
-          
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Design Patterns" href="patterns.html" />
+    <link rel="prev" title="Documents" href="documents.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main">
+<div class="container-xl">
 
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+    
+    <a class="navbar-brand" href="../index.html">
+      <img src="../_static/logo.png" class="logo" alt="logo">
+    </a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar-menu" class="col-lg-9 collapse navbar-collapse">
+      <ul id="navbar-main-elements" class="navbar-nav mr-auto">
+        
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../getting_started/overview.html">Getting Started</a>
+        </li>
+        
+        <li class="nav-item ">
+            <a class="nav-link" href="../user/interface.html">User Guide</a>
+        </li>
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="repo.html">Developer Guide</a>
+        </li>
+        
+        
+      </ul>
+
+
+      
+
+      <ul class="navbar-nav">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/jupyterlab/jupyterlab" target="_blank" rel="noopener">
+              <span><i class="fab fa-github-square"></i></span>
+            </a>
+          </li>
+        
+        
+      </ul>
+    </div>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Getting Started</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/overview.html">Overview</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/starting.html">Starting JupyterLab</a></li>
-</ul>
-<p class="caption"><span class="caption-text">User Guide</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../user/interface.html">The JupyterLab Interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/files.html">Working with Files</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/file_editor.html">Text Editor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/notebook.html">Notebooks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/code_console.html">Code Consoles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/terminal.html">Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/running.html">Managing Kernels and Terminals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/commands.html">Command Palette</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/documents_kernels.html">Documents and kernels</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/file_formats.html">File and Output Formats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../user/extensions.html">Extensions</a></li>
-</ul>
-<p class="caption"><span class="caption-text">Developer Guide</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="repo.html">General Codebase Orientation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="extension_dev.html">Extension Developer Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documents.html">Documents</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Notebook</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#background">Background</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#structure-of-the-notebook-plugin">Structure of the Notebook plugin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#model">Model</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#cell-operations">Cell operations</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#cursors-and-metadata">Cursors and metadata</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#notebook-widget">Notebook widget</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#higher-level-actions-using-notebookactions">Higher level actions using NotebookActions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#widget-hierarchy">Widget hierarchy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rendering-output-messages">Rendering output messages</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-extend-the-notebook-plugin">How to extend the Notebook plugin</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#adding-a-button-to-the-toolbar">Adding a button to the toolbar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#the-ipywidgets-third-party-extension">The <em>ipywidgets</em> third party extension</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="patterns.html">Design Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="css.html">CSS Patterns</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Writing Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="virtualdom.html">Virtual DOM and React</a></li>
-<li class="toctree-l1"><a class="reference internal" href="adding_content.html">Adding Content</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="terminology.html">Terminology</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xkcd_extension_tutorial.html">Let’s Make an xkcd JupyterLab Extension</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
     </nav>
+    
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">JupyterLab</a>
-        
-      </nav>
-
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
+    <div class="container-xl">
+      <div class="row">
           
+          <div class="col-12 col-md-3 bd-sidebar">
+
+<form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form>
 
 
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
 
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-      <li>Notebook</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/developer/notebook.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
+  <div class="bd-toc-item active">
   
-  <hr/>
+
+  <ul class="nav bd-sidenav">
+      
+      
+      
+      
+      
+      
+        
+          
+              <li class="">
+                  <a href="extension_dev.html">Extension Developer Guide</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_points.html">Common Extension Points</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="contributing.html">Contributing to JupyterLab</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="components.html">Using JupyterLab components</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_components.html">Reusing JupyterLab UI</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="documents.html">Documents</a>
+              </li>
+          
+        
+          
+              <li class="active">
+                  <a href="">Notebook</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="patterns.html">Design Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="css.html">CSS Patterns</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="virtualdom.html">React</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="ui_helpers.html">User Interface Helpers</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="terminology.html">Terminology</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_tutorial.html">Let’s Make an Astronomy Picture of the Day JupyterLab Extension</a>
+              </li>
+          
+        
+          
+              <li class="">
+                  <a href="extension_migration.html">JupyterLab 1.x to 2.x Extension Migration Guide</a>
+              </li>
+          
+        
+      
+      
+    </ul>
+
+</nav>
+          </div>
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+              
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#background" class="nav-link">Background</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#structure-of-the-notebook-plugin" class="nav-link">Structure of the Notebook plugin</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#model" class="nav-link">Model</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#cell-operations" class="nav-link">Cell operations</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#metadata" class="nav-link">Metadata</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#notebook-widget" class="nav-link">Notebook widget</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#higher-level-actions-using-notebookactions" class="nav-link">Higher level actions using NotebookActions</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#widget-hierarchy" class="nav-link">Widget hierarchy</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#rendering-output-messages" class="nav-link">Rendering output messages</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#how-to-extend-the-notebook-plugin" class="nav-link">How to extend the Notebook plugin</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#adding-a-button-to-the-toolbar" class="nav-link">Adding a button to the toolbar</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#the-ipywidgets-third-party-extension" class="nav-link">The ipywidgets third party extension</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+    </ul>
+</nav>
+
+
+              
+          </div>
+          
+
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
   <div class="section" id="notebook">
 <h1>Notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://www.youtube.com/watch?v=4Qm6oD_Rlw8&amp;feature=youtu.be&amp;t=55m19s">JupyterLab Walkthrough June 16, 2016 YouTube
-video</a></p>
-<p>The most complicated plugin included in the <strong>JupyterLab application</strong>
+<p id="architecture-walkthrough">A JupyterLab architecture walkthrough from June 16, 2016, provides an overview of the notebook architecture.</p>
+<div class="jp-youtube-video">
+   <iframe src="https://www.youtube-nocookie.com/embed/4Qm6oD_Rlw8?rel=0&amp;showinfo=0&amp;start=3326" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div><p>The most complicated plugin included in the <strong>JupyterLab application</strong>
 is the <strong>Notebook plugin</strong>.</p>
 <p>The
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_notebook_src_widgetfactory_.notebookwidgetfactory.html">NotebookWidgetFactory</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_notebook_src_index_.notebookwidgetfactory.html">NotebookWidgetFactory</a>
 constructs a new
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_notebook_src_panel_.notebookpanel.html">NotebookPanel</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_notebook_src_index_.notebookpanel.html">NotebookPanel</a>
 from a model and populates the toolbar with default widgets.</p>
 </div>
 <div class="section" id="structure-of-the-notebook-plugin">
@@ -232,15 +313,15 @@ notebook files.</p>
 <div class="section" id="model">
 <h3>Model<a class="headerlink" href="#model" title="Permalink to this headline">¶</a></h3>
 <p>The
-<strong>`NotebookModel &lt;http://jupyterlab.github.io/jupyterlab/classes/_notebook_src_model_.notebookmodel.html&gt;`__</strong>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_notebook_src_index_.notebookmodel.html">NotebookModel</a>
 contains an observable list of cells.</p>
-<p>A <strong>`cell
-model &lt;http://jupyterlab.github.io/jupyterlab/modules/_cells_src_model_.html&gt;`__</strong>
+<p>A <a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_cells_src_index_.cellmodel.html">cell
+model</a>
 can be:</p>
 <ul class="simple">
-<li>a code cell</li>
-<li>a markdown cell</li>
-<li>raw cell</li>
+<li><p>a code cell</p></li>
+<li><p>a markdown cell</p></li>
+<li><p>raw cell</p></li>
 </ul>
 <p>A code cell contains a list of <strong>output models</strong>. The list of cells and
 the list of outputs can be observed for changes.</p>
@@ -255,12 +336,13 @@ individual cell input content is supported by the CodeMirror editor’s
 undo feature. (Note: CodeMirror editor’s undo does not cover cell
 metadata changes.)</p>
 </div>
-<div class="section" id="cursors-and-metadata">
-<h4>Cursors and metadata<a class="headerlink" href="#cursors-and-metadata" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="metadata">
+<h4>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h4>
 <p>The notebook model and the cell model (i.e. notebook cells) support
-getting and setting metadata through cursors. You may request a cursor
-to write to a specific metadata key from a notebook model or a cell
-model.</p>
+getting and setting metadata through an
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/modules/_observables_src_index_.iobservablejson.html">IObservableJSON</a>
+object. You can use this to get and set notebook/cell metadata,
+as well as subscribe to changes to it.</p>
 </div>
 </div>
 <div class="section" id="notebook-widget">
@@ -269,10 +351,10 @@ model.</p>
 a new NotebookPanel from the model. The NotebookPanel widget is added to
 the DockPanel. The <strong>NotebookPanel</strong> contains:</p>
 <ul class="simple">
-<li>a
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/modules/_apputils_src_toolbar_.html">Toolbar</a></li>
-<li>a <a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_notebook_src_widget_.notebook.html">Notebook
-widget</a>.</li>
+<li><p>a
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_apputils_src_index_.toolbar.html">Toolbar</a></p></li>
+<li><p>a <a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_notebook_src_index_.notebook.html">Notebook
+widget</a>.</p></li>
 </ul>
 <p>The NotebookPanel also adds completion logic.</p>
 <p>The <strong>NotebookToolbar</strong> maintains a list of widgets to add to the
@@ -285,36 +367,38 @@ the cell list.</p>
 <div class="section" id="higher-level-actions-using-notebookactions">
 <h4>Higher level actions using NotebookActions<a class="headerlink" href="#higher-level-actions-using-notebookactions" title="Permalink to this headline">¶</a></h4>
 <p>Higher-level actions are contained in the
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/modules/_notebook_src_actions_.notebookactions.html">NotebookActions</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_notebook_src_index_.notebookactions.html">NotebookActions</a>
 namespace, which has functions, when given a notebook widget, to run a
 cell and select the next cell, merge or split cells at the cursor,
 delete selected cells, etc.</p>
 </div>
 <div class="section" id="widget-hierarchy">
 <h4>Widget hierarchy<a class="headerlink" href="#widget-hierarchy" title="Permalink to this headline">¶</a></h4>
-<p>A Notebook widget contains a list of <a class="reference external" href="http://jupyterlab.github.io/jupyterlab/modules/_cells_src_widget_.html">cell
+<p>A Notebook widget contains a list of <a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_cells_src_index_.cell.html">cell
 widgets</a>,
 corresponding to the cell models in its cell list.</p>
 <ul class="simple">
-<li>Each cell widget contains an
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_cells_src_inputarea_.inputarea.html">InputArea</a>,<ul>
-<li>which contains n
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_codeeditor_src_widget_.codeeditorwrapper.html">CodeEditorWrapper</a>,<ul>
-<li>which contains a JavaScript CodeMirror instance.</li>
+<li><p>Each cell widget contains an
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_cells_src_index_.inputarea.html">InputArea</a>,</p>
+<ul>
+<li><p>which contains n
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_codeeditor_src_index_.codeeditorwrapper.html">CodeEditorWrapper</a>,</p>
+<ul>
+<li><p>which contains a JavaScript CodeMirror instance.</p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 <p>A
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_cells_src_widget_.codecell.html">CodeCell</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_cells_src_index_.codecell.html">CodeCell</a>
 also contains an
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_outputarea_src_widget_.outputarea.html">OutputArea</a>.
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_outputarea_src_index_.outputarea.html">OutputArea</a>.
 An OutputArea is responsible for rendering the outputs in the
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_outputarea_src_model_.outputareamodel.html">OutputAreaModel</a>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_outputarea_src_index_.outputareamodel.html">OutputAreaModel</a>
 list. An OutputArea uses a notebook-specific
-<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_rendermime_src_registry_.rendermimeregistry.html">RenderMimeRegistry</a>
-object to render <code class="docutils literal"><span class="pre">display_data</span></code> output messages.</p>
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_rendermime_src_index_.rendermimeregistry.html">RenderMimeRegistry</a>
+object to render <code class="docutils literal notranslate"><span class="pre">display_data</span></code> output messages.</p>
 </div>
 <div class="section" id="rendering-output-messages">
 <h4>Rendering output messages<a class="headerlink" href="#rendering-output-messages" title="Permalink to this headline">¶</a></h4>
@@ -331,102 +415,99 @@ notebook-specific widget state.</p>
 </div>
 </div>
 <div class="section" id="how-to-extend-the-notebook-plugin">
-<h2>How to extend the Notebook plugin<a class="headerlink" href="#how-to-extend-the-notebook-plugin" title="Permalink to this headline">¶</a></h2>
+<span id="extend-notebook-plugin"></span><h2>How to extend the Notebook plugin<a class="headerlink" href="#how-to-extend-the-notebook-plugin" title="Permalink to this headline">¶</a></h2>
 <p>We’ll walk through two notebook extensions:</p>
 <ul class="simple">
-<li>adding a button to the toolbar</li>
-<li>adding an ipywidgets extension</li>
+<li><p>adding a button to the toolbar</p></li>
+<li><p>adding an ipywidgets extension</p></li>
 </ul>
 <div class="section" id="adding-a-button-to-the-toolbar">
 <h3>Adding a button to the toolbar<a class="headerlink" href="#adding-a-button-to-the-toolbar" title="Permalink to this headline">¶</a></h3>
 <p>Start from the cookie cutter extension template.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cookiecutter</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">cookiecutter</span>
 <span class="n">cookiecutter</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">jupyterlab</span><span class="o">/</span><span class="n">extension</span><span class="o">-</span><span class="n">cookiecutter</span><span class="o">-</span><span class="n">ts</span>
 <span class="n">cd</span> <span class="n">my</span><span class="o">-</span><span class="n">cookie</span><span class="o">-</span><span class="n">cutter</span><span class="o">-</span><span class="n">name</span>
 </pre></div>
 </div>
 <p>Install the dependencies. Note that extensions are built against the
 released npm packages, not the development versions.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">notebook</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">application</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">apputils</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">docregistry</span> <span class="nd">@phosphor</span><span class="o">/</span><span class="n">disposable</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">save</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">notebook</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">application</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">apputils</span> <span class="nd">@jupyterlab</span><span class="o">/</span><span class="n">docregistry</span> <span class="nd">@lumino</span><span class="o">/</span><span class="n">disposable</span>
 </pre></div>
 </div>
-<p>Copy the following to <code class="docutils literal"><span class="pre">src/index.ts</span></code>:</p>
-<div class="code typescript highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="p">{</span>
-  <span class="n">IDisposable</span><span class="p">,</span> <span class="n">DisposableDelegate</span>
-<span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@phosphor/disposable&#39;</span><span class="p">;</span>
+<p>Copy the following to <code class="docutils literal notranslate"><span class="pre">src/index.ts</span></code>:</p>
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">IDisposable</span><span class="p">,</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@lumino/disposable&#39;</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="p">{</span>
-  <span class="n">JupyterLab</span><span class="p">,</span> <span class="n">JupyterLabPlugin</span>
-<span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@jupyterlab/application&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">JupyterFrontEnd</span><span class="p">,</span> <span class="nx">JupyterFrontEndPlugin</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/application&#39;</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="p">{</span>
-  <span class="n">ToolbarButton</span>
-<span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@jupyterlab/apputils&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">ToolbarButton</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/apputils&#39;</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="p">{</span>
-  <span class="n">DocumentRegistry</span>
-<span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@jupyterlab/docregistry&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">DocumentRegistry</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/docregistry&#39;</span><span class="p">;</span>
 
-<span class="kn">import</span> <span class="p">{</span>
-  <span class="n">NotebookActions</span><span class="p">,</span> <span class="n">NotebookPanel</span><span class="p">,</span> <span class="n">INotebookModel</span>
-<span class="p">}</span> <span class="kn">from</span> <span class="s1">&#39;@jupyterlab/notebook&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span>
+  <span class="nx">NotebookActions</span><span class="p">,</span> <span class="nx">NotebookPanel</span><span class="p">,</span> <span class="nx">INotebookModel</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@jupyterlab/notebook&#39;</span><span class="p">;</span>
 
 
-<span class="o">/**</span>
- <span class="o">*</span> <span class="n">The</span> <span class="n">plugin</span> <span class="n">registration</span> <span class="n">information</span><span class="o">.</span>
- <span class="o">*/</span>
-<span class="n">const</span> <span class="n">plugin</span><span class="p">:</span> <span class="n">JupyterLabPlugin</span><span class="o">&lt;</span><span class="n">void</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">activate</span><span class="p">,</span>
-  <span class="nb">id</span><span class="p">:</span> <span class="s1">&#39;my-extension-name:buttonPlugin&#39;</span><span class="p">,</span>
-  <span class="n">autoStart</span><span class="p">:</span> <span class="n">true</span>
+<span class="cm">/**</span>
+<span class="cm"> * The plugin registration information.</span>
+<span class="cm"> */</span>
+<span class="kr">const</span> <span class="nx">plugin</span>: <span class="kt">JupyterFrontEndPlugin</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">activate</span><span class="p">,</span>
+  <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;my-extension-name:buttonPlugin&#39;</span><span class="p">,</span>
+  <span class="nx">autoStart</span>: <span class="kt">true</span>
 <span class="p">};</span>
 
 
-<span class="o">/**</span>
- <span class="o">*</span> <span class="n">A</span> <span class="n">notebook</span> <span class="n">widget</span> <span class="n">extension</span> <span class="n">that</span> <span class="n">adds</span> <span class="n">a</span> <span class="n">button</span> <span class="n">to</span> <span class="n">the</span> <span class="n">toolbar</span><span class="o">.</span>
- <span class="o">*/</span>
-<span class="n">export</span>
-<span class="k">class</span> <span class="nc">ButtonExtension</span> <span class="n">implements</span> <span class="n">DocumentRegistry</span><span class="o">.</span><span class="n">IWidgetExtension</span><span class="o">&lt;</span><span class="n">NotebookPanel</span><span class="p">,</span> <span class="n">INotebookModel</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="o">/**</span>
-   <span class="o">*</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">extension</span> <span class="nb">object</span><span class="o">.</span>
-   <span class="o">*/</span>
-  <span class="n">createNew</span><span class="p">(</span><span class="n">panel</span><span class="p">:</span> <span class="n">NotebookPanel</span><span class="p">,</span> <span class="n">context</span><span class="p">:</span> <span class="n">DocumentRegistry</span><span class="o">.</span><span class="n">IContext</span><span class="o">&lt;</span><span class="n">INotebookModel</span><span class="o">&gt;</span><span class="p">):</span> <span class="n">IDisposable</span> <span class="p">{</span>
-    <span class="n">let</span> <span class="n">callback</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="n">NotebookActions</span><span class="o">.</span><span class="n">runAll</span><span class="p">(</span><span class="n">panel</span><span class="o">.</span><span class="n">notebook</span><span class="p">,</span> <span class="n">context</span><span class="o">.</span><span class="n">session</span><span class="p">);</span>
+<span class="cm">/**</span>
+<span class="cm"> * A notebook widget extension that adds a button to the toolbar.</span>
+<span class="cm"> */</span>
+<span class="kr">export</span>
+<span class="kr">class</span> <span class="nx">ButtonExtension</span> <span class="kr">implements</span> <span class="nx">DocumentRegistry</span><span class="p">.</span><span class="nx">IWidgetExtension</span><span class="o">&lt;</span><span class="nx">NotebookPanel</span><span class="p">,</span> <span class="nx">INotebookModel</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="cm">/**</span>
+<span class="cm">   * Create a new extension object.</span>
+<span class="cm">   */</span>
+  <span class="nx">createNew</span><span class="p">(</span><span class="nx">panel</span>: <span class="kt">NotebookPanel</span><span class="p">,</span> <span class="nx">context</span>: <span class="kt">DocumentRegistry.IContext</span><span class="o">&lt;</span><span class="nx">INotebookModel</span><span class="o">&gt;</span><span class="p">)</span><span class="o">:</span> <span class="nx">IDisposable</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">callback</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">NotebookActions</span><span class="p">.</span><span class="nx">runAll</span><span class="p">(</span><span class="nx">panel</span><span class="p">.</span><span class="nx">content</span><span class="p">,</span> <span class="nx">context</span><span class="p">.</span><span class="nx">sessionContext</span><span class="p">);</span>
     <span class="p">};</span>
-    <span class="n">let</span> <span class="n">button</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ToolbarButton</span><span class="p">({</span>
-      <span class="n">className</span><span class="p">:</span> <span class="s1">&#39;myButton&#39;</span><span class="p">,</span>
-      <span class="n">onClick</span><span class="p">:</span> <span class="n">callback</span><span class="p">,</span>
-      <span class="n">tooltip</span><span class="p">:</span> <span class="s1">&#39;Run All&#39;</span>
+    <span class="kd">let</span> <span class="nx">button</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToolbarButton</span><span class="p">({</span>
+      <span class="nx">className</span><span class="o">:</span> <span class="s1">&#39;myButton&#39;</span><span class="p">,</span>
+      <span class="nx">iconClass</span><span class="o">:</span> <span class="s1">&#39;fa fa-fast-forward&#39;</span><span class="p">,</span>
+      <span class="nx">onClick</span>: <span class="kt">callback</span><span class="p">,</span>
+      <span class="nx">tooltip</span><span class="o">:</span> <span class="s1">&#39;Run All&#39;</span>
     <span class="p">});</span>
 
-    <span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">);</span>
-    <span class="n">i</span><span class="o">.</span><span class="n">classList</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;fa&#39;</span><span class="p">,</span> <span class="s1">&#39;fa-fast-forward&#39;</span><span class="p">);</span>
-    <span class="n">button</span><span class="o">.</span><span class="n">node</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
-
-    <span class="n">panel</span><span class="o">.</span><span class="n">toolbar</span><span class="o">.</span><span class="n">insertItem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;runAll&#39;</span><span class="p">,</span> <span class="n">button</span><span class="p">);</span>
-    <span class="k">return</span> <span class="n">new</span> <span class="n">DisposableDelegate</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="n">button</span><span class="o">.</span><span class="n">dispose</span><span class="p">();</span>
+    <span class="nx">panel</span><span class="p">.</span><span class="nx">toolbar</span><span class="p">.</span><span class="nx">insertItem</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;runAll&#39;</span><span class="p">,</span> <span class="nx">button</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">new</span> <span class="nx">DisposableDelegate</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">button</span><span class="p">.</span><span class="nx">dispose</span><span class="p">();</span>
     <span class="p">});</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="o">/**</span>
- <span class="o">*</span> <span class="n">Activate</span> <span class="n">the</span> <span class="n">extension</span><span class="o">.</span>
- <span class="o">*/</span>
-<span class="n">function</span> <span class="n">activate</span><span class="p">(</span><span class="n">app</span><span class="p">:</span> <span class="n">JupyterLab</span><span class="p">)</span> <span class="p">{</span>
-  <span class="n">app</span><span class="o">.</span><span class="n">docRegistry</span><span class="o">.</span><span class="n">addWidgetExtension</span><span class="p">(</span><span class="s1">&#39;Notebook&#39;</span><span class="p">,</span> <span class="n">new</span> <span class="n">ButtonExtension</span><span class="p">());</span>
+<span class="cm">/**</span>
+<span class="cm"> * Activate the extension.</span>
+<span class="cm"> */</span>
+<span class="kd">function</span> <span class="nx">activate</span><span class="p">(</span><span class="nx">app</span>: <span class="kt">JupyterFrontEnd</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">app</span><span class="p">.</span><span class="nx">docRegistry</span><span class="p">.</span><span class="nx">addWidgetExtension</span><span class="p">(</span><span class="s1">&#39;Notebook&#39;</span><span class="p">,</span> <span class="k">new</span> <span class="nx">ButtonExtension</span><span class="p">());</span>
 <span class="p">};</span>
 
 
-<span class="o">/**</span>
- <span class="o">*</span> <span class="n">Export</span> <span class="n">the</span> <span class="n">plugin</span> <span class="k">as</span> <span class="n">default</span><span class="o">.</span>
- <span class="o">*/</span>
-<span class="n">export</span> <span class="n">default</span> <span class="n">plugin</span><span class="p">;</span>
+<span class="cm">/**</span>
+<span class="cm"> * Export the plugin as default.</span>
+<span class="cm"> */</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">plugin</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Run the following commands:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">npm</span> <span class="n">install</span>
 <span class="n">npm</span> <span class="n">run</span> <span class="n">build</span>
 <span class="n">jupyter</span> <span class="n">labextension</span> <span class="n">install</span> <span class="o">.</span>
 <span class="n">jupyter</span> <span class="n">lab</span>
@@ -437,15 +518,14 @@ released npm packages, not the development versions.</p>
 <div class="section" id="the-ipywidgets-third-party-extension">
 <h3>The <em>ipywidgets</em> third party extension<a class="headerlink" href="#the-ipywidgets-third-party-extension" title="Permalink to this headline">¶</a></h3>
 <p>This discussion will be a bit confusing since we’ve been using the term
-<strong>widget</strong> to refer to <strong>phosphor widgets</strong>. In the discussion below,
+<em>widget</em> to refer to <em>lumino widgets</em>. In the discussion below,
 <em>ipython widgets</em> will be referred to as <em>ipywidgets</em>. There is no
-intrinsic relation between <strong>phosphor widgets</strong> and <em>ipython widgets</em>.</p>
-<p>The <em>ipywidgets</em> extension registers a factory for a notebook <strong>widget</strong>
-extension using the <a class="reference external" href="http://jupyterlab.github.io/jupyterlab/classes/_docregistry_src_registry_.documentregistry.html">Document
+intrinsic relation between <em>lumino widgets</em> and <em>ipython widgets</em>.</p>
+<p>The <em>ipywidgets</em> extension registers a factory for a notebook <em>widget</em>
+extension using the <a class="reference external" href="https://jupyterlab.github.io/jupyterlab/classes/_docregistry_src_index_.documentregistry.html">Document
 Registry</a>.
-The <code class="docutils literal"><span class="pre">createNew()</span></code> function is called with a NotebookPanel and
-[DocumentContext]
-(<a class="reference external" href="http://jupyterlab.github.io/jupyterlab/interfaces/_docregistry_src_registry_.documentregistry.icontext.html">http://jupyterlab.github.io/jupyterlab/interfaces/_docregistry_src_registry_.documentregistry.icontext.html</a>).
+The <code class="docutils literal notranslate"><span class="pre">createNew()</span></code> function is called with a NotebookPanel and
+<a class="reference external" href="https://jupyterlab.github.io/jupyterlab/interfaces/_docregistry_src_index_.documentregistry.icontext.html">DocumentContext</a>.
 The plugin then creates a ipywidget manager (which uses the context to
 interact the kernel and kernel’s comm manager). The plugin then
 registers an ipywidget renderer with the notebook instance’s rendermime
@@ -453,11 +533,11 @@ registers an ipywidget renderer with the notebook instance’s rendermime
 <p>When an ipywidget model is created in the kernel, a comm message is sent
 to the browser and handled by the ipywidget manager to create a
 browser-side ipywidget model. When the model is displayed in the kernel,
-a <code class="docutils literal"><span class="pre">display_data</span></code> output is sent to the browser with the ipywidget
+a <code class="docutils literal notranslate"><span class="pre">display_data</span></code> output is sent to the browser with the ipywidget
 model id. The renderer registered in that notebook’s rendermime is asked
 to render the output. The renderer asks the ipywidget manager instance
 to render the corresponding model, which returns a JavaScript promise.
-The renderer creates a container <strong>phosphor widget</strong> which it hands back
+The renderer creates a container <em>lumino widget</em> which it hands back
 synchronously to the OutputArea, and then fills the container with the
 rendered <em>ipywidget</em> when the promise resolves.</p>
 <p>Note: The ipywidgets third party extension has not yet been released.</p>
@@ -466,21 +546,27 @@ rendered <em>ipywidget</em> when the promise resolves.</p>
 </div>
 
 
-           </div>
-           <div class="articleComments">
-            
-           </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="patterns.html" class="btn btn-neutral float-right" title="Design Patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="documents.html" class="btn btn-neutral" title="Documents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+              </div>
+              
+              
+              <div class='prev-next-bottom'>
+                
+    <a class='left-prev' id="prev-link" href="documents.html" title="previous page">Documents</a>
+    <a class='right-next' id="next-link" href="patterns.html" title="next page">Design Patterns</a>
+
+              </div>
+              
+          </main>
+          
+
+      </div>
     </div>
+
+    
+  <script src="../_static/js/index.30270b6e4c972e43c488.js"></script>
+
+
+    <footer>
   
 
   <hr/>
@@ -497,47 +583,5 @@ rendered <em>ipywidget</em> when the promise resolves.</p>
 
 </footer>
 
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'1.0 Beta',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-
-  
-
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
-
-  
-  
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
-      });
-  </script>
-   
-
-</body>
+  </body>
 </html>
